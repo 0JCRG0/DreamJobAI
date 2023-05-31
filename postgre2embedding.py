@@ -30,14 +30,6 @@ Model
 """
 model = "gpt-3.5-turbo"  # only matters insofar as it selects which tokenizer to use
 
-"""
-CHROMA ENVIRONMENT
-"""
-client = chromadb.Client(Settings(
-    chroma_db_impl="duckdb+parquet",
-    persist_directory=SAVE_PATH # Optional, defaults to .chromadb/ in the current directory
-))
-
 
 """
 
@@ -50,22 +42,18 @@ def fetch_data_from_table():
 
     # Create a cursor object
     cur = conn.cursor()
-
     cur.execute("SELECT id FROM personal")
 
     # Fetch all rows from the table
     IDS = cur.fetchall()
-
     cur.execute("SELECT title FROM personal")
 
     # Fetch all rows from the table
     TITLES = cur.fetchall()
-
     cur.execute("SELECT description FROM personal")
 
         # Fetch all rows from the table
     DESCRIPTIONS = cur.fetchall()
-
     cur.execute("SELECT location FROM personal")
 
         # Fetch all rows from the table
@@ -105,14 +93,7 @@ jobs_ids, jobs_info= rows_to_nested_list(all_rows)
 #print(jobs_ids[0], type(jobs_ids), len(jobs_ids))
 #print(jobs_info[0], type(jobs_info), len(jobs_info))
 
-"""
-
-Function to count tokens
-
-
-
-"""
-
+""" Function to count tokens """
 
 def num_tokens(text: str, model: str = model) -> int:
     #Return the number of tokens in a string.
@@ -133,8 +114,8 @@ def jobs_to_batches(max_tokens: int) -> list:
             #TRUNCATE IF STRING MORE THAN 1000 TOKENS
             job_truncated = truncated_string(job, model=model, max_tokens=max_tokens)
             batches.append(job_truncated)
-    """
     
+    """ """
     for i, batch in enumerate(batches, start=1):
         print(f"Batch {i}:")
         print("".join(batch))
@@ -142,56 +123,9 @@ def jobs_to_batches(max_tokens: int) -> list:
         print("\n")
     
     print(f"TOTAL NUMBER OF BATCHES:", len(batches))
-    """
+    
     return batches
 
-jobs_in_batches = jobs_to_batches(500)
-
-#print(jobs_in_batches[1])
-
-"""
-Embed document chunks
-
-"""
-
-# calculate embeddings
-EMBEDDING_MODEL = "text-embedding-ada-002"  # OpenAI's embedding model
-BATCH_SIZE = 50  # you can submit up to 2048 embedding inputs per request
-
-EMBEDDINGS = []
-for batch_start in range(0, len(jobs_in_batches), BATCH_SIZE):
-    batch_end = batch_start + BATCH_SIZE
-    batch = jobs_in_batches[batch_start:batch_end]
-    print(f"Batch {batch_start} to {batch_end-1}")
-    response = openai.Embedding.create(model=EMBEDDING_MODEL, input=batch)
-    for i, be in enumerate(response["data"]):
-        assert i == be["index"]  # double check embeddings are in same order as input
-    batch_embeddings = [e["embedding"] for e in response["data"]]
-    EMBEDDINGS.extend(batch_embeddings)
-
-"""
-#CHROMA -- Below
-
-collection = client.get_or_create_collection(name="jobs_test", embedding_function=openai_ef)
-
-collection.add(
-    documents=jobs_in_batches,
-    embeddings=EMBEDDINGS,
-    ids=jobs_ids
-)
-
-print(collection.peek())
-print(collection.count())
-"""
-
-
-#DF 
-
-df = pd.DataFrame({"id": jobs_ids, "embedding": EMBEDDINGS})
-
-df.to_csv(SAVE_PATH+ "/jobs_test2.csv", index=False)
-
-print(df.head())
-
-
-#if __name__ == "__main__":
+if __name__ == "__main__":
+    #The argument is the token limit
+    jobs_to_batches(500)
