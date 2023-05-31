@@ -1,0 +1,1 @@
+Based on an already existing crawler which scrapes remote jobs in 50+ job boards. This repo contains the embedding process of these scraped jobs which are then feed into GPT-4 to match the ideal job with the user's dreamed role.
