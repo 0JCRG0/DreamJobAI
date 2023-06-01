@@ -32,3 +32,8 @@ def truncated_string(
     if print_warning and len(encoded_string) > max_tokens:
         print(f"Warning: Truncated string from {len(encoded_string)} tokens to {max_tokens} tokens.")
     return truncated_string
+
+def num_tokens(text: str, model: str ="gpt-3.5-turbo") -> int:
+    #Return the number of tokens in a string.
+    encoding = tiktoken.encoding_for_model(model)
+    return len(encoding.encode(text))
