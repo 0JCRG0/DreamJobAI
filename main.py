@@ -5,13 +5,19 @@ import tiktoken  # for counting tokens
 import ast  # for converting embeddings saved as strings back to arrays
 from scipy import spatial
 import pretty_errors
+from preprocess import individual_preprocess
 from displayfunction import display
 from dotenv import load_dotenv
 
 """
 Load the variables
 """
+#TODO: 
+"""
 
+EL PINCHE MODELO NO ESTÁ SIENDO ALIMENTADO DE LAS DESCRIPCIONES DE LOS TRABAJOS!!!
+POR ESO ESTÁ BIEN ALUCÍN SIN IMPORTAR LOS PERROS PROMPTS
+"""
 load_dotenv('.env')
 openai.api_key = os.getenv("OPENAI_API_KEY")
 SAVE_PATH = os.getenv("SAVE_PATH")
@@ -25,7 +31,7 @@ GPT_MODEL = "gpt-3.5-turbo"
 Load the embedded file
 """
 
-embeddings_path = SAVE_PATH + "/jobs_test.csv"
+embeddings_path = SAVE_PATH + "/jobs_test4.csv"
 
 df = pd.read_csv(embeddings_path)
 
@@ -54,10 +60,14 @@ def ids_ranked_by_relatedness(
     #Modify this to get more jobs
     top_n: int = 20
 ) -> tuple[list[str], list[float]]:
+
     """Returns a list of strings and relatednesses, sorted from most related to least."""
+    
+    query_preprocess = individual_preprocess(query)
+    print(query_preprocess)
     query_embedding_response = openai.Embedding.create(
         model=EMBEDDING_MODEL,
-        input=query,
+        input=query_preprocess,
     )
     #This is the query (e.g., Data Engineer) that the model will find relatednessnes
     query_embedding = query_embedding_response["data"][0]["embedding"]
