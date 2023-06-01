@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 from chromadb.config import Settings
 import os
 import pretty_errors
-from postgre2embedding import jobs_to_batches, jobs_ids
+from postgre2embedding import jobs_to_batches, jobs_ids, jobs_for_GPT
 
 """ Env variables """
 
@@ -18,6 +18,7 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 
 #CALL IT
 jobs_in_batches = jobs_to_batches(500)
+jobs_text = jobs_for_GPT(500)
 
 # calculate embeddings
 EMBEDDING_MODEL = "text-embedding-ada-002"  # OpenAI's embedding model
@@ -52,14 +53,15 @@ collection.add(
 
 print(collection.peek())
 print(collection.count())
-"""
+print(collection.get(include=["documents"]))
 
+"""
 
 #DF 
 
-df = pd.DataFrame({"id": jobs_ids, "embedding": EMBEDDINGS})
+df = pd.DataFrame({"id": jobs_ids, "embedding": EMBEDDINGS, "text": jobs_text})
 
-df.to_csv(SAVE_PATH+ "/jobs_test4.csv", index=False)
+df.to_csv(SAVE_PATH+ "/jobs_test5.csv", index=False)
 
 print(df.head())
 
