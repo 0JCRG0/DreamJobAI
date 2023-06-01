@@ -37,24 +37,24 @@ YOU NEED TO ADD THE ID COLUMN SO THAT WORKS FOR EVERY TABLE.
 
 """
 
-def fetch_data_from_table():
+def fetch_data_from_table(table_name:str) -> list :
     conn = psycopg2.connect(user=user, password=password, host=host, port=port, database=database)
 
     # Create a cursor object
     cur = conn.cursor()
-    cur.execute("SELECT id FROM personal")
+    cur.execute(f"SELECT id FROM {table_name}")
 
     # Fetch all rows from the table
     IDS = cur.fetchall()
-    cur.execute("SELECT title FROM personal")
+    cur.execute(f"SELECT title FROM {table_name}")
 
     # Fetch all rows from the table
     TITLES = cur.fetchall()
-    cur.execute("SELECT description FROM personal")
+    cur.execute(f"SELECT description FROM {table_name}")
 
         # Fetch all rows from the table
     DESCRIPTIONS = cur.fetchall()
-    cur.execute("SELECT location FROM personal")
+    cur.execute(f"SELECT location FROM {table_name}")
 
         # Fetch all rows from the table
     LOCATIONS = cur.fetchall()
@@ -66,9 +66,8 @@ def fetch_data_from_table():
     return IDS, TITLES, DESCRIPTIONS, LOCATIONS
 
 # Fetch data from the PostgreSQL table
-all_rows = fetch_data_from_table()
 
-def rows_to_nested_list(all_rows: list) -> list:
+def rows_to_nested_list(all_rows: list =  fetch_data_from_table("personal")) -> list:
     #get all the rows
     ids, titles, descriptions, locations = all_rows
     #Ids
@@ -89,17 +88,13 @@ def rows_to_nested_list(all_rows: list) -> list:
     jobs_ids = cleaned_ids
     return jobs_ids, jobs_info
 
-jobs_ids, jobs_info= rows_to_nested_list(all_rows)
+jobs_ids, jobs_info= rows_to_nested_list()
 #print(jobs_ids[0], type(jobs_ids), len(jobs_ids))
 #print(jobs_info[0], type(jobs_info), len(jobs_info))
 
-def num_tokens(text: str, model: str = model) -> int:
-    #Return the number of tokens in a string.
-    encoding = tiktoken.encoding_for_model(model)
-    return len(encoding.encode(text))
 
 """ THIS ONE CONTAINS *NO* PREPROCESSED JOB INFOs"""
-def jobs_for_GPT(max_tokens: int) -> list:
+def jobs_for_GPT(max_tokens: int, embedding_model:str) -> list:
     batches = []
     total_tokens = 0
     for i in jobs_info:
@@ -113,6 +108,11 @@ def jobs_for_GPT(max_tokens: int) -> list:
             batches.append(job_truncated)
     
         total_tokens += num_tokens(job)  # Update the total tokens by adding the tokens of the current job
+    
+    #Get approximate cost for embeddings
+    if embedding_model == "openai":
+        approximate_cost = round((total_tokens / 1000) * 0.0004, 4)
+
     for i, batch in enumerate(batches, start=1):
         print(f"Batch {i}:")
         print("".join(batch))
@@ -121,10 +121,11 @@ def jobs_for_GPT(max_tokens: int) -> list:
     
     print(f"TOTAL NUMBER OF BATCHES:", len(batches))
     print(f"TOTAL NUMBER OF TOKENS:", total_tokens)  # Print the total number of tokens
+    print(f"APPROXIMATE COST OF EMBEDDING:", f"${approximate_cost} USD")
     return batches
 
 """ This one is PREPROCESSED JOB INFO -> USED FOR EMBEDDINGS """
-def jobs_to_batches(max_tokens: int) -> list:
+def jobs_to_batches(max_tokens: int, embedding_model: str) -> list:
     batches = []
     total_tokens = 0
     for i in jobs_info:
@@ -138,7 +139,12 @@ def jobs_to_batches(max_tokens: int) -> list:
             job_truncated = truncated_string(job_clean, model=model, max_tokens=max_tokens)
             batches.append(job_truncated)
 
-        total_tokens += num_tokens(job_clean)  # Update the total tokens by adding the tokens of the current job
+        # Update the total tokens by adding the tokens of the current job
+        total_tokens += num_tokens(job_clean)
+
+    #Get approximate cost for embeddings
+    if embedding_model == "openai":
+        approximate_cost = round((total_tokens / 1000) * 0.0004, 4)
 
     for i, batch in enumerate(batches, start=1):
         print(f"Batch {i}:")
@@ -148,14 +154,13 @@ def jobs_to_batches(max_tokens: int) -> list:
     
     print(f"TOTAL NUMBER OF BATCHES:", len(batches))
     print(f"TOTAL NUMBER OF TOKENS:", total_tokens)  # Print the total number of tokens
+    print(f"APPROXIMATE COST OF EMBEDDING:", f"${approximate_cost} USD")
     
     return batches
 
 
-
-
     
 if __name__ == "__main__":
-    #The argument is the token limit
-    #jobs_for_GPT(500)
-    jobs_to_batches(500)
+    """ 1st argument: token limit, 2nd arg: embedding model"""
+    jobs_for_GPT(500, "openai")
+    #jobs_to_batches(500, "openai")
