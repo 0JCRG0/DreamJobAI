@@ -6,10 +6,10 @@ import tiktoken
 import openai
 import pandas as pd
 import chromadb
-from utils.handy import openai_ef
 from chromadb.utils import embedding_functions
 from dotenv import load_dotenv
 from chromadb.config import Settings
+from preprocess import individual_preprocess
 
 """
 Env variables
@@ -93,18 +93,15 @@ jobs_ids, jobs_info= rows_to_nested_list(all_rows)
 #print(jobs_ids[0], type(jobs_ids), len(jobs_ids))
 #print(jobs_info[0], type(jobs_info), len(jobs_info))
 
-""" Function to count tokens """
-
 def num_tokens(text: str, model: str = model) -> int:
     #Return the number of tokens in a string.
     encoding = tiktoken.encoding_for_model(model)
     return len(encoding.encode(text))
 
-#print(num_tokens("tiktoken is great!"))
-
-
-def jobs_to_batches(max_tokens: int) -> list:
+""" THIS ONE CONTAINS *NO* PREPROCESSED JOB INFOs"""
+def jobs_for_GPT(max_tokens: int) -> list:
     batches = []
+    total_tokens = 0
     for i in jobs_info:
         job = " ".join(i)  # Join the elements of the list into a single string
         tokens_job_info = num_tokens(job)
@@ -115,7 +112,7 @@ def jobs_to_batches(max_tokens: int) -> list:
             job_truncated = truncated_string(job, model=model, max_tokens=max_tokens)
             batches.append(job_truncated)
     
-    """ """
+        total_tokens += num_tokens(job)  # Update the total tokens by adding the tokens of the current job
     for i, batch in enumerate(batches, start=1):
         print(f"Batch {i}:")
         print("".join(batch))
@@ -123,9 +120,42 @@ def jobs_to_batches(max_tokens: int) -> list:
         print("\n")
     
     print(f"TOTAL NUMBER OF BATCHES:", len(batches))
+    print(f"TOTAL NUMBER OF TOKENS:", total_tokens)  # Print the total number of tokens
+    return batches
+
+""" This one is PREPROCESSED JOB INFO -> USED FOR EMBEDDINGS """
+def jobs_to_batches(max_tokens: int) -> list:
+    batches = []
+    total_tokens = 0
+    for i in jobs_info:
+        job = " ".join(i)  # Join the elements of the list into a single string
+        job_clean = individual_preprocess(job) #cleans each job
+        tokens_job_info = num_tokens(job_clean)
+        if tokens_job_info <= max_tokens:
+            batches.append(job_clean)
+        else:
+            #TRUNCATE IF STRING MORE THAN 1000 TOKENS
+            job_truncated = truncated_string(job_clean, model=model, max_tokens=max_tokens)
+            batches.append(job_truncated)
+
+        total_tokens += num_tokens(job_clean)  # Update the total tokens by adding the tokens of the current job
+
+    for i, batch in enumerate(batches, start=1):
+        print(f"Batch {i}:")
+        print("".join(batch))
+        print(f"Tokens per batch:", num_tokens(batch))
+        print("\n")
+    
+    print(f"TOTAL NUMBER OF BATCHES:", len(batches))
+    print(f"TOTAL NUMBER OF TOKENS:", total_tokens)  # Print the total number of tokens
     
     return batches
 
+
+
+
+    
 if __name__ == "__main__":
     #The argument is the token limit
+    #jobs_for_GPT(500)
     jobs_to_batches(500)
