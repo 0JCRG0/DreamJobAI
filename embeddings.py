@@ -17,53 +17,52 @@ SAVE_PATH = os.getenv("SAVE_PATH")
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 #CALL IT
-jobs_in_batches = jobs_to_batches(500)
-jobs_text = jobs_for_GPT(500)
+jobs_in_batches = jobs_to_batches(500, "openai")
+jobs_text = jobs_for_GPT(500, "openai")
 
 # calculate embeddings
 EMBEDDING_MODEL = "text-embedding-ada-002"  # OpenAI's embedding model
 BATCH_SIZE = 50  # you can submit up to 2048 embedding inputs per request
 
-EMBEDDINGS = []
-for batch_start in range(0, len(jobs_in_batches), BATCH_SIZE):
-    batch_end = batch_start + BATCH_SIZE
-    batch = jobs_in_batches[batch_start:batch_end]
-    print(f"Batch {batch_start} to {batch_end-1}")
-    response = openai.Embedding.create(model=EMBEDDING_MODEL, input=batch)
-    for i, be in enumerate(response["data"]):
-        assert i == be["index"]  # double check embeddings are in same order as input
-    batch_embeddings = [e["embedding"] for e in response["data"]]
-    EMBEDDINGS.extend(batch_embeddings)
+def embedded_batches_ada()-> list: 
+    embeddings = []
+    for batch_start in range(0, len(jobs_in_batches), BATCH_SIZE):
+        batch_end = batch_start + BATCH_SIZE
+        batch = jobs_in_batches[batch_start:batch_end]
+        print(f"Batch {batch_start} to {batch_end-1}")
+        response = openai.Embedding.create(model=EMBEDDING_MODEL, input=batch)
+        for i, be in enumerate(response["data"]):
+            assert i == be["index"]  # double check embeddings are in same order as input
+        batch_embeddings = [e["embedding"] for e in response["data"]]
+        embeddings.extend(batch_embeddings)
+    return embeddings
 
-"""
+
 #CHROMA -- Below
 
-client = chromadb.Client(Settings(
-    chroma_db_impl="duckdb+parquet",
-    persist_directory=SAVE_PATH # Optional, defaults to .chromadb/ in the current directory
-))
 
-collection = client.get_or_create_collection(name="jobs_test", embedding_function=openai_ef)
+def chroma_or_df(db: str, file_name:str )-> list:
+    if db == "chromadb":
+        client = chromadb.Client(Settings(
+            chroma_db_impl="duckdb+parquet",
+            persist_directory=SAVE_PATH # Optional, defaults to .chromadb/ in the current directory
+        ))
 
-collection.add(
-    documents=jobs_in_batches,
-    embeddings=EMBEDDINGS,
-    ids=jobs_ids
-)
+        collection = client.get_or_create_collection(name=file_name, embedding_function=openai_ef)
 
-print(collection.peek())
-print(collection.count())
-print(collection.get(include=["documents"]))
-
-"""
-
-#DF 
-
-df = pd.DataFrame({"id": jobs_ids, "embedding": EMBEDDINGS, "text": jobs_text})
-
-df.to_csv(SAVE_PATH+ "/jobs_test5.csv", index=False)
-
-print(df.head())
+        collection.add(
+            documents=jobs_text,
+            embeddings=embedded_batches_ada(),
+            ids=jobs_ids
+        )
+        print(collection.peek())
+        print(collection.count())
+        print(collection.get(include=["documents"]))
+    elif db == "df":
+        df = pd.DataFrame({"id": jobs_ids, "embedding": embedded_batches_ada(), "text": jobs_text})
+        df.to_csv(SAVE_PATH+ f"/{file_name}.csv", index=False)
+        print(df.head())
 
 
-#if __name__ == "__main__":
+if __name__ == "__main__":
+    chroma_or_df("chromadb", "test")
