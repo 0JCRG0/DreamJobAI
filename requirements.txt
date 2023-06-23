@@ -1,0 +1,11 @@
+openai
+pandas
+chromadb
+python-dotenv
+pretty_errors
+psycopg2
+tiktoken
+transformers
+tensor
+nltk
+langdetect
