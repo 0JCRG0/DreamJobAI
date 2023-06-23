@@ -11,6 +11,7 @@ from postgre2embedding import jobs_to_batches, jobs_ids, jobs_for_GPT
 
 """ Env variables """
 
+
 load_dotenv('.env')
 SAVE_PATH = os.getenv("SAVE_PATH")
 #Setting API key
@@ -41,7 +42,7 @@ def embedded_batches_ada()-> list:
 #CHROMA -- Below
 
 
-def chroma_or_df(db: str, file_name:str )-> list:
+def saving_openai_embeddings(db: str, file_name:str )-> list:
     if db == "chromadb":
         client = chromadb.Client(Settings(
             chroma_db_impl="duckdb+parquet",
@@ -58,11 +59,19 @@ def chroma_or_df(db: str, file_name:str )-> list:
         print(collection.peek())
         print(collection.count())
         print(collection.get(include=["documents"]))
-    elif db == "df":
+    elif db == "parquet":
+        df_data = {
+        'ids': jobs_ids,
+        'text_data': jobs_for_GPT(700, "e5-large", False),
+        'embeddings': embedded_batches_ada()
+    }
+        df = pd.DataFrame(df_data)
+        df.to_parquet(SAVE_PATH+ f"/{file_name}.parquet", engine='pyarrow')
+        print(f"Saved embeddings to {file_name}.parquet")
+    elif db == "csv":
         df = pd.DataFrame({"id": jobs_ids, "embedding": embedded_batches_ada(), "text": jobs_text})
         df.to_csv(SAVE_PATH+ f"/{file_name}.csv", index=False)
         print(df.head())
 
-
 if __name__ == "__main__":
-    chroma_or_df("chromadb", "test")
+    saving_openai_embeddings("parquet", "openai_embedding")
