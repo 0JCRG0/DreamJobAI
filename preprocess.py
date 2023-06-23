@@ -19,7 +19,7 @@ def individual_preprocess(text):
     lang = detect(text)
 
     # Remove special characters, numbers, and extra spaces
-    text = re.sub(r"[^a-zA-Z\s]+", " ", text)
+    text = re.sub(r"[^a-zA-Z\s:]+", " ", text)
     text = re.sub(r"\s+", " ", text).strip().lower()
 
     # Tokenize
