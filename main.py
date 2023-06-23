@@ -12,7 +12,7 @@ from dotenv import load_dotenv
 """
 Load the variables
 """
-#TODO: 
+
 """
 
 EL PINCHE MODELO NO ESTÁ SIENDO ALIMENTADO DE LAS DESCRIPCIONES DE LOS TRABAJOS!!!
