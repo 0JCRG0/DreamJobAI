@@ -23,7 +23,7 @@ def truncated_string(
     string: str,
     model: str,
     max_tokens: int,
-    print_warning: bool = True,
+    print_warning: bool = False,
 ) -> str:
     """Truncate a string to a maximum number of tokens."""
     encoding = tiktoken.encoding_for_model(model)
