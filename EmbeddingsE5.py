@@ -12,17 +12,28 @@ from utils.handy import *
 import pretty_errors
 from dotenv import load_dotenv
 import os
-from postgre2embedding import jobs_to_batches, jobs_ids, jobs_for_GPT
+from LoadAllJobs import *
+from LoadRecentJobs import *
 
 load_dotenv('.env')
 SAVE_PATH = os.getenv("SAVE_PATH")
 
-def embedding_e5_family(embedding_tokenizer: str, embedding_model: str):
-    INPUT_TEXT = jobs_to_batches(max_tokens=512, embedding_model="e5-large", print_warning=False)
+
+def embedding_e5_family(embedding_tokenizer: str, embedding_model: str, all_jobs: bool, chunk_size: int, max_tokens: int, print_warning: bool, file_name: str) -> list:
+    if all_jobs:
+        jobs_in_batches = all_jobs_to_batches(max_tokens, "e5", print_warning)
+        jobs_text = all_jobs_for_GPT(max_tokens, "e5", print_warning)
+        jobs_ids = all_jobs_ids
+    else:
+        jobs_in_batches = recent_jobs_to_batches(max_tokens,"e5", print_warning)
+        jobs_text = recent_jobs_for_GPT(max_tokens, "e5", print_warning)
+        jobs_ids = recent_jobs_ids
+    
+    INPUT_TEXT = jobs_in_batches
     TOKENIZER = AutoTokenizer.from_pretrained(embedding_tokenizer)
     MODEL = AutoModel.from_pretrained(embedding_model)
 
-    CHUNK_SIZE = 64
+    CHUNK_SIZE = chunk_size
 
     def average_pool(last_hidden_states: Tensor,
                     attention_mask: Tensor) -> Tensor:
@@ -32,7 +43,7 @@ def embedding_e5_family(embedding_tokenizer: str, embedding_model: str):
     def save_embeddings_to_parquet(embeddings, parquet_filename):
         df_data = {
         'ids': jobs_ids,
-        'text_data': jobs_for_GPT(700, "e5-large", False),
+        'text_data': jobs_text,
         'embeddings': list(embeddings)
     }
         df = pd.DataFrame(df_data)
@@ -72,10 +83,10 @@ def embedding_e5_family(embedding_tokenizer: str, embedding_model: str):
 
     # Concatenate embeddings and save to a single Parquet file
     all_embeddings = np.vstack(embeddings_list)
-    save_embeddings_to_parquet(all_embeddings, f'{embedding_model}_embeddings.parquet')
+    save_embeddings_to_parquet(all_embeddings, f'{file_name}.parquet')
 
 if __name__ == "__main__":
-    embedding_e5_family("intfloat/e5-large-v2", "intfloat/e5-large-v2")
+    embedding_e5_family(embedding_tokenizer="intfloat/e5-base-v2", embedding_model="intfloat/e5-base-v2", all_jobs=False, chunk_size=15, max_tokens=512, print_warning=False, file_name="test_e5_base")
 
     """
     tokeinizer= intfloat/e5-large-v2

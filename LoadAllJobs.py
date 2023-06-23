@@ -34,12 +34,15 @@ model = "gpt-3.5-turbo"  # only matters insofar as it selects which tokenizer to
 """
 
 TODO: REMEMBER THE NEW PLAN IS AS FOLLOWS:
+    TODO: 1. Connect e5 & openai embeddings to LoadRecentJobs 
+    TODO: 2. Use function in loader to concatenate main embeddings with recent
+    TODO: 3. Recuerda hacer un trigger para una tabla basada en no_usa,
+            la cual siempre filtre trabajos que esten a una semana de distancia del día presente.
+            Por ejemplo, hoy es 10 de enero, el filtro aceptaría a los trabajos encontrados desde el 3 de enero,
+            pero el día de mañana (11 de enero) el filtro se le suma +1 por lo que el corte sería el 4 de enero,
+            así sucesivamente.
+            3.1. This table will be loaded for subsequent embedding (all jobs & recent jobs). NOT no_usa
 
-    TODO 1. Incorporate new postgre function which queries jobs that were added three hours ago.
-    TODO 2. You already have embeddings for all the jobs by ada, but you need to do that with either e5-large-v2 or e5-base-v2
-    TODO 3. Function to add the most recent gathered jobs to the parquet file with all the jobs.
-        TODO 3.1. This solves cost & speed (You can either use openai or e5 -this will depend on performance & other trade-offs)
-    
 
 """
 
@@ -94,13 +97,13 @@ def rows_to_nested_list(all_rows: list =  fetch_data_from_table("no_usa")) -> li
     jobs_ids = cleaned_ids
     return jobs_ids, jobs_info
 
-jobs_ids, jobs_info= rows_to_nested_list()
+all_jobs_ids, jobs_info= rows_to_nested_list()
 #print(jobs_ids[0], type(jobs_ids), len(jobs_ids))
 #print(jobs_info[0], type(jobs_info), len(jobs_info))
 
 
 """ THIS ONE CONTAINS *NO* PREPROCESSED JOB INFOs"""
-def jobs_for_GPT(max_tokens: int, embedding_model:str, print_warning: bool = True) -> list:
+def all_jobs_for_GPT(max_tokens: int, embedding_model:str, print_warning: bool = True) -> list:
     batches = []
     total_tokens = 0
     truncation_counter = 0  # Counter for truncations
@@ -122,7 +125,7 @@ def jobs_for_GPT(max_tokens: int, embedding_model:str, print_warning: bool = Tru
     #Get approximate cost for embeddings
     if embedding_model == "openai":
         approximate_cost = round((total_tokens / 1000) * 0.0004, 4)
-    elif embedding_model == "e5-large":
+    elif embedding_model == "e5":
         approximate_cost = 0
 
     if print_warning:
@@ -140,7 +143,7 @@ def jobs_for_GPT(max_tokens: int, embedding_model:str, print_warning: bool = Tru
     return batches
 
 """ This one is PREPROCESSED JOB INFO -> USED FOR EMBEDDINGS """
-def jobs_to_batches(max_tokens: int, embedding_model: str, print_warning: bool = True) -> list:
+def all_jobs_to_batches(max_tokens: int, embedding_model: str, print_warning: bool = True) -> list:
     batches = []
     total_tokens = 0
     truncation_counter = 0  # Counter for truncations
@@ -164,7 +167,7 @@ def jobs_to_batches(max_tokens: int, embedding_model: str, print_warning: bool =
     #Get approximate cost for embeddings
     if embedding_model == "openai":
         approximate_cost = round((total_tokens / 1000) * 0.0004, 4)
-    elif embedding_model == "e5-large":
+    elif embedding_model == "e5":
         approximate_cost = 0
     
     if print_warning:
@@ -185,5 +188,5 @@ def jobs_to_batches(max_tokens: int, embedding_model: str, print_warning: bool =
     
 if __name__ == "__main__":
     """ 1st argument: token limit, 2nd arg: embedding model"""
-    #jobs_for_GPT(512, "e5-large")
-    jobs_to_batches(512, "openai")
+    #all_jobs_for_GPT(512, "e5-large")
+    all_jobs_to_batches(512, "openai")
