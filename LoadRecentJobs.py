@@ -58,10 +58,7 @@ def fetch_data_from_table(table_name:str) -> list :
 
     return ids, titles, descriptions, locations
 
-ids, titles, descriptions, locations = fetch_data_from_table("no_usa")
-
-print(titles, len(titles))
-print(locations, len(locations))
+#ids, titles, descriptions, locations = fetch_data_from_table("no_usa")
 
 
 def rows_to_nested_list(all_rows: list =  fetch_data_from_table("no_usa")) -> list:
@@ -85,10 +82,10 @@ def rows_to_nested_list(all_rows: list =  fetch_data_from_table("no_usa")) -> li
     jobs_ids = cleaned_ids
     return jobs_ids, jobs_info
 
-jobs_ids, jobs_info= rows_to_nested_list()
+recent_jobs_ids, jobs_info= rows_to_nested_list()
 
 """ THIS ONE CONTAINS *NO* PREPROCESSED JOB INFOs"""
-def jobs_for_GPT(max_tokens: int, embedding_model:str, print_warning: bool = True) -> list:
+def recent_jobs_for_GPT(max_tokens: int, embedding_model:str, print_warning: bool = True) -> list:
     batches = []
     total_tokens = 0
     truncation_counter = 0  # Counter for truncations
@@ -110,7 +107,7 @@ def jobs_for_GPT(max_tokens: int, embedding_model:str, print_warning: bool = Tru
     #Get approximate cost for embeddings
     if embedding_model == "openai":
         approximate_cost = round((total_tokens / 1000) * 0.0004, 4)
-    elif embedding_model == "e5-large":
+    elif embedding_model == "e5":
         approximate_cost = 0
 
     if print_warning:
@@ -128,7 +125,7 @@ def jobs_for_GPT(max_tokens: int, embedding_model:str, print_warning: bool = Tru
     return batches
 
 """ This one is PREPROCESSED JOB INFO -> USED FOR EMBEDDINGS """
-def jobs_to_batches(max_tokens: int, embedding_model: str, print_warning: bool = True) -> list:
+def recent_jobs_to_batches(max_tokens: int, embedding_model: str, print_warning: bool = True) -> list:
     batches = []
     total_tokens = 0
     truncation_counter = 0  # Counter for truncations
@@ -152,7 +149,7 @@ def jobs_to_batches(max_tokens: int, embedding_model: str, print_warning: bool =
     #Get approximate cost for embeddings
     if embedding_model == "openai":
         approximate_cost = round((total_tokens / 1000) * 0.0004, 4)
-    elif embedding_model == "e5-large":
+    elif embedding_model == "e5":
         approximate_cost = 0
     
     if print_warning:
@@ -172,5 +169,5 @@ def jobs_to_batches(max_tokens: int, embedding_model: str, print_warning: bool =
 
 if __name__ == "__main__":
     """1st argument: token limit, 2nd arg: embedding model"""
-    #jobs_for_GPT(512, "e5-large")
-    jobs_to_batches(512, "e5-large")
+    #recent_jobs_for_GPT(512, "e5-large")
+    recent_jobs_to_batches(512, "e5-large")

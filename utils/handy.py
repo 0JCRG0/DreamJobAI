@@ -1,6 +1,12 @@
 import re
 from chromadb.utils import embedding_functions
 import tiktoken
+import logging
+from dotenv import load_dotenv
+import os
+
+load_dotenv(".env")
+LOGGER_PATH = os.getenv("LOGGER_PATH")
 
 def clean_rows(s):
     if not isinstance(s, str):
@@ -37,3 +43,12 @@ def num_tokens(text: str, model: str ="gpt-3.5-turbo") -> int:
     #Return the number of tokens in a string.
     encoding = tiktoken.encoding_for_model(model)
     return len(encoding.encode(text))
+
+def LoggingMain():
+    # Define a custom format with bold text
+    log_format = '%(asctime)s %(levelname)s: \n%(message)s\n'
+
+    # Configure the logger with the custom format
+    logging.basicConfig(filename=LOGGER_PATH,
+                        level=logging.INFO,
+                        format=log_format)
