@@ -29,6 +29,7 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 """
 Model
 """
+
 model = "gpt-3.5-turbo"  # only matters insofar as it selects which tokenizer to use
 
 def fetch_data_from_table(table_name:str) -> list :
@@ -101,7 +102,6 @@ def recent_jobs_for_GPT(max_tokens: int, embedding_model:str, print_warning: boo
             batches.append(job_truncated)
             truncation_counter += 1
 
-    
         total_tokens += num_tokens(job)  # Update the total tokens by adding the tokens of the current job
     
     #Get approximate cost for embeddings
@@ -168,6 +168,4 @@ def recent_jobs_to_batches(max_tokens: int, embedding_model: str, print_warning:
 
 
 if __name__ == "__main__":
-    """1st argument: token limit, 2nd arg: embedding model"""
-    #recent_jobs_for_GPT(512, "e5-large")
     recent_jobs_to_batches(512, "e5-large")

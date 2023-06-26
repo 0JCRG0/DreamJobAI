@@ -6,7 +6,6 @@ import ast  # for converting embeddings saved as strings back to arrays
 from scipy import spatial
 import pretty_errors
 from preprocess import individual_preprocess
-from displayfunction import display
 from dotenv import load_dotenv
 
 """
