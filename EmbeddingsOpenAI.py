@@ -1,12 +1,16 @@
 import openai
 import pandas as pd
 import chromadb
+from datetime import datetime
 from utils.handy import *
 from chromadb.utils import embedding_functions
 from dotenv import load_dotenv
 from chromadb.config import Settings
 import os
 import pretty_errors
+import pandas as pd
+import pyarrow as pa
+import pyarrow.parquet as pq
 from LoadAllJobs import all_jobs_to_batches, all_jobs_ids, all_jobs_for_GPT
 from LoadRecentJobs import recent_jobs_for_GPT, recent_jobs_to_batches, recent_jobs_ids
 """ Env variables """
@@ -14,19 +18,25 @@ from LoadRecentJobs import recent_jobs_for_GPT, recent_jobs_to_batches, recent_j
 
 load_dotenv('.env')
 SAVE_PATH = os.getenv("SAVE_PATH")
+OPENAI_PREEXISTING_JOBS = os.getenv("OPENAI_PREEXISTING_JOBS")
+OPENAI_TODAY_JOBS = os.getenv("OPENAI_RECENT_JOBS")
+OPENAI_TOTAL_JOBS = os.getenv("OPENAI_TOTAL_JOBS")
+
 #Setting API key
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 #CALL IT
-def embeddings_openai(all: bool, max_tokens: int, model_for_cost: str, db: str, file_name: str):
-    if all:
+def embeddings_openai(all_jobs: bool, max_tokens: int, model_for_cost: str, db: str):
+    if all_jobs:
         jobs_in_batches = all_jobs_to_batches(max_tokens, model_for_cost, False)
         jobs_text = all_jobs_for_GPT(max_tokens, model_for_cost, False)
         jobs_ids = all_jobs_ids
+        file_name = "openai_preexisting"
     else:
         jobs_in_batches = recent_jobs_to_batches(max_tokens,model_for_cost, False)
         jobs_text = recent_jobs_for_GPT(max_tokens, model_for_cost, False)
         jobs_ids = recent_jobs_ids
+        file_name = "openai_today"
     # calculate embeddings
     EMBEDDING_MODEL = "text-embedding-ada-002"  # OpenAI's embedding model
     BATCH_SIZE = 50  # you can submit up to 2048 embedding inputs per request
@@ -43,10 +53,6 @@ def embeddings_openai(all: bool, max_tokens: int, model_for_cost: str, db: str, 
             batch_embeddings = [e["embedding"] for e in response["data"]]
             embeddings.extend(batch_embeddings)
         return embeddings
-
-
-    #CHROMA -- Below
-
 
     def saving_openai_embeddings()-> list:
         if db == "chromadb":
@@ -79,6 +85,22 @@ def embeddings_openai(all: bool, max_tokens: int, model_for_cost: str, db: str, 
             df.to_csv(SAVE_PATH+ f"/{file_name}.csv", index=False)
             print(df.head())
     saving_openai_embeddings()
+    
+    #If you are embedding jobs from today concat it with all_jobs
+    if all_jobs == False:
+        def concat_parquet_openai():
+            # Read the Parquet files
+            recent_jobs = pq.read_table(OPENAI_TODAY_JOBS)
+            preexisting_jobs = pq.read_table(OPENAI_PREEXISTING_JOBS)
+            
+            # Append the tables
+            appended_jobs = pa.concat_tables([recent_jobs, preexisting_jobs])
+            
+            # Write the appended table to a new Parquet file
+            pq.write_table(appended_jobs, OPENAI_TOTAL_JOBS)
+            now = datetime.now()
+            logging.info(f"OpenAI embeddings have been appended at {now}")
+        concat_parquet_openai()
 
 if __name__ == "__main__":
-    embeddings_openai(False, 512, "openai", "parquet", "test2")
+    embeddings_openai(all_jobs=False, max_tokens=512, model_for_cost="openai", db="parquet")
