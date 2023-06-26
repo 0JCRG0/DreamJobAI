@@ -7,6 +7,9 @@ from tqdm import tqdm
 from transformers import AutoTokenizer, AutoModel
 import pretty_errors
 import pandas as pd
+from datetime import datetime
+import pyarrow as pa
+import pyarrow.parquet as pq
 import numpy as np
 from utils.handy import *
 import pretty_errors
@@ -17,17 +20,23 @@ from LoadRecentJobs import *
 
 load_dotenv('.env')
 SAVE_PATH = os.getenv("SAVE_PATH")
+E5_BASE_PREEXISTING_JOBS = os.getenv("E5_BASE_PREEXISTING_JOBS")
+E5_BASE_TODAY_JOBS = os.getenv("E5_BASE_RECENT_JOBS")
+E5_BASE_TOTAL_JOBS = os.getenv("E5_BASE_TOTAL_JOBS")
 
+LoggingMain()
 
-def embedding_e5_family(embedding_tokenizer: str, embedding_model: str, all_jobs: bool, chunk_size: int, max_tokens: int, print_warning: bool, file_name: str) -> list:
+def embedding_e5_family(embedding_tokenizer: str, embedding_model: str, all_jobs: bool, chunk_size: int, print_warning: bool) -> list:
     if all_jobs:
-        jobs_in_batches = all_jobs_to_batches(max_tokens, "e5", print_warning)
-        jobs_text = all_jobs_for_GPT(max_tokens, "e5", print_warning)
+        jobs_in_batches = all_jobs_to_batches(512, "e5", print_warning)
+        jobs_text = all_jobs_for_GPT(512, "e5", print_warning)
         jobs_ids = all_jobs_ids
+        file_name = "e5_base_preexisting.parquet"
     else:
-        jobs_in_batches = recent_jobs_to_batches(max_tokens,"e5", print_warning)
-        jobs_text = recent_jobs_for_GPT(max_tokens, "e5", print_warning)
+        jobs_in_batches = recent_jobs_to_batches(512,"e5", print_warning)
+        jobs_text = recent_jobs_for_GPT(512, "e5", print_warning)
         jobs_ids = recent_jobs_ids
+        file_name = "e5_base_today.parquet"
     
     INPUT_TEXT = jobs_in_batches
     TOKENIZER = AutoTokenizer.from_pretrained(embedding_tokenizer)
@@ -82,11 +91,34 @@ def embedding_e5_family(embedding_tokenizer: str, embedding_model: str, all_jobs
             embeddings_list.append(batch_embeddings)
 
     # Concatenate embeddings and save to a single Parquet file
-    all_embeddings = np.vstack(embeddings_list)
-    save_embeddings_to_parquet(all_embeddings, f'{file_name}.parquet')
+    final_embeddings = np.vstack(embeddings_list)
+    save_embeddings_to_parquet(final_embeddings, file_name)
+
+    #If you are embedding jobs from today concat it with all_jobs
+    if all_jobs == False:
+        def concat_parquet_E5():
+            if embedding_model == "intfloat/e5-base-v2":
+                today = E5_BASE_TODAY_JOBS
+                preexisting = E5_BASE_PREEXISTING_JOBS
+                total = E5_BASE_TOTAL_JOBS
+            else:
+                print("NOT DEFINED")
+                logging.error("NOT DEFINED")
+            # Read the Parquet files
+            today_jobs = pq.read_table(today)
+            preexisting_jobs = pq.read_table(preexisting)
+            
+            # Append the tables
+            appended_jobs = pa.concat_tables([today_jobs, preexisting_jobs])
+            
+            # Write the appended table to a new Parquet file
+            pq.write_table(appended_jobs, total)
+            now = datetime.now()
+            logging.info(f"{embedding_model} embeddings have been appended at {now}")
+        concat_parquet_E5()
 
 if __name__ == "__main__":
-    embedding_e5_family(embedding_tokenizer="intfloat/e5-base-v2", embedding_model="intfloat/e5-base-v2", all_jobs=False, chunk_size=15, max_tokens=512, print_warning=False, file_name="test_e5_base")
+    embedding_e5_family(embedding_tokenizer="intfloat/e5-base-v2", embedding_model="intfloat/e5-base-v2", all_jobs=False, chunk_size=15, print_warning=False)
 
     """
     tokeinizer= intfloat/e5-large-v2
