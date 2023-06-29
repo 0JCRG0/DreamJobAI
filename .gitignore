@@ -3,3 +3,5 @@
 *.bin
 *.pkl
 *.csv
+/e5
+/.cfg
