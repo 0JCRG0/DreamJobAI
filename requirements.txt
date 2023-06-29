@@ -3,9 +3,11 @@ pandas
 chromadb
 python-dotenv
 pretty_errors
-psycopg2
+psycopg2-binary
 tiktoken
 transformers
 tensor
 nltk
 langdetect
+pyarrow
+tqdm
