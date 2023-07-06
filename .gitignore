@@ -5,3 +5,5 @@
 *.csv
 /e5
 /.cfg
+__pycache__/
+utils/__pycache__
