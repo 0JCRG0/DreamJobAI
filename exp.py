@@ -22,7 +22,7 @@ def convert_suitability(json_data):
     return suitability_values
 
 z = """
-{
+[{
   "id": "44019",
   "suitability": "Moderately Suitable"
 },
@@ -61,7 +61,7 @@ z = """
 {
   "id": "35737",
   "suitability": "Not Suitable"
-}
+}]
 """
 
 print(convert_suitability(z))
