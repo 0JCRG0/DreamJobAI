@@ -40,9 +40,9 @@ Also, extract any financial aspects and additional perks associated with the job
 assistant_query=""" Remember to think step by step.
 """
 
-openai.aiosession.set(ClientSession())
 
-async def summarise_job_gpt(job_description: str) -> Tuple[str, float]:
+async def async_summarise_job_gpt(session, job_description: str) -> Tuple[str, float]:
+    openai.aiosession.set(session)
     response = await openai.ChatCompletion.acreate(
         messages=[
             {'role': 'user', 'content': system_query},
@@ -71,6 +71,6 @@ async def summarise_job_gpt(job_description: str) -> Tuple[str, float]:
     return response_message, total_cost
 
 # At the end of your program, close the http session
-async def close_session():
+"""async def close_session():
     # At the end of your program, close the http session
-    await openai.aiosession.get().close()
+    await openai.aiosession.get().close()"""
