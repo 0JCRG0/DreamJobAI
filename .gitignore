@@ -2,9 +2,8 @@
 *.parquet
 *.bin
 *.pkl
-*.csv
+*.txt
 /e5
 /.cfg
 __pycache__/
 utils/__pycache__
-data/
