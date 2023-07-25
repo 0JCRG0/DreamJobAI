@@ -16,6 +16,7 @@ from datetime import datetime, timedelta
 from utils.handy import *
 from preprocess import *
 from utils.AsyncSummariseJob import async_summarise_job_gpt
+from EmbeddingsOpenAI import embeddings_openai
 
 
 """
@@ -48,10 +49,10 @@ def fetch_data_from_table(table_name:str) -> list :
 
 	# Calculate the timestamp for 3 hours ago
 	two_hours_ago = datetime.now() - timedelta(hours=2)
-	
+
 	# Fetch rows from the table with the specified conditions
 	cur.execute(f"SELECT id, title, description, location FROM {table_name} WHERE timestamp >= %s", (two_hours_ago,))
-	
+
 	#cur.execute(f"SELECT id, title, description, location FROM {table_name}")
 
 	# Fetch all rows from the table
@@ -87,22 +88,22 @@ def raw_descriptions_to_batches(max_tokens: int, embedding_model: str, print_mes
 			truncation_counter += 1
 
 		total_tokens += num_tokens(i)  # Update the total tokens by adding the tokens of the current job
-	
+
 	#Get approximate cost for embeddings
 	if embedding_model == "openai":
 		approximate_cost = round((total_tokens / 1000) * 0.0004, 4)
 	elif embedding_model == "e5":
 		approximate_cost = 0
-	
+
 	average_tokens_per_batch = total_tokens / len(batches)
-	
+
 	if print_messages:
 		for i, batch in enumerate(batches, start=1):
 			print(f"Batch {i}:")
 			print("".join(batch))
 			print(f"Tokens per batch:", num_tokens(batch))
 			print("\n")
-		
+
 		print(f"TOTAL NUMBER OF BATCHES:", len(batches))
 		print(f"TOTAL NUMBER OF TOKENS:", total_tokens)  # Print the total number of tokens
 		print(f"NUMBER OF TRUNCATIONS:", truncation_counter)  # Print the number of truncations
@@ -144,7 +145,7 @@ async def summarise_descriptions(descriptions: list) -> list:
 		else:
 			print(f"Description with index {i} could not be summarised after 3 attempts.")
 			return i, text, 0
-	
+
 	async with ClientSession() as session:
 		tasks = [process_description(session, i, text) for i, text in enumerate(descriptions)]
 		results = await asyncio.gather(*tasks)
@@ -162,27 +163,20 @@ async def summarise_descriptions(descriptions: list) -> list:
 	return descriptions_summarised, total_cost, elapsed_time
 
 
-def save_to_text_file(total_cost, processed_time, filename):
-	with open(SAVE_PATH + f'{filename}.txt', 'w') as file:
-		file.write(f"Total Cost: {total_cost}\n")
-		file.write(f"Processed Time: {processed_time} seconds\n")
-
-
-async def main():
+async def main(embedding_model:str):
 	raw_summarised_batches, raw_total_cost, raw_processed_time = await summarise_descriptions(raw_batches)
 
 	#SAVE THE DATA...
 
-	df_raw_summarised_batches = pd.DataFrame({
-		"ids": ids,
-		"batches": raw_batches,
-		"summaries": raw_summarised_batches})
+	save_df_to_csv(ids, raw_batches, raw_summarised_batches)
 
 	save_to_text_file(raw_total_cost, raw_processed_time, "/raw_summarised_batches")
 
-	df_raw_summarised_batches.to_csv(SAVE_PATH + "/raw_summarised_batches.csv", index=False)
-
+	#Embedding starts
+	#if embedding_model == "openai":
+		#embeddings_openai(batches_to_embed= raw_summarised_batches, batches_ids=ids, original_descriptions=raw_batches, db="parquet", filename="openai_embeddings_summary")
+	#elif embedding_model == "e5":
 
 if __name__ == "__main__":
-	asyncio.run(main())
+	asyncio.run(main("openai"))
 
