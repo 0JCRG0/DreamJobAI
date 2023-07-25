@@ -11,8 +11,6 @@ import pretty_errors
 import pandas as pd
 import pyarrow as pa
 import pyarrow.parquet as pq
-from LoadAllJobs import all_jobs_to_batches, all_jobs_ids, all_jobs_for_GPT
-from LoadRecentJobs import recent_jobs_for_GPT, recent_jobs_to_batches, recent_jobs_ids
 """ Env variables """
 
 

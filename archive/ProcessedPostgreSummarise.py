@@ -12,7 +12,7 @@ from chromadb.utils import embedding_functions
 from chromadb.config import Settings
 from datetime import datetime, timedelta
 from utils.handy import *
-from preprocess import *
+from utils.preprocess import *
 from utils.SummariseJob import summarise_job_gpt
 
 

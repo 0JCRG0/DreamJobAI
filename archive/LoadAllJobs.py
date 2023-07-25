@@ -9,7 +9,7 @@ import chromadb
 from chromadb.utils import embedding_functions
 from dotenv import load_dotenv
 from chromadb.config import Settings
-from preprocess import individual_preprocess
+from utils.preprocess import individual_preprocess
 
 """
 Env variables

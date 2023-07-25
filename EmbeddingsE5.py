@@ -15,8 +15,6 @@ from utils.handy import *
 import pretty_errors
 from dotenv import load_dotenv
 import os
-from LoadAllJobs import *
-from LoadRecentJobs import *
 
 load_dotenv('.env')
 SAVE_PATH = os.getenv("SAVE_PATH")
@@ -25,6 +23,8 @@ E5_BASE_TODAY_JOBS = os.getenv("E5_BASE_RECENT_JOBS")
 E5_BASE_TOTAL_JOBS = os.getenv("E5_BASE_TOTAL_JOBS")
 
 LoggingMain()
+
+#TODO: MODIFY SO IT CAN BE CALLED BY postgresummary
 
 def embedding_e5_family(embedding_tokenizer: str, embedding_model: str, all_jobs: bool, chunk_size: int, print_warning: bool) -> list:
     if all_jobs:

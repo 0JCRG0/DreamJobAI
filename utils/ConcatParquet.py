@@ -3,8 +3,8 @@ import pyarrow as pa
 import pyarrow.parquet as pq
 from dotenv import load_dotenv
 import os
-from LoadAllJobs import *
-from LoadRecentJobs import *
+from archive.LoadAllJobs import *
+from archive.LoadRecentJobs import *
 from datetime import datetime
 
 load_dotenv('.env')

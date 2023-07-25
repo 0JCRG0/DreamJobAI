@@ -14,7 +14,6 @@ from chromadb.utils import embedding_functions
 from chromadb.config import Settings
 from datetime import datetime, timedelta
 from utils.handy import *
-from preprocess import *
 from utils.AsyncSummariseJob import async_summarise_job_gpt
 from EmbeddingsOpenAI import embeddings_openai
 
