@@ -7,3 +7,1398 @@ error_code=context_length_exceeded error_message="This model's maximum context l
 2023-06-26 22:01:22,098 INFO: 
 error_code=context_length_exceeded error_message="This model's maximum context length is 4097 tokens. However, your messages resulted in 4229 tokens. Please reduce the length of the messages." error_param=messages error_type=invalid_request_error message='OpenAI API error received' stream_error=False
 
+2023-07-24 23:13:37,401 WARNING: 
+Constructor parameter should be str. Retrying attempt 1...
+
+2023-07-24 23:13:39,407 WARNING: 
+Constructor parameter should be str. Retrying attempt 1...
+
+2023-07-24 23:13:41,411 WARNING: 
+Constructor parameter should be str. Retrying attempt 1...
+
+2023-07-24 23:13:43,416 WARNING: 
+Constructor parameter should be str. Retrying attempt 1...
+
+2023-07-24 23:13:45,423 WARNING: 
+Constructor parameter should be str. Retrying attempt 1...
+
+2023-07-24 23:13:47,426 WARNING: 
+Constructor parameter should be str. Retrying attempt 1...
+
+2023-07-24 23:13:49,432 WARNING: 
+Constructor parameter should be str. Retrying attempt 1...
+
+2023-07-24 23:13:51,437 WARNING: 
+Constructor parameter should be str. Retrying attempt 1...
+
+2023-07-24 23:13:53,441 WARNING: 
+Constructor parameter should be str. Retrying attempt 1...
+
+2023-07-24 23:13:55,446 WARNING: 
+Constructor parameter should be str. Retrying attempt 1...
+
+2023-07-24 23:13:57,452 WARNING: 
+Constructor parameter should be str. Retrying attempt 1...
+
+2023-07-24 23:13:59,457 WARNING: 
+Constructor parameter should be str. Retrying attempt 1...
+
+2023-07-24 23:14:01,460 WARNING: 
+Constructor parameter should be str. Retrying attempt 1...
+
+2023-07-24 23:14:03,464 WARNING: 
+Constructor parameter should be str. Retrying attempt 1...
+
+2023-07-24 23:14:05,470 WARNING: 
+Constructor parameter should be str. Retrying attempt 1...
+
+2023-07-24 23:14:07,476 WARNING: 
+Constructor parameter should be str. Retrying attempt 1...
+
+2023-07-24 23:14:09,255 ERROR: 
+Task exception was never retrieved
+future: <Task finished name='Task-1' coro=<main() done, defined at /Users/juanreyesgarcia/Library/CloudStorage/OneDrive-FundacionUniversidaddelasAmericasPuebla/DEVELOPER/PROJECTS/DreamedJobAI/PostgreSummarise.py:169> exception=KeyboardInterrupt()>
+Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Library/CloudStorage/OneDrive-FundacionUniversidaddelasAmericasPuebla/DEVELOPER/PROJECTS/DreamedJobAI/PostgreSummarise.py", line 133, in process_description
+    description_summary, cost = await async_summarise_job_gpt(text)
+  File "/Users/juanreyesgarcia/Library/CloudStorage/OneDrive-FundacionUniversidaddelasAmericasPuebla/DEVELOPER/PROJECTS/DreamedJobAI/utils/AsyncSummariseJob.py", line 46, in async_summarise_job_gpt
+    openai.aiosession.set(ClientSession(session))
+  File "/Users/juanreyesgarcia/Library/CloudStorage/OneDrive-FundacionUniversidaddelasAmericasPuebla/DEVELOPER/PROJECTS/DreamedJobAI/e5/lib/python3.10/site-packages/aiohttp/client.py", line 233, in __init__
+    self._base_url = URL(base_url)
+  File "/Users/juanreyesgarcia/Library/CloudStorage/OneDrive-FundacionUniversidaddelasAmericasPuebla/DEVELOPER/PROJECTS/DreamedJobAI/e5/lib/python3.10/site-packages/yarl/_url.py", line 179, in __new__
+    raise TypeError("Constructor parameter should be str")
+TypeError: Constructor parameter should be str
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Library/CloudStorage/OneDrive-FundacionUniversidaddelasAmericasPuebla/DEVELOPER/PROJECTS/DreamedJobAI/PostgreSummarise.py", line 185, in <module>
+    asyncio.run(main())
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/runners.py", line 47, in run
+    _cancel_all_tasks(loop)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/runners.py", line 63, in _cancel_all_tasks
+    loop.run_until_complete(tasks.gather(*to_cancel, return_exceptions=True))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/Users/juanreyesgarcia/Library/CloudStorage/OneDrive-FundacionUniversidaddelasAmericasPuebla/DEVELOPER/PROJECTS/DreamedJobAI/PostgreSummarise.py", line 170, in main
+    raw_summarised_batches, raw_total_cost, raw_processed_time = await summarise_descriptions(raw_batches)
+  File "/Users/juanreyesgarcia/Library/CloudStorage/OneDrive-FundacionUniversidaddelasAmericasPuebla/DEVELOPER/PROJECTS/DreamedJobAI/PostgreSummarise.py", line 148, in summarise_descriptions
+    results = await asyncio.gather(*tasks)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/Users/juanreyesgarcia/Library/CloudStorage/OneDrive-FundacionUniversidaddelasAmericasPuebla/DEVELOPER/PROJECTS/DreamedJobAI/PostgreSummarise.py", line 142, in process_description
+    time.sleep(2**attempts)  # exponential backoff
+KeyboardInterrupt
+2023-07-24 23:26:51,606 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=1131 request_id=a13f1cf3fd3470dcf552a3fc1672ba1f response_code=200
+
+2023-07-24 23:26:51,610 INFO: 
+Description's index 29 just added.
+
+2023-07-24 23:26:52,113 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=1043 request_id=ce7736b8ccf97c533440e98b3f3417d0 response_code=200
+
+2023-07-24 23:26:52,114 INFO: 
+Description's index 28 just added.
+
+2023-07-24 23:26:54,779 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=4266 request_id=c405a441a836a493a71fd4f74cad4066 response_code=200
+
+2023-07-24 23:26:54,779 INFO: 
+Description's index 14 just added.
+
+2023-07-24 23:26:55,689 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5288 request_id=20310bf8734939bea8af96b7172ea887 response_code=200
+
+2023-07-24 23:26:55,689 INFO: 
+Description's index 22 just added.
+
+2023-07-24 23:26:56,193 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5172 request_id=19d43ade6c1c733714ce71e7e42683b6 response_code=200
+
+2023-07-24 23:26:56,193 INFO: 
+Description's index 10 just added.
+
+2023-07-24 23:26:56,696 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6011 request_id=45180b8df87de56bf35d5e2835841607 response_code=200
+
+2023-07-24 23:26:56,697 INFO: 
+Description's index 25 just added.
+
+2023-07-24 23:26:57,200 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6223 request_id=cd38695090bfc253e7654c9c67fd4066 response_code=200
+
+2023-07-24 23:26:57,201 INFO: 
+Description's index 17 just added.
+
+2023-07-24 23:26:57,709 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6331 request_id=44feb4ca8695430f002bd0286375c018 response_code=200
+
+2023-07-24 23:26:57,710 INFO: 
+Description's index 20 just added.
+
+2023-07-24 23:26:58,215 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6307 request_id=ee3f2444b19e448f7b7ffcd9e75f4971 response_code=200
+
+2023-07-24 23:26:58,216 INFO: 
+Description's index 55 just added.
+
+2023-07-24 23:26:58,718 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6408 request_id=9a47b79188c55dded0d8642df7d8bba5 response_code=200
+
+2023-07-24 23:26:58,719 INFO: 
+Description's index 58 just added.
+
+2023-07-24 23:26:59,224 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6431 request_id=06f306afa02202e9022bc660c31fd37f response_code=200
+
+2023-07-24 23:26:59,224 INFO: 
+Description's index 52 just added.
+
+2023-07-24 23:26:59,729 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6695 request_id=f80460678ce5414fa4db7a5527e637e5 response_code=200
+
+2023-07-24 23:26:59,729 INFO: 
+Description's index 6 just added.
+
+2023-07-24 23:27:00,234 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6600 request_id=6af8a6fa4b594d6b047ff9e78fa8afc4 response_code=200
+
+2023-07-24 23:27:00,235 INFO: 
+Description's index 16 just added.
+
+2023-07-24 23:27:00,739 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6585 request_id=de1ff4d5d54609ea748cbcf574bde545 response_code=200
+
+2023-07-24 23:27:00,739 INFO: 
+Description's index 44 just added.
+
+2023-07-24 23:27:01,241 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6805 request_id=97eee648c119fb8bdb9a0e1cbfc21d93 response_code=200
+
+2023-07-24 23:27:01,242 INFO: 
+Description's index 18 just added.
+
+2023-07-24 23:27:01,746 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6802 request_id=93d6b1e213c1e5080e16a880de56b7e5 response_code=200
+
+2023-07-24 23:27:01,747 INFO: 
+Description's index 48 just added.
+
+2023-07-24 23:27:02,252 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6921 request_id=ac3e43f9dfa87e060e70f70d2de25086 response_code=200
+
+2023-07-24 23:27:02,252 INFO: 
+Description's index 21 just added.
+
+2023-07-24 23:27:02,758 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6950 request_id=4da6171b9ac415b81ab736b734a6c970 response_code=200
+
+2023-07-24 23:27:02,758 INFO: 
+Description's index 9 just added.
+
+2023-07-24 23:27:03,262 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6922 request_id=aff17c5566892aa01303d4f0283f6f66 response_code=200
+
+2023-07-24 23:27:03,263 INFO: 
+Description's index 40 just added.
+
+2023-07-24 23:27:03,768 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7036 request_id=e69df1f71c7da233a571bdc6435baa9b response_code=200
+
+2023-07-24 23:27:03,769 INFO: 
+Description's index 11 just added.
+
+2023-07-24 23:27:04,272 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7025 request_id=c1cdf1d7951e66fa179f8baca5f81078 response_code=200
+
+2023-07-24 23:27:04,272 INFO: 
+Description's index 43 just added.
+
+2023-07-24 23:27:04,775 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7079 request_id=e3e61f4dd1600fb75785696f20a8231a response_code=200
+
+2023-07-24 23:27:04,776 INFO: 
+Description's index 23 just added.
+
+2023-07-24 23:27:05,278 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7194 request_id=289f1d3e4553554f550ad5fccf2b9534 response_code=200
+
+2023-07-24 23:27:05,279 INFO: 
+Description's index 49 just added.
+
+2023-07-24 23:27:05,780 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7229 request_id=e6aaf68583387b4c3108bcafcfea2a97 response_code=200
+
+2023-07-24 23:27:05,781 INFO: 
+Description's index 4 just added.
+
+2023-07-24 23:27:06,289 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7246 request_id=effc723c2d5924e900c6027aa651b536 response_code=200
+
+2023-07-24 23:27:06,289 INFO: 
+Description's index 30 just added.
+
+2023-07-24 23:27:06,795 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7457 request_id=5c8974c57ee1f1bca8a82d3f34ce7927 response_code=200
+
+2023-07-24 23:27:06,795 INFO: 
+Description's index 8 just added.
+
+2023-07-24 23:27:07,299 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7372 request_id=bd85490192fd27d427c9d1adfcdbb90d response_code=200
+
+2023-07-24 23:27:07,300 INFO: 
+Description's index 54 just added.
+
+2023-07-24 23:27:07,802 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7403 request_id=062d366f5995314c9f8772219604d480 response_code=200
+
+2023-07-24 23:27:07,802 INFO: 
+Description's index 47 just added.
+
+2023-07-24 23:27:08,308 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7474 request_id=3ee00bcfa3f43e82cb56ab49e51923a9 response_code=200
+
+2023-07-24 23:27:08,308 INFO: 
+Description's index 42 just added.
+
+2023-07-24 23:27:08,812 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7336 request_id=c3d0b5052ad40fd5c174816b4fe6fcc0 response_code=200
+
+2023-07-24 23:27:08,812 INFO: 
+Description's index 36 just added.
+
+2023-07-24 23:27:09,316 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7533 request_id=7cdd439ed0463b75fd36100e00a0990a response_code=200
+
+2023-07-24 23:27:09,317 INFO: 
+Description's index 33 just added.
+
+2023-07-24 23:27:09,822 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7386 request_id=d5e5a39bc387f6ef00fca8ba7d753ce1 response_code=200
+
+2023-07-24 23:27:09,822 INFO: 
+Description's index 37 just added.
+
+2023-07-24 23:27:10,326 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7658 request_id=6286ce8dcd9bc236c27b2c698d1dbb1f response_code=200
+
+2023-07-24 23:27:10,326 INFO: 
+Description's index 57 just added.
+
+2023-07-24 23:27:10,829 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7702 request_id=e2ba01d43d6c46783bd94dbbb445c92e response_code=200
+
+2023-07-24 23:27:10,830 INFO: 
+Description's index 31 just added.
+
+2023-07-24 23:27:11,336 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7616 request_id=cca0f9301d40e9a94862dad909531332 response_code=200
+
+2023-07-24 23:27:11,338 INFO: 
+Description's index 53 just added.
+
+2023-07-24 23:27:11,843 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7809 request_id=37117ac9f043b029d9909f206ef66c7c response_code=200
+
+2023-07-24 23:27:11,843 INFO: 
+Description's index 13 just added.
+
+2023-07-24 23:27:12,344 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7960 request_id=6fb7124fb303990f0f1bac7f04f14210 response_code=200
+
+2023-07-24 23:27:12,345 INFO: 
+Description's index 41 just added.
+
+2023-07-24 23:27:12,849 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8115 request_id=f5e643fb1751abc83cab4a34864f5639 response_code=200
+
+2023-07-24 23:27:12,850 INFO: 
+Description's index 5 just added.
+
+2023-07-24 23:27:13,353 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8122 request_id=f6e2424b781416525a2a001a3cfcacb1 response_code=200
+
+2023-07-24 23:27:13,354 INFO: 
+Description's index 2 just added.
+
+2023-07-24 23:27:13,859 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8214 request_id=69d8d4d5d94aa38dcffe75ce66382666 response_code=200
+
+2023-07-24 23:27:13,860 INFO: 
+Description's index 19 just added.
+
+2023-07-24 23:27:14,365 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8121 request_id=a4cf362eb86286e832f3904a9dacaafa response_code=200
+
+2023-07-24 23:27:14,366 INFO: 
+Description's index 24 just added.
+
+2023-07-24 23:27:14,871 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8357 request_id=9e0d02a4e7439480ff268364c57a1238 response_code=200
+
+2023-07-24 23:27:14,872 INFO: 
+Description's index 46 just added.
+
+2023-07-24 23:27:15,376 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8525 request_id=f72bf6c63aef7a214e1540cda6e824d9 response_code=200
+
+2023-07-24 23:27:15,377 INFO: 
+Description's index 7 just added.
+
+2023-07-24 23:27:15,879 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8501 request_id=d9c293045ea3e4f793ed235336d6ba9e response_code=200
+
+2023-07-24 23:27:15,880 INFO: 
+Description's index 50 just added.
+
+2023-07-24 23:27:16,380 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8576 request_id=b58ce5a9c26ea5b506eed02febf49195 response_code=200
+
+2023-07-24 23:27:16,381 INFO: 
+Description's index 3 just added.
+
+2023-07-24 23:27:16,882 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8617 request_id=7740c2dd1d59b29723ec4bcc5c17ed17 response_code=200
+
+2023-07-24 23:27:16,883 INFO: 
+Description's index 39 just added.
+
+2023-07-24 23:27:17,389 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8853 request_id=975a7669d28baca0d7068132da65b88f response_code=200
+
+2023-07-24 23:27:17,389 INFO: 
+Description's index 15 just added.
+
+2023-07-24 23:27:17,891 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8871 request_id=921f04fe3943dfb9035da1cab1dfe9a2 response_code=200
+
+2023-07-24 23:27:17,892 INFO: 
+Description's index 27 just added.
+
+2023-07-24 23:27:18,398 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9243 request_id=3fe37f745b8324aa03fcff6aaffa2bfe response_code=200
+
+2023-07-24 23:27:18,399 INFO: 
+Description's index 1 just added.
+
+2023-07-24 23:27:18,904 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9361 request_id=8bcd3eacf3f3d49d846c8b8ab8b7404a response_code=200
+
+2023-07-24 23:27:18,904 INFO: 
+Description's index 12 just added.
+
+2023-07-24 23:27:19,408 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9301 request_id=664a40c511d8dcb16886ffb5f2908473 response_code=200
+
+2023-07-24 23:27:19,409 INFO: 
+Description's index 51 just added.
+
+2023-07-24 23:27:19,914 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9552 request_id=0caec4d877cf8469293421621bfb83d8 response_code=200
+
+2023-07-24 23:27:19,915 INFO: 
+Description's index 35 just added.
+
+2023-07-24 23:27:20,419 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9621 request_id=a97bcadcd40a8d6081256bda676ea2c5 response_code=200
+
+2023-07-24 23:27:20,419 INFO: 
+Description's index 34 just added.
+
+2023-07-24 23:27:20,920 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9823 request_id=6e1364eefe54685b96637e0d791c9708 response_code=200
+
+2023-07-24 23:27:20,920 INFO: 
+Description's index 38 just added.
+
+2023-07-24 23:27:21,425 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9744 request_id=416a7940fa474e0e7237963c0b1fd3db response_code=200
+
+2023-07-24 23:27:21,425 INFO: 
+Description's index 56 just added.
+
+2023-07-24 23:27:21,928 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=10073 request_id=573b6fccd7f94f7ed1b742788f4c2359 response_code=200
+
+2023-07-24 23:27:21,928 INFO: 
+Description's index 26 just added.
+
+2023-07-24 23:27:22,429 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=10202 request_id=bfd90853d1afe7a95507060fb5aa3332 response_code=200
+
+2023-07-24 23:27:22,433 INFO: 
+Description's index 0 just added.
+
+2023-07-24 23:27:22,934 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=10457 request_id=4d9ce38372c6fa2f67de9ab530b6a8d9 response_code=200
+
+2023-07-24 23:27:22,935 INFO: 
+Description's index 32 just added.
+
+2023-07-24 23:27:23,439 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=11711 request_id=4cd09336e02e0993e722f6d5f7451425 response_code=200
+
+2023-07-24 23:27:23,440 INFO: 
+Description's index 45 just added.
+
+2023-07-25 01:10:57,632 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=f63e4b012e8dbac3844b47dadcb31c80 response_code=429
+
+2023-07-25 01:10:57,634 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89646 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-25 01:10:57,634 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89646 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-25 01:10:59,643 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=4270ab39424eb494854fb590625aff67 response_code=429
+
+2023-07-25 01:10:59,644 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89635 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-25 01:10:59,644 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89635 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-25 01:11:01,650 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=d36f360bbe09763cf311385a2390acc5 response_code=429
+
+2023-07-25 01:11:01,651 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89635 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-25 01:11:01,651 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89635 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-25 01:11:03,654 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=59390f303115915e2966dcdb6c11703d response_code=429
+
+2023-07-25 01:11:03,655 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89637 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-25 01:11:03,655 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89637 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-25 01:11:05,660 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=2f3b7118af33d16d980f8ba049e74dfc response_code=429
+
+2023-07-25 01:11:05,661 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89635 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-25 01:11:05,661 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89635 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-25 01:11:07,665 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=1856f1d2e58a948d201a64436cebbe1f response_code=429
+
+2023-07-25 01:11:07,666 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89630 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-25 01:11:07,666 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89630 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-25 01:11:09,672 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=8ecc0a4ea4ea1972b14e6c12234a6ba7 response_code=429
+
+2023-07-25 01:11:09,673 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89636 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-25 01:11:09,673 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89636 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-25 01:11:11,679 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=6797e6bb839b379423e7bf0f96cfd147 response_code=429
+
+2023-07-25 01:11:11,680 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89637 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-25 01:11:11,680 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89637 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-25 01:11:13,686 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=3107d4b23ffb92539ad06b4a2d755e41 response_code=429
+
+2023-07-25 01:11:13,687 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89607 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-25 01:11:13,687 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89607 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-25 01:11:14,422 ERROR: 
+Task exception was never retrieved
+future: <Task finished name='Task-1' coro=<main() done, defined at /Users/juanreyesgarcia/Library/CloudStorage/OneDrive-FundacionUniversidaddelasAmericasPuebla/DEVELOPER/PROJECTS/DreamedJobAI/PostgreSummarise.py:166> exception=KeyboardInterrupt()>
+Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Library/CloudStorage/OneDrive-FundacionUniversidaddelasAmericasPuebla/DEVELOPER/PROJECTS/DreamedJobAI/PostgreSummarise.py", line 135, in process_description
+    description_summary, cost = await async_summarise_job_gpt(session, text)
+  File "/Users/juanreyesgarcia/Library/CloudStorage/OneDrive-FundacionUniversidaddelasAmericasPuebla/DEVELOPER/PROJECTS/DreamedJobAI/utils/AsyncSummariseJob.py", line 46, in async_summarise_job_gpt
+    response = await openai.ChatCompletion.acreate(
+  File "/Users/juanreyesgarcia/Library/CloudStorage/OneDrive-FundacionUniversidaddelasAmericasPuebla/DEVELOPER/PROJECTS/DreamedJobAI/e5/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 45, in acreate
+    return await super().acreate(*args, **kwargs)
+  File "/Users/juanreyesgarcia/Library/CloudStorage/OneDrive-FundacionUniversidaddelasAmericasPuebla/DEVELOPER/PROJECTS/DreamedJobAI/e5/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 217, in acreate
+    response, _, api_key = await requestor.arequest(
+  File "/Users/juanreyesgarcia/Library/CloudStorage/OneDrive-FundacionUniversidaddelasAmericasPuebla/DEVELOPER/PROJECTS/DreamedJobAI/e5/lib/python3.10/site-packages/openai/api_requestor.py", line 382, in arequest
+    resp, got_stream = await self._interpret_async_response(result, stream)
+  File "/Users/juanreyesgarcia/Library/CloudStorage/OneDrive-FundacionUniversidaddelasAmericasPuebla/DEVELOPER/PROJECTS/DreamedJobAI/e5/lib/python3.10/site-packages/openai/api_requestor.py", line 726, in _interpret_async_response
+    self._interpret_response_line(
+  File "/Users/juanreyesgarcia/Library/CloudStorage/OneDrive-FundacionUniversidaddelasAmericasPuebla/DEVELOPER/PROJECTS/DreamedJobAI/e5/lib/python3.10/site-packages/openai/api_requestor.py", line 763, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.RateLimitError: Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89607 / min. Contact us through our help center at help.openai.com if you continue to have issues.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Library/CloudStorage/OneDrive-FundacionUniversidaddelasAmericasPuebla/DEVELOPER/PROJECTS/DreamedJobAI/PostgreSummarise.py", line 180, in <module>
+    asyncio.run(main("openai"))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/runners.py", line 47, in run
+    _cancel_all_tasks(loop)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/runners.py", line 63, in _cancel_all_tasks
+    loop.run_until_complete(tasks.gather(*to_cancel, return_exceptions=True))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/Users/juanreyesgarcia/Library/CloudStorage/OneDrive-FundacionUniversidaddelasAmericasPuebla/DEVELOPER/PROJECTS/DreamedJobAI/PostgreSummarise.py", line 167, in main
+    raw_summarised_batches, raw_total_cost, raw_processed_time = await summarise_descriptions(raw_batches)
+  File "/Users/juanreyesgarcia/Library/CloudStorage/OneDrive-FundacionUniversidaddelasAmericasPuebla/DEVELOPER/PROJECTS/DreamedJobAI/PostgreSummarise.py", line 151, in summarise_descriptions
+    results = await asyncio.gather(*tasks)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/Users/juanreyesgarcia/Library/CloudStorage/OneDrive-FundacionUniversidaddelasAmericasPuebla/DEVELOPER/PROJECTS/DreamedJobAI/PostgreSummarise.py", line 144, in process_description
+    time.sleep(2**attempts)  # exponential backoff
+KeyboardInterrupt
+2023-07-25 01:13:23,909 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=1173f9fdd691bce3dca5932c50c01f4c response_code=429
+
+2023-07-25 01:13:23,911 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89089 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-25 01:13:23,911 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89089 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-25 01:13:25,917 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=6a1b561c8324907e0a8153f540967432 response_code=429
+
+2023-07-25 01:13:25,918 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89088 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-25 01:13:25,918 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89088 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-25 01:13:27,924 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=b583b39d0c442c0b81bc158e651550f9 response_code=429
+
+2023-07-25 01:13:27,924 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89089 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-25 01:13:27,924 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89089 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-25 01:13:29,927 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=267207a22dc5973f5bcdc78ed6aa1738 response_code=429
+
+2023-07-25 01:13:29,927 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89089 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-25 01:13:29,927 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89089 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-25 01:13:31,934 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=ff2a382fb9162aa0d7b4b528c9aaf575 response_code=429
+
+2023-07-25 01:13:31,934 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89087 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-25 01:13:31,934 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89087 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-25 01:13:33,940 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=243e8b111d5e1bdf22df22c1b57aeda7 response_code=429
+
+2023-07-25 01:13:33,941 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89085 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-25 01:13:33,941 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89085 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-25 01:13:35,944 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=9361dca823cd1592e502944aa75b379f response_code=429
+
+2023-07-25 01:13:35,945 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89086 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-25 01:13:35,945 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89086 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-25 01:13:37,947 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=f5cf100f9ce1e6863ce1d0e1d9391ef2 response_code=429
+
+2023-07-25 01:13:37,947 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89086 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-25 01:13:37,947 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89086 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-25 01:13:38,384 ERROR: 
+Task exception was never retrieved
+future: <Task finished name='Task-1' coro=<main() done, defined at /Users/juanreyesgarcia/Library/CloudStorage/OneDrive-FundacionUniversidaddelasAmericasPuebla/DEVELOPER/PROJECTS/DreamedJobAI/PostgreSummarise.py:166> exception=KeyboardInterrupt()>
+Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Library/CloudStorage/OneDrive-FundacionUniversidaddelasAmericasPuebla/DEVELOPER/PROJECTS/DreamedJobAI/PostgreSummarise.py", line 135, in process_description
+    description_summary, cost = await async_summarise_job_gpt(session, text)
+  File "/Users/juanreyesgarcia/Library/CloudStorage/OneDrive-FundacionUniversidaddelasAmericasPuebla/DEVELOPER/PROJECTS/DreamedJobAI/utils/AsyncSummariseJob.py", line 46, in async_summarise_job_gpt
+    response = await openai.ChatCompletion.acreate(
+  File "/Users/juanreyesgarcia/Library/CloudStorage/OneDrive-FundacionUniversidaddelasAmericasPuebla/DEVELOPER/PROJECTS/DreamedJobAI/e5/lib/python3.10/site-packages/openai/api_resources/chat_completion.py", line 45, in acreate
+    return await super().acreate(*args, **kwargs)
+  File "/Users/juanreyesgarcia/Library/CloudStorage/OneDrive-FundacionUniversidaddelasAmericasPuebla/DEVELOPER/PROJECTS/DreamedJobAI/e5/lib/python3.10/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 217, in acreate
+    response, _, api_key = await requestor.arequest(
+  File "/Users/juanreyesgarcia/Library/CloudStorage/OneDrive-FundacionUniversidaddelasAmericasPuebla/DEVELOPER/PROJECTS/DreamedJobAI/e5/lib/python3.10/site-packages/openai/api_requestor.py", line 382, in arequest
+    resp, got_stream = await self._interpret_async_response(result, stream)
+  File "/Users/juanreyesgarcia/Library/CloudStorage/OneDrive-FundacionUniversidaddelasAmericasPuebla/DEVELOPER/PROJECTS/DreamedJobAI/e5/lib/python3.10/site-packages/openai/api_requestor.py", line 726, in _interpret_async_response
+    self._interpret_response_line(
+  File "/Users/juanreyesgarcia/Library/CloudStorage/OneDrive-FundacionUniversidaddelasAmericasPuebla/DEVELOPER/PROJECTS/DreamedJobAI/e5/lib/python3.10/site-packages/openai/api_requestor.py", line 763, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.RateLimitError: Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89086 / min. Contact us through our help center at help.openai.com if you continue to have issues.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/juanreyesgarcia/Library/CloudStorage/OneDrive-FundacionUniversidaddelasAmericasPuebla/DEVELOPER/PROJECTS/DreamedJobAI/PostgreSummarise.py", line 180, in <module>
+    asyncio.run(main("openai"))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/runners.py", line 47, in run
+    _cancel_all_tasks(loop)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/runners.py", line 63, in _cancel_all_tasks
+    loop.run_until_complete(tasks.gather(*to_cancel, return_exceptions=True))
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/Users/juanreyesgarcia/Library/CloudStorage/OneDrive-FundacionUniversidaddelasAmericasPuebla/DEVELOPER/PROJECTS/DreamedJobAI/PostgreSummarise.py", line 167, in main
+    raw_summarised_batches, raw_total_cost, raw_processed_time = await summarise_descriptions(raw_batches)
+  File "/Users/juanreyesgarcia/Library/CloudStorage/OneDrive-FundacionUniversidaddelasAmericasPuebla/DEVELOPER/PROJECTS/DreamedJobAI/PostgreSummarise.py", line 151, in summarise_descriptions
+    results = await asyncio.gather(*tasks)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 633, in run_until_complete
+    self.run_forever()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 600, in run_forever
+    self._run_once()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 1896, in _run_once
+    handle._run()
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/Users/juanreyesgarcia/Library/CloudStorage/OneDrive-FundacionUniversidaddelasAmericasPuebla/DEVELOPER/PROJECTS/DreamedJobAI/PostgreSummarise.py", line 144, in process_description
+    time.sleep(2**attempts)  # exponential backoff
+KeyboardInterrupt
+2023-07-25 01:26:11,638 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=571a8cd3084cb23ff91e1c41c046e1f6 response_code=429
+
+2023-07-25 01:26:11,640 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89933 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-25 01:26:11,640 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89933 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-25 01:26:13,651 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=faf39ab57fedbcb6ca7a0ab89c5d45c0 response_code=429
+
+2023-07-25 01:26:13,651 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89934 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-25 01:26:13,651 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89934 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-25 01:26:15,658 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=b24a5e0475d81b4995eb7b5b4f8de044 response_code=429
+
+2023-07-25 01:26:15,658 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89932 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-25 01:26:15,659 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89932 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-25 01:26:17,665 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=1a1f92344584889987a3e02c47c88c76 response_code=429
+
+2023-07-25 01:26:17,666 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89934 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-25 01:26:17,666 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89934 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-25 01:26:19,673 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=50d1507243d5fa311127faa8f64982f8 response_code=429
+
+2023-07-25 01:26:19,674 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89930 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-25 01:26:19,674 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89930 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-25 01:26:21,680 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=22e1895acf374f81bb8c4aee3eb6ec21 response_code=429
+
+2023-07-25 01:26:21,680 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89933 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-25 01:26:21,681 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89933 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-25 01:26:23,685 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=920920b6f1ff7008d78d37e7ce270e0d response_code=429
+
+2023-07-25 01:26:23,685 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89929 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-25 01:26:23,686 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89929 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-25 01:26:25,693 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=d2786d8fff04c77f7012eef12381b6b6 response_code=429
+
+2023-07-25 01:26:25,693 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89932 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-25 01:26:25,693 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89932 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-25 01:26:27,700 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=d9a1aad0b999957fff85dc1b8dbe0ee7 response_code=429
+
+2023-07-25 01:26:27,700 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89928 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-25 01:26:27,700 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89928 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-25 01:26:29,705 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=61f341cd23d53b425aeac26f95077a5f response_code=429
+
+2023-07-25 01:26:29,705 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89931 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-25 01:26:29,705 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89931 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-25 01:26:31,710 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=dae7c66776192ef0e3b40da24342f1eb response_code=429
+
+2023-07-25 01:26:31,711 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89919 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-25 01:26:31,711 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89919 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-25 01:26:33,718 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=914fb2417db377cc305f47223ae23593 response_code=429
+
+2023-07-25 01:26:33,718 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89916 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-25 01:26:33,719 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89916 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-25 01:26:35,723 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=be155ec166ea2b2f75e461ceb3c9d418 response_code=429
+
+2023-07-25 01:26:35,724 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89908 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-25 01:26:35,724 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89908 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-25 01:26:37,727 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=d9c9c6697069a05c71d0b2e75d5da930 response_code=429
+
+2023-07-25 01:26:37,728 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89931 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-25 01:26:37,729 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89931 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-25 01:26:39,735 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=1053ac1783f33ed1cb2977a73c28e190 response_code=429
+
+2023-07-25 01:26:39,735 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89917 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-25 01:26:39,735 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89917 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-25 01:26:41,756 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5487 request_id=e8d1a6f8ba1af9dfcf2c87e1ddb56a50 response_code=200
+
+2023-07-25 01:26:41,759 INFO: 
+Description's index 27 just added.
+
+2023-07-25 01:26:42,265 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5527 request_id=004c4375045d03f4e992aa878eca0d3f response_code=200
+
+2023-07-25 01:26:42,266 INFO: 
+Description's index 0 just added.
+
+2023-07-25 01:26:42,771 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5541 request_id=83b2d65cca1a1ba8bc24ac0a6b125acd response_code=200
+
+2023-07-25 01:26:42,771 INFO: 
+Description's index 24 just added.
+
+2023-07-25 01:26:43,274 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5658 request_id=047e52d6bb7b800cb9aedce62cf3850d response_code=200
+
+2023-07-25 01:26:43,275 INFO: 
+Description's index 23 just added.
+
+2023-07-25 01:26:43,778 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5970 request_id=c619989454c52be40e74eff1ebca36b0 response_code=200
+
+2023-07-25 01:26:43,779 INFO: 
+Description's index 12 just added.
+
+2023-07-25 01:26:44,283 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5873 request_id=6c2c5c84fd11cbf2e63e9a313503bcbb response_code=200
+
+2023-07-25 01:26:44,284 INFO: 
+Description's index 25 just added.
+
+2023-07-25 01:26:44,789 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6658 request_id=24a39ec2da7919e4270f84d059a7d6f8 response_code=200
+
+2023-07-25 01:26:44,790 INFO: 
+Description's index 36 just added.
+
+2023-07-25 01:26:45,294 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6677 request_id=76f6e64550cf6436cc5a70a4beafad80 response_code=200
+
+2023-07-25 01:26:45,295 INFO: 
+Description's index 28 just added.
+
+2023-07-25 01:26:45,799 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6847 request_id=fb888a6cc15aac5a01d325abeb76aedb response_code=200
+
+2023-07-25 01:26:45,800 INFO: 
+Description's index 39 just added.
+
+2023-07-25 01:26:46,306 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6786 request_id=00f31efe30940de545d9911aaa316311 response_code=200
+
+2023-07-25 01:26:46,306 INFO: 
+Description's index 40 just added.
+
+2023-07-25 01:26:46,809 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7010 request_id=304f9d66fff23e2c12c51248a62b9416 response_code=200
+
+2023-07-25 01:26:46,810 INFO: 
+Description's index 8 just added.
+
+2023-07-25 01:26:47,316 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6916 request_id=68bb2d45aa602162c9150cc58ea5469b response_code=200
+
+2023-07-25 01:26:47,316 INFO: 
+Description's index 76 just added.
+
+2023-07-25 01:26:47,821 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6994 request_id=e288688a53b3604126d437cc5e3b1e98 response_code=200
+
+2023-07-25 01:26:47,822 INFO: 
+Description's index 33 just added.
+
+2023-07-25 01:26:48,327 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6939 request_id=cc9c0f1bf335a4129602c74363e35e04 response_code=200
+
+2023-07-25 01:26:48,328 INFO: 
+Description's index 4 just added.
+
+2023-07-25 01:26:48,834 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7168 request_id=6d74b8410968d6608a0444f939481d0d response_code=200
+
+2023-07-25 01:26:48,834 INFO: 
+Description's index 44 just added.
+
+2023-07-25 01:26:49,339 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7301 request_id=565d83b4085324637276fe771d92abf7 response_code=200
+
+2023-07-25 01:26:49,340 INFO: 
+Description's index 43 just added.
+
+2023-07-25 01:26:49,841 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7391 request_id=68f731ef032c5bb738a2086022dc164b response_code=200
+
+2023-07-25 01:26:49,842 INFO: 
+Description's index 16 just added.
+
+2023-07-25 01:26:50,348 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7421 request_id=5295f38dadfc9c6222716a6935d1516d response_code=200
+
+2023-07-25 01:26:50,349 INFO: 
+Description's index 75 just added.
+
+2023-07-25 01:26:50,856 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7557 request_id=f7a3d29fff1742cbcc9d2ce9c8fdefbf response_code=200
+
+2023-07-25 01:26:50,857 INFO: 
+Description's index 3 just added.
+
+2023-07-25 01:26:51,360 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7567 request_id=ffcbfb6012e81f3692fb4cc6803e2f6d response_code=200
+
+2023-07-25 01:26:51,361 INFO: 
+Description's index 15 just added.
+
+2023-07-25 01:26:51,866 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7583 request_id=aaa0240736a7951e72515858e1a28e94 response_code=200
+
+2023-07-25 01:26:51,867 INFO: 
+Description's index 50 just added.
+
+2023-07-25 01:26:52,372 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7461 request_id=4cf29d0d50d02f66dd1e6c856776e0dd response_code=200
+
+2023-07-25 01:26:52,373 INFO: 
+Description's index 67 just added.
+
+2023-07-25 01:26:52,875 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7413 request_id=b1c07c9019a0adf0d43cf004e5a9aee6 response_code=200
+
+2023-07-25 01:26:52,876 INFO: 
+Description's index 30 just added.
+
+2023-07-25 01:26:53,382 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7700 request_id=716e972ea78668cfba702d8694c324f9 response_code=200
+
+2023-07-25 01:26:53,383 INFO: 
+Description's index 55 just added.
+
+2023-07-25 01:26:53,887 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7566 request_id=0f6b0c37e2fb4783800ea843cd2d515c response_code=200
+
+2023-07-25 01:26:53,888 INFO: 
+Description's index 29 just added.
+
+2023-07-25 01:26:54,391 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7849 request_id=10676aced506050c4f63bad39554729a response_code=200
+
+2023-07-25 01:26:54,391 INFO: 
+Description's index 37 just added.
+
+2023-07-25 01:26:54,897 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8010 request_id=54005a2f39165350cb7753350ba71169 response_code=200
+
+2023-07-25 01:26:54,897 INFO: 
+Description's index 87 just added.
+
+2023-07-25 01:26:55,399 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8107 request_id=a58774235254f0c19e5fa665dbdddaf5 response_code=200
+
+2023-07-25 01:26:55,400 INFO: 
+Description's index 35 just added.
+
+2023-07-25 01:26:55,905 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8193 request_id=5fd8c7e79e055a8b820559ff4af21644 response_code=200
+
+2023-07-25 01:26:55,906 INFO: 
+Description's index 17 just added.
+
+2023-07-25 01:26:56,410 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8218 request_id=03e905bf20ed196a88accb10f1f16763 response_code=200
+
+2023-07-25 01:26:56,411 INFO: 
+Description's index 2 just added.
+
+2023-07-25 01:26:56,916 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7956 request_id=ce97367d7aaa7f379c32a0c269255f1f response_code=200
+
+2023-07-25 01:26:56,917 INFO: 
+Description's index 31 just added.
+
+2023-07-25 01:26:57,418 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8185 request_id=a96e7a2ce5abb6d244a893dd483e8ce4 response_code=200
+
+2023-07-25 01:26:57,419 INFO: 
+Description's index 21 just added.
+
+2023-07-25 01:26:57,923 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8314 request_id=bf74efe98502a01542932a0e96ebabb6 response_code=200
+
+2023-07-25 01:26:57,924 INFO: 
+Description's index 34 just added.
+
+2023-07-25 01:26:58,426 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8342 request_id=59e4556e97bb3e192ccc4af3febf5d6d response_code=200
+
+2023-07-25 01:26:58,427 INFO: 
+Description's index 11 just added.
+
+2023-07-25 01:26:58,932 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8413 request_id=7f805842907066a4510e03a18864203d response_code=200
+
+2023-07-25 01:26:58,933 INFO: 
+Description's index 1 just added.
+
+2023-07-25 01:26:59,438 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6304 request_id=89a1d551713f0cf0d2985864a94ae335 response_code=200
+
+2023-07-25 01:26:59,439 INFO: 
+Description's index 85 just added.
+
+2023-07-25 01:26:59,940 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8541 request_id=3508845ed8e6de7a17284f0bcc909352 response_code=200
+
+2023-07-25 01:26:59,941 INFO: 
+Description's index 51 just added.
+
+2023-07-25 01:27:00,446 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8704 request_id=b1f6d8960a2521f9406295ad67818c31 response_code=200
+
+2023-07-25 01:27:00,447 INFO: 
+Description's index 59 just added.
+
+2023-07-25 01:27:00,950 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8770 request_id=c983fcce9da400605312ea6e67722487 response_code=200
+
+2023-07-25 01:27:00,950 INFO: 
+Description's index 5 just added.
+
+2023-07-25 01:27:01,456 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8692 request_id=0f7eb5589f306b10af21fd36475b82c2 response_code=200
+
+2023-07-25 01:27:01,457 INFO: 
+Description's index 32 just added.
+
+2023-07-25 01:27:01,958 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8738 request_id=dca8b6b5878ce4b7038ea1b618519bc1 response_code=200
+
+2023-07-25 01:27:01,959 INFO: 
+Description's index 56 just added.
+
+2023-07-25 01:27:02,465 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8808 request_id=d46d422dc8a229e5858ea29b9a2f54ca response_code=200
+
+2023-07-25 01:27:02,466 INFO: 
+Description's index 47 just added.
+
+2023-07-25 01:27:02,970 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9014 request_id=2c12e2ff700d19159b9e1e96ee69ac4e response_code=200
+
+2023-07-25 01:27:02,971 INFO: 
+Description's index 7 just added.
+
+2023-07-25 01:27:03,476 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8985 request_id=c1181d3d1f9e9c0e0fcfc3d6ef9d2240 response_code=200
+
+2023-07-25 01:27:03,477 INFO: 
+Description's index 53 just added.
+
+2023-07-25 01:27:03,982 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8930 request_id=0c969827417becbeb6a6116ea93e4371 response_code=200
+
+2023-07-25 01:27:03,983 INFO: 
+Description's index 86 just added.
+
+2023-07-25 01:27:04,484 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8963 request_id=77bcdc4d03c4b820ca6702a43cadfe18 response_code=200
+
+2023-07-25 01:27:04,485 INFO: 
+Description's index 45 just added.
+
+2023-07-25 01:27:04,986 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9121 request_id=16e2ce4ea90d14b36f81aa0ebc0566d7 response_code=200
+
+2023-07-25 01:27:04,987 INFO: 
+Description's index 71 just added.
+
+2023-07-25 01:27:05,489 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9240 request_id=5435276a01482f10d18b6e40d5ceea51 response_code=200
+
+2023-07-25 01:27:05,490 INFO: 
+Description's index 19 just added.
+
+2023-07-25 01:27:05,993 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9316 request_id=935708d2c63728fc604dda9ed932345d response_code=200
+
+2023-07-25 01:27:05,994 INFO: 
+Description's index 26 just added.
+
+2023-07-25 01:27:06,499 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9366 request_id=1188a097c7079bca1d756be933f4369c response_code=200
+
+2023-07-25 01:27:06,500 INFO: 
+Description's index 6 just added.
+
+2023-07-25 01:27:07,005 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9309 request_id=e5a789c1b5bca1c784cf0240155556ce response_code=200
+
+2023-07-25 01:27:07,006 INFO: 
+Description's index 42 just added.
+
+2023-07-25 01:27:07,512 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9389 request_id=fd2233bb37655b0787b73bf7c3e3c31a response_code=200
+
+2023-07-25 01:27:07,512 INFO: 
+Description's index 14 just added.
+
+2023-07-25 01:27:08,017 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9501 request_id=41026b07e40e295ce87082328e8ea241 response_code=200
+
+2023-07-25 01:27:08,018 INFO: 
+Description's index 60 just added.
+
+2023-07-25 01:27:08,524 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9605 request_id=ed33f62fb5000cc34f4eb459c6492787 response_code=200
+
+2023-07-25 01:27:08,524 INFO: 
+Description's index 20 just added.
+
+2023-07-25 01:27:09,026 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9513 request_id=95772180d5eec71df738b491d3420d0b response_code=200
+
+2023-07-25 01:27:09,027 INFO: 
+Description's index 54 just added.
+
+2023-07-25 01:27:09,532 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9655 request_id=07f5d5b8ccbb5860fed72ad45f78cadf response_code=200
+
+2023-07-25 01:27:09,533 INFO: 
+Description's index 9 just added.
+
+2023-07-25 01:27:10,039 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9454 request_id=63b31fa2b030d2b29cb26848d03cff4a response_code=200
+
+2023-07-25 01:27:10,040 INFO: 
+Description's index 18 just added.
+
+2023-07-25 01:27:10,544 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9622 request_id=242a959984b6346143c3282c0b1ae523 response_code=200
+
+2023-07-25 01:27:10,544 INFO: 
+Description's index 64 just added.
+
+2023-07-25 01:27:11,049 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9649 request_id=cf0af8ce7adc80e3572c8a16834322d9 response_code=200
+
+2023-07-25 01:27:11,050 INFO: 
+Description's index 81 just added.
+
+2023-07-25 01:27:11,555 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9899 request_id=c673a3de715bc55096c0e9d2f27372d1 response_code=200
+
+2023-07-25 01:27:11,556 INFO: 
+Description's index 13 just added.
+
+2023-07-25 01:27:12,059 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9847 request_id=b3f942dd7e8dd2b7c98be7de950171d5 response_code=200
+
+2023-07-25 01:27:12,060 INFO: 
+Description's index 61 just added.
+
+2023-07-25 01:27:12,565 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=10004 request_id=f25bbf70ae48e3b0e5320848311ae488 response_code=200
+
+2023-07-25 01:27:12,566 INFO: 
+Description's index 63 just added.
+
+2023-07-25 01:27:13,071 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=10004 request_id=c2604e572c0d592877cd1fecc8587f43 response_code=200
+
+2023-07-25 01:27:13,072 INFO: 
+Description's index 66 just added.
+
+2023-07-25 01:27:13,575 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=10132 request_id=3cbc85e7f7fa5ad551905acdeb40e5d5 response_code=200
+
+2023-07-25 01:27:13,576 INFO: 
+Description's index 48 just added.
+
+2023-07-25 01:27:14,080 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=10156 request_id=119a597ac118155a4aa20826fa0c7e2a response_code=200
+
+2023-07-25 01:27:14,081 INFO: 
+Description's index 46 just added.
+
+2023-07-25 01:27:14,587 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=10244 request_id=e9b7216ebc37944b5e67cfe6b619e50b response_code=200
+
+2023-07-25 01:27:14,588 INFO: 
+Description's index 22 just added.
+
+2023-07-25 01:27:15,091 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=10724 request_id=690d3db3550b0fbbceb6d3972c7a3ed2 response_code=200
+
+2023-07-25 01:27:15,092 INFO: 
+Description's index 10 just added.
+
+2023-07-25 01:27:15,595 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=11278 request_id=d8c4236ff0954c77a2fee76100780bb9 response_code=200
+
+2023-07-25 01:27:15,596 INFO: 
+Description's index 41 just added.
+
+2023-07-25 01:27:16,100 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=11269 request_id=89e744f46cdf673e440bbcef4c218be6 response_code=200
+
+2023-07-25 01:27:16,101 INFO: 
+Description's index 52 just added.
+
+2023-07-25 01:27:16,607 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=11558 request_id=317541fd5ccb145d4338692b84f5b222 response_code=200
+
+2023-07-25 01:27:16,608 INFO: 
+Description's index 77 just added.
+
+2023-07-25 01:27:17,111 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=11592 request_id=e22af579a11eb37a43f4e67ed0f430ea response_code=200
+
+2023-07-25 01:27:17,112 INFO: 
+Description's index 58 just added.
+
+2023-07-25 01:27:17,613 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=11884 request_id=713c735051c627436c7bc3a437772737 response_code=200
+
+2023-07-25 01:27:17,613 INFO: 
+Description's index 65 just added.
+
+2023-07-25 01:27:18,115 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=11928 request_id=41474740acc95f5ee6e80e804cfc4669 response_code=200
+
+2023-07-25 01:27:18,116 INFO: 
+Description's index 68 just added.
+
+2023-07-25 01:27:18,621 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=12235 request_id=614a0a4ee636572449c0a8a4fbf431a6 response_code=200
+
+2023-07-25 01:27:18,621 INFO: 
+Description's index 57 just added.
+
+2023-07-25 01:27:19,127 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=13337 request_id=9c2c57870f05b35500e6a6ae8913c26f response_code=200
+
+2023-07-25 01:27:19,128 INFO: 
+Description's index 38 just added.
+
+2023-07-25 01:27:19,631 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=13485 request_id=c3c4d1d186f3af0b69cca37a6281bd00 response_code=200
+
+2023-07-25 01:27:19,632 INFO: 
+Description's index 49 just added.
+
+2023-07-25 01:27:20,144 WARNING: 
+Error communicating with OpenAI. Retrying attempt 2...
+
+2023-07-25 01:27:24,151 WARNING: 
+Error communicating with OpenAI. Retrying attempt 2...
+
+2023-07-25 01:27:28,158 WARNING: 
+Error communicating with OpenAI. Retrying attempt 2...
+
+2023-07-25 01:27:32,161 WARNING: 
+Error communicating with OpenAI. Retrying attempt 2...
+
+2023-07-25 01:27:36,170 WARNING: 
+Error communicating with OpenAI. Retrying attempt 2...
+
+2023-07-25 01:27:40,172 WARNING: 
+Error communicating with OpenAI. Retrying attempt 2...
+
+2023-07-25 01:27:44,176 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6550 request_id=b0edcaeaed83c3ce5d764f51479313d5 response_code=200
+
+2023-07-25 01:27:44,176 INFO: 
+Description's index 88 just added.
+
+2023-07-25 01:27:44,682 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7951 request_id=6ef777c8a48fe9518b85dc0966f45c1b response_code=200
+
+2023-07-25 01:27:44,683 INFO: 
+Description's index 80 just added.
+
+2023-07-25 01:27:45,188 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8134 request_id=cec7cca74a486a190e6c4701636ad8c9 response_code=200
+
+2023-07-25 01:27:45,188 INFO: 
+Description's index 74 just added.
+
+2023-07-25 01:27:45,689 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9042 request_id=b5cca24ef77ccdb5dcd86c7df610bbf5 response_code=200
+
+2023-07-25 01:27:45,690 INFO: 
+Description's index 70 just added.
+
+2023-07-25 01:27:46,196 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9204 request_id=40363567745b6997db2c8f5c96e97f53 response_code=200
+
+2023-07-25 01:27:46,196 INFO: 
+Description's index 69 just added.
+
+2023-07-25 01:27:46,698 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9528 request_id=21bd7d019e2abad451b2ebb59733e002 response_code=200
+
+2023-07-25 01:27:46,698 INFO: 
+Description's index 62 just added.
+
+2023-07-25 01:27:47,204 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=11300 request_id=b0fdcc97a43e4ea534271539b9f0a1bd response_code=200
+
+2023-07-25 01:27:47,205 INFO: 
+Description's index 83 just added.
+
+2023-07-25 01:27:47,707 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=12300 request_id=49fe0c75a35f1de3e728a51cc7a12547 response_code=200
+
+2023-07-25 01:27:47,707 INFO: 
+Description's index 84 just added.
+
+2023-07-25 01:27:48,217 WARNING: 
+Error communicating with OpenAI. Retrying attempt 3...
+
+2023-07-25 01:27:56,223 WARNING: 
+Error communicating with OpenAI. Retrying attempt 3...
+
+2023-07-25 01:28:04,229 WARNING: 
+Error communicating with OpenAI. Retrying attempt 3...
+
+2023-07-25 01:28:19,949 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7547 request_id=811852a681334b547d346815d667812d response_code=200
+
+2023-07-25 01:28:19,951 INFO: 
+Description's index 82 just added.
+
+2023-07-25 01:28:20,457 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7916 request_id=c062bd726e7d16da169e2e8c0acb593a response_code=200
+
+2023-07-25 01:28:20,458 INFO: 
+Description's index 79 just added.
+
+2023-07-25 01:28:21,897 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9445 request_id=60c2c5e5aa16ce42041bbdbc42e66068 response_code=200
+
+2023-07-25 01:28:21,897 INFO: 
+Description's index 73 just added.
+
