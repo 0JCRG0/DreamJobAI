@@ -13,6 +13,7 @@ import pyarrow as pa
 import pyarrow.parquet as pq
 from LoadAllJobs import all_jobs_to_batches, all_jobs_ids, all_jobs_for_GPT
 from LoadRecentJobs import recent_jobs_for_GPT, recent_jobs_to_batches, recent_jobs_ids
+from PostgreSummarise import ids, raw_descriptions_to_batches, summarise_descriptions
 """ Env variables """
 
 
@@ -26,17 +27,22 @@ OPENAI_TOTAL_JOBS = os.getenv("OPENAI_TOTAL_JOBS")
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 #CALL IT
-def embeddings_openai(all_jobs: bool, max_tokens: int, model_for_cost: str, db: str):
-    if all_jobs:
+def embeddings_openai(jobs_to_embed: str, max_tokens: int, model_for_cost: str, db: str):
+    if jobs_to_embed == "LoadAllJobs":
         jobs_in_batches = all_jobs_to_batches(max_tokens, model_for_cost, False)
         jobs_text = all_jobs_for_GPT(max_tokens, model_for_cost, False)
         jobs_ids = all_jobs_ids
         file_name = "openai_preexisting"
-    else:
+    elif jobs_to_embed == "LoadRecentJobs":
         jobs_in_batches = recent_jobs_to_batches(max_tokens,model_for_cost, False)
         jobs_text = recent_jobs_for_GPT(max_tokens, model_for_cost, False)
         jobs_ids = recent_jobs_ids
         file_name = "openai_today"
+    elif jobs_to_embed == "PostgreSummarise":
+        jobs_in_batches = raw_descriptions_to_batches(max_tokens=750, embedding_model="e5", print_messages=False)
+        jobs_text = summarise_descriptions(jobs_in_batches)
+        jobs_ids = ids
+        file_name = "openai_summarised"
     # calculate embeddings
     EMBEDDING_MODEL = "text-embedding-ada-002"  # OpenAI's embedding model
     BATCH_SIZE = 50  # you can submit up to 2048 embedding inputs per request
@@ -87,7 +93,7 @@ def embeddings_openai(all_jobs: bool, max_tokens: int, model_for_cost: str, db: 
     saving_openai_embeddings()
     
     #If you are embedding jobs from today concat it with all_jobs
-    if all_jobs == False:
+    if jobs_to_embed == "LoadRecentJobs":
         def concat_parquet_openai():
             # Read the Parquet files
             recent_jobs = pq.read_table(OPENAI_TODAY_JOBS)
@@ -103,4 +109,4 @@ def embeddings_openai(all_jobs: bool, max_tokens: int, model_for_cost: str, db: 
         concat_parquet_openai()
 
 if __name__ == "__main__":
-    embeddings_openai(all_jobs=False, max_tokens=512, model_for_cost="openai", db="parquet")
+    embeddings_openai(jobs_to_embed="PostgreSummarise", max_tokens=512, model_for_cost="openai", db="parquet")

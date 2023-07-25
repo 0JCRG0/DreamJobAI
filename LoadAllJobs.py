@@ -32,20 +32,7 @@ model = "gpt-3.5-turbo"  # only matters insofar as it selects which tokenizer to
 
 #
 
-"""
 
-TODO: REMEMBER THE NEW PLAN IS AS FOLLOWS:
-    TODO: 1. Connect e5 & openai embeddings to LoadRecentJobs 
-    TODO: 2. Use function in loader to concatenate main embeddings with recent
-    TODO: 3. Recuerda hacer un trigger para una tabla basada en no_usa,
-            la cual siempre filtre trabajos que esten a una semana de distancia del día presente.
-            Por ejemplo, hoy es 10 de enero, el filtro aceptaría a los trabajos encontrados desde el 3 de enero,
-            pero el día de mañana (11 de enero) el filtro se le suma +1 por lo que el corte sería el 4 de enero,
-            así sucesivamente.
-            3.1. This table will be loaded for subsequent embedding (all jobs & recent jobs). NOT no_usa
-
-
-"""
 
 def fetch_data_from_table(table_name:str) -> list :
     conn = psycopg2.connect(user=user, password=password, host=host, port=port, database=database)
