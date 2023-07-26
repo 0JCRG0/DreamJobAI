@@ -3,8 +3,10 @@ import os
 from dotenv import load_dotenv
 import pretty_errors
 import openai
+import logging
 import chromadb
 import timeit
+import time
 from aiohttp import ClientSession
 import asyncio
 import time
@@ -13,7 +15,7 @@ import pandas as pd
 from chromadb.utils import embedding_functions
 from chromadb.config import Settings
 from datetime import datetime, timedelta
-from utils.handy import *
+from utils.handy import num_tokens, count_words, LoggingMain, truncated_string, save_df_to_csv, summary_specs_txt_file, original_specs_txt_file
 from utils.AsyncSummariseJob import async_summarise_job_gpt
 from EmbeddingsOpenAI import embeddings_openai
 
@@ -95,6 +97,13 @@ def raw_descriptions_to_batches(max_tokens: int, embedding_model: str, print_mes
 		approximate_cost = 0
 
 	average_tokens_per_batch = total_tokens / len(batches)
+	content = f"TOTAL NUMBER OF BATCHES: {len(batches)}\n" \
+			f"TOTAL NUMBER OF TOKENS: {total_tokens}\n" \
+			f"NUMBER OF TRUNCATIONS: {truncation_counter}\n" \
+			f"AVERAGE NUMBER OF TOKENS PER BATCH: {average_tokens_per_batch}\n" \
+			f"APPROXIMATE COST OF EMBEDDING: ${approximate_cost} USD\n"
+	
+	original_specs_txt_file(content)
 
 	if print_messages:
 		for i, batch in enumerate(batches, start=1):
@@ -103,15 +112,12 @@ def raw_descriptions_to_batches(max_tokens: int, embedding_model: str, print_mes
 			print(f"Tokens per batch:", num_tokens(batch))
 			print("\n")
 
-		print(f"TOTAL NUMBER OF BATCHES:", len(batches))
-		print(f"TOTAL NUMBER OF TOKENS:", total_tokens)  # Print the total number of tokens
-		print(f"NUMBER OF TRUNCATIONS:", truncation_counter)  # Print the number of truncations
-		print(f"AVERAGE NUMBER OF TOKENS PER BATCH:",average_tokens_per_batch )
-		print(f"APPROXIMATE COST OF EMBEDDING:", f"${approximate_cost} USD")
-
+		print(content)
+	
 	return batches
 
-raw_batches = raw_descriptions_to_batches(max_tokens=512, embedding_model="e5", print_messages = True)
+
+raw_batches = raw_descriptions_to_batches(max_tokens=1000, embedding_model="e5", print_messages = True)
 
 df_raw_batches = pd.DataFrame({
 	"ids": ids,
@@ -121,28 +127,32 @@ df_raw_batches.to_csv(SAVE_PATH + "/raw_batches.csv", index=False)
 
 
 async def summarise_descriptions(descriptions: list) -> list:
-	#Start the timer
-	#start_time = timeit.default_timer()
 	#start timer
 	start_time = asyncio.get_event_loop().time()
 	total_cost = 0
 
 	async def process_description(session, i, text):
 		attempts = 0
-		while attempts < 3:
+		while attempts < 5:
 			try:
-				description_summary, cost = await async_summarise_job_gpt(session, text)
-				print(f"Description with index {i} just added.")
-				logging.info(f"Description's index {i} just added.")
-				time.sleep(.5)
-				return i, description_summary, cost
+				words_per_text = count_words(text)
+				if words_per_text > 50:
+					description_summary, cost = await async_summarise_job_gpt(session, text)
+					print(f"Description with index {i} just added.")
+					logging.info(f"Description's index {i} just added.")
+					time.sleep(.5)
+					return i, description_summary, cost
+				else:
+					logging.info(f"Description with index {i} is too short for being summarised. Number of words: {words_per_text}")
+					print(f"Description with index {i} is too short for being summarised. Number of words: {words_per_text}")
+					return i, text, 0
 			except (ServiceUnavailableError, Exception) as e:
 				attempts += 1
 				print(f"{e}. Retrying attempt {attempts}...")
 				logging.warning(f"{e}. Retrying attempt {attempts}...")
 				time.sleep(2**attempts)  # exponential backoff
 		else:
-			print(f"Description with index {i} could not be summarised after 3 attempts.")
+			print(f"Description with index {i} could not be summarised after 5 attempts.")
 			return i, text, 0
 
 	async with ClientSession() as session:
@@ -157,7 +167,7 @@ async def summarise_descriptions(descriptions: list) -> list:
 
 	#await close_session()
 	#processed_time = timeit.default_timer() - start_time
-	elapsed_time = asyncio.get_event_loop().time() - start_time
+	elapsed_time = asyncio.get_event_loop().time() - start_time / 60
 
 	return descriptions_summarised, total_cost, elapsed_time
 
@@ -167,9 +177,9 @@ async def main(embedding_model:str):
 
 	#SAVE THE DATA...
 
-	save_df_to_csv(ids, raw_batches, raw_summarised_batches)
+	save_df_to_csv(ids, raw_batches, raw_summarised_batches)	
 
-	save_to_text_file(raw_total_cost, raw_processed_time, "/raw_summarised_batches")
+	summary_specs_txt_file(raw_total_cost, raw_processed_time)
 
 	#Embedding starts
 	#if embedding_model == "openai":
