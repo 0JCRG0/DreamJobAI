@@ -2,7 +2,6 @@
 *.parquet
 *.bin
 *.pkl
-*.txt
 /e5
 /.cfg
 __pycache__/
