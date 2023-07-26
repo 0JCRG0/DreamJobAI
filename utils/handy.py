@@ -3,6 +3,7 @@ from chromadb.utils import embedding_functions
 import tiktoken
 import pandas as pd
 import logging
+import datetime
 from dotenv import load_dotenv
 import os
 
@@ -55,10 +56,18 @@ def LoggingMain():
 						level=logging.INFO,
 						format=log_format)
 
-def save_to_text_file(total_cost, processed_time, filename):
-	with open(SAVE_PATH + f'{filename}.txt', 'w') as file:
-		file.write(f"Total Cost: {total_cost}\n")
-		file.write(f"Processed Time: {processed_time} seconds\n")
+def original_specs_txt_file(content: str): 
+	timestamp = datetime.datetime.now()
+	with open(SAVE_PATH + '/specs.txt', 'a') as file:
+		file.write(f"At {timestamp}\n")
+		file.write("RAW BATCHES SPECS: \n")
+		file.write(content)
+
+def summary_specs_txt_file(total_cost: float, processed_time: float): 
+	with open(SAVE_PATH + '/specs.txt', 'a') as file:
+		file.write("\nSUMMARISED BATCHES SPECS: \n")
+		file.write(f"Total Cost: {total_cost:.2f}\n")
+		file.write(f"Processed Time: {processed_time:.1f} minutes\n\n")
 
 def save_df_to_csv(id, original, summary):
 	df_raw_summarised_batches = pd.DataFrame({
@@ -67,3 +76,13 @@ def save_df_to_csv(id, original, summary):
 		"summary": summary})
 
 	df_raw_summarised_batches.to_csv(SAVE_PATH + "/raw_summarised_batches.csv", index=False)
+
+def count_words(text: str) -> int:
+    # Remove leading and trailing whitespaces
+    text = text.strip()
+
+    # Split the text into words using whitespace as a delimiter
+    words = text.split()
+
+    # Return the count of words
+    return len(words)
