@@ -11,7 +11,7 @@ from datetime import datetime
 import pyarrow as pa
 import pyarrow.parquet as pq
 import numpy as np
-from utils.handy import *
+from utils.handy import LoggingMain, save_embeddings_to_parquet, append_parquet
 import pretty_errors
 from dotenv import load_dotenv
 import os
@@ -26,38 +26,19 @@ LoggingMain()
 
 #TODO: MODIFY SO IT CAN BE CALLED BY postgresummary
 
-def embedding_e5_family(embedding_tokenizer: str, embedding_model: str, all_jobs: bool, chunk_size: int, print_warning: bool) -> list:
-    if all_jobs:
-        jobs_in_batches = all_jobs_to_batches(512, "e5", print_warning)
-        jobs_text = all_jobs_for_GPT(512, "e5", print_warning)
-        jobs_ids = all_jobs_ids
-        file_name = "e5_base_preexisting.parquet"
-    else:
-        jobs_in_batches = recent_jobs_to_batches(512,"e5", print_warning)
-        jobs_text = recent_jobs_for_GPT(512, "e5", print_warning)
-        jobs_ids = recent_jobs_ids
-        file_name = "e5_base_today.parquet"
+def embedding_e5_base_v2(batches_to_embed: list[str], batches_ids: list[str], original_descriptions: list[str], chunk_size: int) -> list:
     
-    INPUT_TEXT = jobs_in_batches
-    TOKENIZER = AutoTokenizer.from_pretrained(embedding_tokenizer)
-    MODEL = AutoModel.from_pretrained(embedding_model)
-
+    INPUT_TEXT = batches_to_embed
+    INPUT_IDS = batches_ids
+    INPUT_ORIGINAL = original_descriptions
+    TOKENIZER = AutoTokenizer.from_pretrained("intfloat/e5-base-v2")
+    MODEL = AutoModel.from_pretrained("intfloat/e5-base-v2")
     CHUNK_SIZE = chunk_size
 
     def average_pool(last_hidden_states: Tensor,
                     attention_mask: Tensor) -> Tensor:
         last_hidden = last_hidden_states.masked_fill(~attention_mask[..., None].bool(), 0.0)
         return last_hidden.sum(dim=1) / attention_mask.sum(dim=1)[..., None]
-
-    def save_embeddings_to_parquet(embeddings, parquet_filename):
-        df_data = {
-        'ids': jobs_ids,
-        'text_data': jobs_text,
-        'embeddings': list(embeddings)
-    }
-        df = pd.DataFrame(df_data)
-        df.to_parquet(SAVE_PATH+ f"/{parquet_filename}", engine='pyarrow')
-        print(f"Saved embeddings to {parquet_filename}")
 
     class TextDataset(Dataset):
         def __init__(self, texts, tokenizer):
@@ -91,40 +72,23 @@ def embedding_e5_family(embedding_tokenizer: str, embedding_model: str, all_jobs
             embeddings_list.append(batch_embeddings)
 
     # Concatenate embeddings and save to a single Parquet file
-    final_embeddings = np.vstack(embeddings_list)
-    save_embeddings_to_parquet(final_embeddings, file_name)
+    EMBEDDINGS = np.vstack(embeddings_list)
 
-    #If you are embedding jobs from today concat it with all_jobs
-    if all_jobs == False:
-        def concat_parquet_E5():
-            if embedding_model == "intfloat/e5-base-v2":
-                today = E5_BASE_TODAY_JOBS
-                preexisting = E5_BASE_PREEXISTING_JOBS
-                total = E5_BASE_TOTAL_JOBS
-            else:
-                print("NOT DEFINED")
-                logging.error("NOT DEFINED")
-            # Read the Parquet files
-            today_jobs = pq.read_table(today)
-            preexisting_jobs = pq.read_table(preexisting)
-            
-            # Append the tables
-            appended_jobs = pa.concat_tables([today_jobs, preexisting_jobs])
-            
-            # Write the appended table to a new Parquet file
-            pq.write_table(appended_jobs, total)
-            now = datetime.now()
-            logging.info(f"{embedding_model} embeddings have been appended at {now}")
-        concat_parquet_E5()
+    #Timestamps
+    TIMESTAMPS = []
+    timestamp = datetime.now()
+    TIMESTAMPS.extend([timestamp] * len(INPUT_IDS))
 
-if __name__ == "__main__":
-    embedding_e5_family(embedding_tokenizer="intfloat/e5-base-v2", embedding_model="intfloat/e5-base-v2", all_jobs=False, chunk_size=15, print_warning=False)
+    df_data = {
+        'id': INPUT_IDS,
+        'original': INPUT_ORIGINAL,
+        'summary': INPUT_TEXT,
+        'embedding': list(EMBEDDINGS),
+        'timestamp': TIMESTAMPS
+        }
+    
+    new_data = pd.DataFrame(df_data)
 
-    """
-    tokeinizer= intfloat/e5-large-v2
-    model = intfloat/e5-large-v2
+    append_parquet(new_data)
 
-    tokenizer= intfloat/e5-base-v2
-    model= intfloat/e5-base-v2
 
-    """

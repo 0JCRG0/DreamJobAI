@@ -4,6 +4,7 @@ import tiktoken
 import pandas as pd
 import logging
 import datetime
+import pyarrow.parquet as pq
 from dotenv import load_dotenv
 import os
 
@@ -67,7 +68,7 @@ def summary_specs_txt_file(total_cost: float, processed_time: float):
 	with open(SAVE_PATH + '/specs.txt', 'a') as file:
 		file.write("\nSUMMARISED BATCHES SPECS: \n")
 		file.write(f"Total Cost: {total_cost:.2f}\n")
-		file.write(f"Processed Time: {processed_time:.1f} minutes\n\n")
+		file.write(f"Processed Time: {processed_time:.2f} seconds\n\n")
 
 def save_df_to_csv(id, original, summary):
 	df_raw_summarised_batches = pd.DataFrame({
@@ -78,11 +79,28 @@ def save_df_to_csv(id, original, summary):
 	df_raw_summarised_batches.to_csv(SAVE_PATH + "/raw_summarised_batches.csv", index=False)
 
 def count_words(text: str) -> int:
-    # Remove leading and trailing whitespaces
-    text = text.strip()
+	# Remove leading and trailing whitespaces
+	text = text.strip()
 
-    # Split the text into words using whitespace as a delimiter
-    words = text.split()
+	# Split the text into words using whitespace as a delimiter
+	words = text.split()
 
-    # Return the count of words
-    return len(words)
+	# Return the count of words
+	return len(words)
+
+def save_embeddings_to_parquet(data):
+	df = pd.DataFrame(data)
+	df.to_parquet(SAVE_PATH+ f"/e5_base_v2_data.parquet", engine='pyarrow')
+	print(f"Saved embeddings to ../e5_base_v2_data.parquet")
+
+def append_parquet(new_df: pd.DataFrame):
+	# Load existing data
+	df = pd.read_parquet('/Users/juanreyesgarcia/Library/CloudStorage/OneDrive-FundacionUniversidaddelasAmericasPuebla/DEVELOPER/PROJECTS/DreamedJobAI/data/e5_base_v2_data.parquet')
+
+	df = pd.concat([df, new_df], ignore_index=True)
+		# Remove duplicates based on 'id' column
+	df = df.drop_duplicates(subset='id')
+
+	# Write back to Parquet
+	df.to_parquet('/Users/juanreyesgarcia/Library/CloudStorage/OneDrive-FundacionUniversidaddelasAmericasPuebla/DEVELOPER/PROJECTS/DreamedJobAI/data/e5_base_v2_data.parquet', engine='pyarrow')
+	logging.info("e5_base_v2_data.parquet has been updated")
