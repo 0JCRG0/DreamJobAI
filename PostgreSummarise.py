@@ -18,7 +18,7 @@ from datetime import datetime, timedelta
 from utils.handy import num_tokens, count_words, LoggingMain, truncated_string, save_df_to_csv, summary_specs_txt_file, original_specs_txt_file
 from utils.AsyncSummariseJob import async_summarise_job_gpt
 from EmbeddingsOpenAI import embeddings_openai
-
+from EmbeddingsE5 import embedding_e5_base_v2
 
 """
 Env variables
@@ -49,12 +49,13 @@ def fetch_data_from_table(table_name:str) -> list :
 	cur = conn.cursor()
 
 	# Calculate the timestamp for 3 hours ago
-	two_hours_ago = datetime.now() - timedelta(hours=2)
+	#two_hours_ago = datetime.now() - timedelta(hours=2)
 
 	# Fetch rows from the table with the specified conditions
-	cur.execute(f"SELECT id, title, description, location FROM {table_name} WHERE timestamp >= %s", (two_hours_ago,))
+	#cur.execute(f"SELECT id, title, description, location FROM {table_name} WHERE timestamp >= %s", (two_hours_ago,))
 
-	#cur.execute(f"SELECT id, title, description, location FROM {table_name}")
+	
+	cur.execute(f"SELECT id, title, description, location FROM {table_name}")
 
 	# Fetch all rows from the table
 	rows = cur.fetchall()
@@ -71,7 +72,7 @@ def fetch_data_from_table(table_name:str) -> list :
 
 	return ids, titles, descriptions, locations
 
-ids, titles, descriptions, locations = fetch_data_from_table("no_usa")
+ids, titles, descriptions, locations = fetch_data_from_table("test")
 
 def raw_descriptions_to_batches(max_tokens: int, embedding_model: str, print_messages: bool = True) -> list:
 	batches = []
@@ -167,7 +168,7 @@ async def summarise_descriptions(descriptions: list) -> list:
 
 	#await close_session()
 	#processed_time = timeit.default_timer() - start_time
-	elapsed_time = asyncio.get_event_loop().time() - start_time / 60
+	elapsed_time = asyncio.get_event_loop().time() - start_time
 
 	return descriptions_summarised, total_cost, elapsed_time
 
@@ -182,10 +183,13 @@ async def main(embedding_model:str):
 	summary_specs_txt_file(raw_total_cost, raw_processed_time)
 
 	#Embedding starts
-	#if embedding_model == "openai":
-		#embeddings_openai(batches_to_embed= raw_summarised_batches, batches_ids=ids, original_descriptions=raw_batches, db="parquet", filename="openai_embeddings_summary")
-	#elif embedding_model == "e5":
+	if embedding_model == "openai":
+		embeddings_openai(batches_to_embed= raw_summarised_batches, batches_ids=ids, original_descriptions=raw_batches, db="parquet", filename="openai_embeddings_summary")
+	elif embedding_model == "e5":
+		embedding_e5_base_v2(batches_to_embed = raw_summarised_batches, batches_ids= ids, original_descriptions=raw_batches, chunk_size=15)
+
 
 if __name__ == "__main__":
-	asyncio.run(main("openai"))
+	asyncio.run(main("e5"))
+
 

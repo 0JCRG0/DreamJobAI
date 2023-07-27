@@ -62,15 +62,11 @@ async def async_summarise_job_gpt(session, job_description: str) -> Tuple[str, f
         prompt_cost = round((prompt_tokens / 1000) * 0.0015, 3)
         completion_cost = round((completion_tokens / 1000) * 0.002, 3)
         total_cost = prompt_cost + completion_cost
-        print(f"COST FOR SUMMARISING: ${total_cost} USD")
+        print(f"COST FOR SUMMARISING: ${total_cost:.2f} USD")
     elif MODEL == "gpt-3.5-turbo-16k":
         prompt_cost = round((prompt_tokens / 1000) * 0.003, 3)
         completion_cost = round((completion_tokens / 1000) * 0.004, 3)
         total_cost = prompt_cost + completion_cost
-        print(f"COST FOR SUMMARISING: ${total_cost} USD")
+        print(f"COST FOR SUMMARISING: ${total_cost:.2f} USD")
     return response_message, total_cost
 
-# At the end of your program, close the http session
-"""async def close_session():
-    # At the end of your program, close the http session
-    await openai.aiosession.get().close()"""

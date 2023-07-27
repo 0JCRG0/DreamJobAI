@@ -3304,3 +3304,858 @@ message='OpenAI API response' path=https://api.openai.com/v1/chat/completions pr
 2023-07-26 12:59:04,930 INFO: 
 Description's index 186 just added.
 
+2023-07-26 14:25:39,028 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=4243 request_id=08a59ffb84cca3096c9ae838dabac95b response_code=200
+
+2023-07-26 14:25:39,034 INFO: 
+Description's index 6 just added.
+
+2023-07-26 14:25:39,600 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=4901 request_id=81cb27ece1e15930a7075c616c7cbd75 response_code=200
+
+2023-07-26 14:25:39,601 INFO: 
+Description's index 5 just added.
+
+2023-07-26 14:25:40,358 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5628 request_id=b82aafbc96201109973f6421e86d574c response_code=200
+
+2023-07-26 14:25:40,359 INFO: 
+Description's index 7 just added.
+
+2023-07-26 14:25:40,864 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5735 request_id=8d56b6f8fcc3da3f894fc53d45ee0094 response_code=200
+
+2023-07-26 14:25:40,865 INFO: 
+Description's index 0 just added.
+
+2023-07-26 14:25:41,373 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6268 request_id=58349a4213bbc2a86a867e90fdb1450e response_code=200
+
+2023-07-26 14:25:41,373 INFO: 
+Description's index 8 just added.
+
+2023-07-26 14:25:41,878 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6287 request_id=bfc3f94a4e0d806d583992525e138a5c response_code=200
+
+2023-07-26 14:25:41,880 INFO: 
+Description's index 4 just added.
+
+2023-07-26 14:25:42,386 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6470 request_id=c4a2ccabe1bd4217901ce8c29601b484 response_code=200
+
+2023-07-26 14:25:42,387 INFO: 
+Description's index 1 just added.
+
+2023-07-26 14:25:43,225 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8463 request_id=9144d07a75b6cf5fc7faf03a69b52a89 response_code=200
+
+2023-07-26 14:25:43,226 INFO: 
+Description's index 2 just added.
+
+2023-07-26 14:25:45,685 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=10821 request_id=20303314d4cbd05f09259ef2f1dc221a response_code=200
+
+2023-07-26 14:25:45,686 INFO: 
+Description's index 3 just added.
+
+2023-07-26 14:27:07,666 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=3968 request_id=39737be5dc8cb8dd87798319d9848434 response_code=200
+
+2023-07-26 14:27:07,672 INFO: 
+Description's index 6 just added.
+
+2023-07-26 14:27:08,530 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=4941 request_id=87b05986ff01586a4a6a5065853070bb response_code=200
+
+2023-07-26 14:27:08,531 INFO: 
+Description's index 8 just added.
+
+2023-07-26 14:27:09,032 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5104 request_id=9c130b8a2f0af064297c3e9c5eec8ada response_code=200
+
+2023-07-26 14:27:09,032 INFO: 
+Description's index 5 just added.
+
+2023-07-26 14:27:09,538 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5581 request_id=739af73f7e084fde070e4bd6d571c834 response_code=200
+
+2023-07-26 14:27:09,539 INFO: 
+Description's index 7 just added.
+
+2023-07-26 14:27:10,706 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7049 request_id=36ac5bb2194ec889235c5f73b3e4c509 response_code=200
+
+2023-07-26 14:27:10,707 INFO: 
+Description's index 0 just added.
+
+2023-07-26 14:27:11,213 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7502 request_id=1f59e10b0c936900dfd0aa442282d1a8 response_code=200
+
+2023-07-26 14:27:11,213 INFO: 
+Description's index 2 just added.
+
+2023-07-26 14:27:11,719 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8030 request_id=fe646457667616cebdfdc8dc41df7d3e response_code=200
+
+2023-07-26 14:27:11,719 INFO: 
+Description's index 4 just added.
+
+2023-07-26 14:27:12,225 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8535 request_id=8d121085a31a1c44cdae3fcf2710b338 response_code=200
+
+2023-07-26 14:27:12,225 INFO: 
+Description's index 1 just added.
+
+2023-07-26 14:27:14,773 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=11068 request_id=3b785c13ed1b37785b20528e0d5d08c5 response_code=200
+
+2023-07-26 14:27:14,774 INFO: 
+Description's index 3 just added.
+
+2023-07-26 23:36:43,878 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=2852 request_id=f69588c2eb7d66a451c5a59d808bb7cd response_code=200
+
+2023-07-26 23:36:43,887 INFO: 
+Description's index 8 just added.
+
+2023-07-26 23:36:45,039 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=4054 request_id=2e6b0c5ba536b33a7118e8cd37ec14f6 response_code=200
+
+2023-07-26 23:36:45,040 INFO: 
+Description's index 6 just added.
+
+2023-07-26 23:36:45,546 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=4330 request_id=8424e8ee43e58d155118d60acffdad1d response_code=200
+
+2023-07-26 23:36:45,547 INFO: 
+Description's index 5 just added.
+
+2023-07-26 23:36:46,407 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5397 request_id=64bbab7c4e252fa5d9ccf824ec79aa02 response_code=200
+
+2023-07-26 23:36:46,408 INFO: 
+Description's index 7 just added.
+
+2023-07-26 23:36:47,364 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6433 request_id=dea641f54c26411d6327e1d4980b652e response_code=200
+
+2023-07-26 23:36:47,365 INFO: 
+Description's index 0 just added.
+
+2023-07-26 23:36:48,300 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7279 request_id=18f6da8e6ee9ce8e9a3465e4ae05ebc8 response_code=200
+
+2023-07-26 23:36:48,301 INFO: 
+Description's index 4 just added.
+
+2023-07-26 23:36:48,807 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7758 request_id=6b65ce13e67612552423c35109cfebfb response_code=200
+
+2023-07-26 23:36:48,807 INFO: 
+Description's index 2 just added.
+
+2023-07-26 23:36:50,336 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9411 request_id=9c3f0f25f06ffc4437de1a8a30c8c203 response_code=200
+
+2023-07-26 23:36:50,337 INFO: 
+Description's index 1 just added.
+
+2023-07-26 23:36:52,779 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=11853 request_id=02b8f9b39d64ecf23c32253e6d5580ad response_code=200
+
+2023-07-26 23:36:52,780 INFO: 
+Description's index 3 just added.
+
+2023-07-26 23:39:28,812 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=4160 request_id=ae7a15857eec5dbe9ece317063f6620c response_code=200
+
+2023-07-26 23:39:28,817 INFO: 
+Description's index 6 just added.
+
+2023-07-26 23:39:29,324 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=4566 request_id=f150ac970f0ebfd6855b3060182d2d04 response_code=200
+
+2023-07-26 23:39:29,325 INFO: 
+Description's index 5 just added.
+
+2023-07-26 23:39:29,831 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=4972 request_id=e55c60a2e080e61cd76948027c918453 response_code=200
+
+2023-07-26 23:39:29,832 INFO: 
+Description's index 7 just added.
+
+2023-07-26 23:39:30,371 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5718 request_id=691f039b5ae23cedfd2c4fa99fcdfbc8 response_code=200
+
+2023-07-26 23:39:30,371 INFO: 
+Description's index 8 just added.
+
+2023-07-26 23:39:31,078 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6412 request_id=8be73a0e40167c25cc891af935f6c951 response_code=200
+
+2023-07-26 23:39:31,079 INFO: 
+Description's index 4 just added.
+
+2023-07-26 23:39:31,583 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6717 request_id=433967e2267dacbbd593ae8630460373 response_code=200
+
+2023-07-26 23:39:31,583 INFO: 
+Description's index 0 just added.
+
+2023-07-26 23:39:32,090 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7102 request_id=54e45e33d0ee2db3d63a052146142f83 response_code=200
+
+2023-07-26 23:39:32,091 INFO: 
+Description's index 2 just added.
+
+2023-07-26 23:39:33,442 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8788 request_id=596bdbc1e784a4c9799facaf33dd3792 response_code=200
+
+2023-07-26 23:39:33,442 INFO: 
+Description's index 3 just added.
+
+2023-07-26 23:39:33,948 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8840 request_id=37c081d6f3ccfa718add1fcd08995c08 response_code=200
+
+2023-07-26 23:39:33,949 INFO: 
+Description's index 1 just added.
+
+2023-07-27 00:12:19,242 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5828 request_id=c35eac4b987602a037560f30e8dc0b03 response_code=200
+
+2023-07-27 00:12:19,249 INFO: 
+Description's index 13 just added.
+
+2023-07-27 00:12:19,757 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5917 request_id=14cdfbeb20ad54972c8638c11a21ba2d response_code=200
+
+2023-07-27 00:12:19,759 INFO: 
+Description's index 9 just added.
+
+2023-07-27 00:12:20,262 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6198 request_id=15933ac58f3c25120737a3d9ecdce6e3 response_code=200
+
+2023-07-27 00:12:20,262 INFO: 
+Description's index 7 just added.
+
+2023-07-27 00:12:20,770 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6862 request_id=977ee7011fbddd151908541e700ba5c1 response_code=200
+
+2023-07-27 00:12:20,771 INFO: 
+Description's index 5 just added.
+
+2023-07-27 00:12:21,277 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7056 request_id=558ee5e9ccded8c70b2d94af2fb593bf response_code=200
+
+2023-07-27 00:12:21,278 INFO: 
+Description's index 0 just added.
+
+2023-07-27 00:12:21,785 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7693 request_id=6a87d0db8d46e7a3ca558d982b6a0e1f response_code=200
+
+2023-07-27 00:12:21,786 INFO: 
+Description's index 10 just added.
+
+2023-07-27 00:12:22,292 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7839 request_id=03cf3d2c3590f22beeb017792e547d3d response_code=200
+
+2023-07-27 00:12:22,293 INFO: 
+Description's index 12 just added.
+
+2023-07-27 00:12:22,796 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8179 request_id=ab4b60477b516c727c9b72141f54af9a response_code=200
+
+2023-07-27 00:12:22,797 INFO: 
+Description's index 11 just added.
+
+2023-07-27 00:12:23,303 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8265 request_id=21160c593fd41498c6e237129b4ee65e response_code=200
+
+2023-07-27 00:12:23,304 INFO: 
+Description's index 1 just added.
+
+2023-07-27 00:12:23,811 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8607 request_id=e17ca5de7183032508f92383528a2975 response_code=200
+
+2023-07-27 00:12:23,812 INFO: 
+Description's index 8 just added.
+
+2023-07-27 00:12:24,314 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8931 request_id=d51f0a05167737934ce33a5c9596e879 response_code=200
+
+2023-07-27 00:12:24,316 INFO: 
+Description's index 2 just added.
+
+2023-07-27 00:12:24,821 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9031 request_id=5c035b4bf8cc18cc08ef8b1d06bdb7c8 response_code=200
+
+2023-07-27 00:12:24,822 INFO: 
+Description's index 3 just added.
+
+2023-07-27 00:12:25,327 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9146 request_id=a07b30a493a6d576a79df9f56eeb0c0c response_code=200
+
+2023-07-27 00:12:25,327 INFO: 
+Description's index 4 just added.
+
+2023-07-27 00:12:25,833 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9643 request_id=da60c6e32162836ea25224549a3d719f response_code=200
+
+2023-07-27 00:12:25,834 INFO: 
+Description's index 6 just added.
+
+2023-07-27 00:15:34,035 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5555 request_id=986236b48114c22f43529e6c29b84805 response_code=200
+
+2023-07-27 00:15:34,043 INFO: 
+Description's index 9 just added.
+
+2023-07-27 00:15:35,600 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7088 request_id=2a9785826a324fac4b57062413bca258 response_code=200
+
+2023-07-27 00:15:35,600 INFO: 
+Description's index 0 just added.
+
+2023-07-27 00:15:36,107 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7480 request_id=6c00a182e48fbf72f456a36eea3849b8 response_code=200
+
+2023-07-27 00:15:36,108 INFO: 
+Description's index 10 just added.
+
+2023-07-27 00:15:36,613 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7796 request_id=435671d5d55c069fa2656ea98fd32817 response_code=200
+
+2023-07-27 00:15:36,614 INFO: 
+Description's index 11 just added.
+
+2023-07-27 00:15:37,121 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7837 request_id=78c627042004f6d9698e166c24e47260 response_code=200
+
+2023-07-27 00:15:37,122 INFO: 
+Description's index 5 just added.
+
+2023-07-27 00:15:37,628 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8299 request_id=8f43d8315acc68c05dbe3e70041a8ee8 response_code=200
+
+2023-07-27 00:15:37,629 INFO: 
+Description's index 2 just added.
+
+2023-07-27 00:15:38,135 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8557 request_id=e9d29fa98b37527c885b1e1bd69ecad7 response_code=200
+
+2023-07-27 00:15:38,136 INFO: 
+Description's index 1 just added.
+
+2023-07-27 00:15:38,642 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8745 request_id=73800d6d5bf2156f49484dfd7914b36a response_code=200
+
+2023-07-27 00:15:38,643 INFO: 
+Description's index 7 just added.
+
+2023-07-27 00:15:39,145 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8883 request_id=656cce6a13bcf4ec5b26bd83b4ebf1cf response_code=200
+
+2023-07-27 00:15:39,146 INFO: 
+Description's index 12 just added.
+
+2023-07-27 00:15:39,651 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8851 request_id=fc84b1c04a325ea23d3b5e234ed0b831 response_code=200
+
+2023-07-27 00:15:39,652 INFO: 
+Description's index 6 just added.
+
+2023-07-27 00:15:40,159 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9204 request_id=733f1b9be45b6c0d9eed31560ce43cf8 response_code=200
+
+2023-07-27 00:15:40,160 INFO: 
+Description's index 8 just added.
+
+2023-07-27 00:15:40,666 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9347 request_id=17d9ef83223795e0a742b685e4a98209 response_code=200
+
+2023-07-27 00:15:40,666 INFO: 
+Description's index 4 just added.
+
+2023-07-27 00:15:41,171 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=10141 request_id=0f0c0e6c6cb23704f574049fc7050e2d response_code=200
+
+2023-07-27 00:15:41,171 INFO: 
+Description's index 3 just added.
+
+2023-07-27 00:15:41,677 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=12082 request_id=c5aaf8284bffbc5ae02b7fae0e6c60e9 response_code=200
+
+2023-07-27 00:15:41,677 INFO: 
+Description's index 13 just added.
+
+2023-07-27 00:23:12,277 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6079 request_id=d63e2a73df44adc2e8d85a3fe0c5b7d3 response_code=200
+
+2023-07-27 00:23:12,283 INFO: 
+Description's index 4 just added.
+
+2023-07-27 00:23:12,790 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6148 request_id=78e8ffea1b7908bd13c4fca2eadf64c9 response_code=200
+
+2023-07-27 00:23:12,791 INFO: 
+Description's index 3 just added.
+
+2023-07-27 00:23:13,400 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7110 request_id=67b8e3a20c40ee58ad9af8800cd7fee5 response_code=200
+
+2023-07-27 00:23:13,400 INFO: 
+Description's index 2 just added.
+
+2023-07-27 00:23:13,907 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7607 request_id=47f25c4fa95eec81a1938e20116be278 response_code=200
+
+2023-07-27 00:23:13,907 INFO: 
+Description's index 0 just added.
+
+2023-07-27 00:23:14,413 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7631 request_id=4ee02fe0f5db630b48a2fd50a91eab88 response_code=200
+
+2023-07-27 00:23:14,414 INFO: 
+Description's index 7 just added.
+
+2023-07-27 00:23:14,921 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7645 request_id=e50bbbda010e4a610b6e73ce03c2ce47 response_code=200
+
+2023-07-27 00:23:14,922 INFO: 
+Description's index 1 just added.
+
+2023-07-27 00:23:15,428 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7980 request_id=e0dc93709a53cef06ccbdbb80c59f70c response_code=200
+
+2023-07-27 00:23:15,429 INFO: 
+Description's index 10 just added.
+
+2023-07-27 00:23:15,934 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8730 request_id=b733d20dabab798a232812039281634a response_code=200
+
+2023-07-27 00:23:15,934 INFO: 
+Description's index 8 just added.
+
+2023-07-27 00:23:16,441 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8968 request_id=cf9703f87faf74cd80afa77ce0771e1b response_code=200
+
+2023-07-27 00:23:16,441 INFO: 
+Description's index 9 just added.
+
+2023-07-27 00:23:16,948 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9900 request_id=d29a2f6f6a05784ce496251b0c02a797 response_code=200
+
+2023-07-27 00:23:16,949 INFO: 
+Description's index 5 just added.
+
+2023-07-27 00:23:17,452 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=10108 request_id=e8a54eecac26f14d1a1992b5b4d5cfe5 response_code=200
+
+2023-07-27 00:23:17,453 INFO: 
+Description's index 6 just added.
+
+2023-07-27 00:23:58,049 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=4173 request_id=142522f4bf17869e25cd10adb4c178bf response_code=200
+
+2023-07-27 00:23:58,054 INFO: 
+Description's index 10 just added.
+
+2023-07-27 00:23:58,969 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5104 request_id=cce0ceac514744ec4d7b1bbe71807251 response_code=200
+
+2023-07-27 00:23:58,970 INFO: 
+Description's index 3 just added.
+
+2023-07-27 00:24:00,099 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6237 request_id=936d957d06cace830a17e6d01c76398e response_code=200
+
+2023-07-27 00:24:00,100 INFO: 
+Description's index 4 just added.
+
+2023-07-27 00:24:00,607 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6513 request_id=f5a122e6be548ebdee097ae790b04ab3 response_code=200
+
+2023-07-27 00:24:00,608 INFO: 
+Description's index 2 just added.
+
+2023-07-27 00:24:01,114 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7057 request_id=ae6b2b5a38ceff7336b020a84047c8ac response_code=200
+
+2023-07-27 00:24:01,115 INFO: 
+Description's index 0 just added.
+
+2023-07-27 00:24:01,623 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7457 request_id=16cfcaa72f3b4d02b1d5a717fdc167c6 response_code=200
+
+2023-07-27 00:24:01,623 INFO: 
+Description's index 7 just added.
+
+2023-07-27 00:24:02,125 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7721 request_id=0fc8027be33ad351eaa6413638e417e5 response_code=200
+
+2023-07-27 00:24:02,126 INFO: 
+Description's index 9 just added.
+
+2023-07-27 00:24:02,632 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7790 request_id=a3bf3144a9bca1bf85adc77587d53d86 response_code=200
+
+2023-07-27 00:24:02,633 INFO: 
+Description's index 8 just added.
+
+2023-07-27 00:24:03,139 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8045 request_id=a11f2834440c3b8f14d45b146db164a7 response_code=200
+
+2023-07-27 00:24:03,140 INFO: 
+Description's index 1 just added.
+
+2023-07-27 00:24:03,884 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=10030 request_id=1cde6995ebb0e1190e6d469214c393c3 response_code=200
+
+2023-07-27 00:24:03,885 INFO: 
+Description's index 6 just added.
+
+2023-07-27 00:24:04,390 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=10127 request_id=6f7fcb5742b953abffc268099f4b727e response_code=200
+
+2023-07-27 00:24:04,391 INFO: 
+Description's index 5 just added.
+
+2023-07-27 00:24:46,744 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5680 request_id=30ab484896cef459e9b93687d0139477 response_code=200
+
+2023-07-27 00:24:46,752 INFO: 
+Description's index 4 just added.
+
+2023-07-27 00:24:47,608 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6493 request_id=b4cd97e7e628ee4c5e2f714ce5a81318 response_code=200
+
+2023-07-27 00:24:47,608 INFO: 
+Description's index 2 just added.
+
+2023-07-27 00:24:48,737 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7594 request_id=098c6b60ea83798d5ea33e8ecb059a16 response_code=200
+
+2023-07-27 00:24:48,738 INFO: 
+Description's index 7 just added.
+
+2023-07-27 00:24:49,243 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6726 request_id=e76257d9c774d0e9e22aa40e4091183b response_code=200
+
+2023-07-27 00:24:49,244 INFO: 
+Description's index 3 just added.
+
+2023-07-27 00:24:49,745 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7884 request_id=7bb48b44dddb1518a717a29a0634d987 response_code=200
+
+2023-07-27 00:24:49,746 INFO: 
+Description's index 9 just added.
+
+2023-07-27 00:24:50,252 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8016 request_id=e8968c5651bbdd17f4b21aac71252a24 response_code=200
+
+2023-07-27 00:24:50,253 INFO: 
+Description's index 10 just added.
+
+2023-07-27 00:24:50,760 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8557 request_id=bf426f809a02948ed528ba8cc23a3118 response_code=200
+
+2023-07-27 00:24:50,761 INFO: 
+Description's index 8 just added.
+
+2023-07-27 00:24:51,267 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8709 request_id=899f55d0085bee08cf265c1e2bd8ff4a response_code=200
+
+2023-07-27 00:24:51,268 INFO: 
+Description's index 5 just added.
+
+2023-07-27 00:24:51,774 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9276 request_id=d3e14104b1ef5a5268b7a4a839802108 response_code=200
+
+2023-07-27 00:24:51,775 INFO: 
+Description's index 0 just added.
+
+2023-07-27 00:24:52,281 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=10033 request_id=a0f67798bf2de6562797b12a87965f3d response_code=200
+
+2023-07-27 00:24:52,282 INFO: 
+Description's index 1 just added.
+
+2023-07-27 00:24:52,785 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=10270 request_id=7dd36bf79f7586fb628aca1ff425138d response_code=200
+
+2023-07-27 00:24:52,787 INFO: 
+Description's index 6 just added.
+
+2023-07-27 00:28:14,047 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=3698 request_id=7ba5b0afeea3305dd8b36bfb0e8e18c4 response_code=200
+
+2023-07-27 00:28:14,053 INFO: 
+Description's index 10 just added.
+
+2023-07-27 00:28:15,790 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5418 request_id=614bd5ae413ce75f56c69db2d2299262 response_code=200
+
+2023-07-27 00:28:15,791 INFO: 
+Description's index 3 just added.
+
+2023-07-27 00:28:16,298 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5771 request_id=76c417028e58a24e6c8942d398da7717 response_code=200
+
+2023-07-27 00:28:16,299 INFO: 
+Description's index 4 just added.
+
+2023-07-27 00:28:16,805 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6378 request_id=1ee7c43ee4aee320cbecfbe1d43410e0 response_code=200
+
+2023-07-27 00:28:16,805 INFO: 
+Description's index 2 just added.
+
+2023-07-27 00:28:17,309 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6679 request_id=2df4b52d8e37bb65640d53f23f15f2b4 response_code=200
+
+2023-07-27 00:28:17,309 INFO: 
+Description's index 7 just added.
+
+2023-07-27 00:28:17,938 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7663 request_id=c26d33b026c05b9137635ea3627b83ff response_code=200
+
+2023-07-27 00:28:17,939 INFO: 
+Description's index 8 just added.
+
+2023-07-27 00:28:18,445 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7977 request_id=2d74760a6a0ec888f9d6dab352312685 response_code=200
+
+2023-07-27 00:28:18,446 INFO: 
+Description's index 9 just added.
+
+2023-07-27 00:28:18,951 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8089 request_id=eb36364d7f6f3b89aa3425a32b38e918 response_code=200
+
+2023-07-27 00:28:18,952 INFO: 
+Description's index 5 just added.
+
+2023-07-27 00:28:19,459 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7976 request_id=e6a965e1ce313880d596849118d91136 response_code=200
+
+2023-07-27 00:28:19,460 INFO: 
+Description's index 0 just added.
+
+2023-07-27 00:28:19,966 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8482 request_id=0dea3dd9fdc4109a903a2492f76a13f0 response_code=200
+
+2023-07-27 00:28:19,968 INFO: 
+Description's index 1 just added.
+
+2023-07-27 00:28:20,474 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9966 request_id=c37e24b26f540c9db8e223ca71285c2e response_code=200
+
+2023-07-27 00:28:20,476 INFO: 
+Description's index 6 just added.
+
+2023-07-27 00:36:24,440 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5728 request_id=6d25db1d002d9ed4c2f14700174fa522 response_code=200
+
+2023-07-27 00:36:24,448 INFO: 
+Description's index 3 just added.
+
+2023-07-27 00:36:25,156 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5634 request_id=4164c79d73d4b5e07f3cb6ddb009c6a0 response_code=200
+
+2023-07-27 00:36:25,157 INFO: 
+Description's index 4 just added.
+
+2023-07-27 00:36:25,664 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6858 request_id=e4146a62845c40cbd2c75f491ca478aa response_code=200
+
+2023-07-27 00:36:25,665 INFO: 
+Description's index 10 just added.
+
+2023-07-27 00:36:26,171 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7150 request_id=64e45d1efd728ffe0cada210c7c11da5 response_code=200
+
+2023-07-27 00:36:26,172 INFO: 
+Description's index 7 just added.
+
+2023-07-27 00:36:26,676 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7754 request_id=7510b4305270a9c164fd1ae2d26f14aa response_code=200
+
+2023-07-27 00:36:26,677 INFO: 
+Description's index 0 just added.
+
+2023-07-27 00:36:27,182 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6636 request_id=f7f6df5619cb89a8d214846f4557cf28 response_code=200
+
+2023-07-27 00:36:27,182 INFO: 
+Description's index 2 just added.
+
+2023-07-27 00:36:27,684 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8637 request_id=07881e5ed862c02838c8fe8544d513f8 response_code=200
+
+2023-07-27 00:36:27,685 INFO: 
+Description's index 8 just added.
+
+2023-07-27 00:36:28,188 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9550 request_id=5c7eb6b9afc854742d6972059e46f7ef response_code=200
+
+2023-07-27 00:36:28,189 INFO: 
+Description's index 1 just added.
+
+2023-07-27 00:36:28,696 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=10188 request_id=f807a02f8bbbafaf81a45e93e0f9e03b response_code=200
+
+2023-07-27 00:36:28,697 INFO: 
+Description's index 5 just added.
+
+2023-07-27 00:36:29,201 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=10423 request_id=dcbb535dcde607f0c0a08b148c7877cd response_code=200
+
+2023-07-27 00:36:29,202 INFO: 
+Description's index 6 just added.
+
+2023-07-27 00:36:32,425 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=11563 request_id=c65130499aa3d00b9e671f853b59ee59 response_code=200
+
+2023-07-27 00:36:32,426 INFO: 
+Description's index 9 just added.
+
+2023-07-27 00:42:04,020 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5554 request_id=2cd9d9daa1ee3f30ce9302a8f92e341b response_code=200
+
+2023-07-27 00:42:04,029 INFO: 
+Description's index 4 just added.
+
+2023-07-27 00:42:07,066 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8594 request_id=6d7cd124d4a35984428dce4600f79ca9 response_code=200
+
+2023-07-27 00:42:07,072 INFO: 
+Description's index 10 just added.
+
+2023-07-27 00:42:07,580 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8894 request_id=39cdbeab6ed804426494822427a79c43 response_code=200
+
+2023-07-27 00:42:07,580 INFO: 
+Description's index 1 just added.
+
+2023-07-27 00:42:08,085 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8895 request_id=e9ce17adf13b71249d8fb83d6a214afb response_code=200
+
+2023-07-27 00:42:08,086 INFO: 
+Description's index 0 just added.
+
+2023-07-27 00:42:08,591 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5388 request_id=9159b72138b508b7e9ed0de033b033f7 response_code=200
+
+2023-07-27 00:42:08,591 INFO: 
+Description's index 3 just added.
+
+2023-07-27 00:42:09,098 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7415 request_id=d7f9368808a1a2519c279d092d418897 response_code=200
+
+2023-07-27 00:42:09,099 INFO: 
+Description's index 2 just added.
+
+2023-07-27 00:42:09,607 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8606 request_id=f268da6fe502250065202d6863df19dd response_code=200
+
+2023-07-27 00:42:09,607 INFO: 
+Description's index 8 just added.
+
+2023-07-27 00:42:10,113 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7459 request_id=69a5135a3cbc8948d99d9cc9299cbd76 response_code=200
+
+2023-07-27 00:42:10,113 INFO: 
+Description's index 7 just added.
+
+2023-07-27 00:42:12,838 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=11198 request_id=8ef32673fb4f9982cbce2f0407bc91a4 response_code=200
+
+2023-07-27 00:42:12,839 INFO: 
+Description's index 6 just added.
+
+2023-07-27 00:42:14,297 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=12000 request_id=53497568f3beabfbbd00d8a3894da86a response_code=200
+
+2023-07-27 00:42:14,309 INFO: 
+Description's index 9 just added.
+
+2023-07-27 00:44:29,098 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6124 request_id=55db1f9033cf27f8a243671d75564ef6 response_code=200
+
+2023-07-27 00:44:29,104 INFO: 
+Description's index 3 just added.
+
+2023-07-27 00:44:29,611 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6462 request_id=0edea8ba1942fd5111cab2afff28e1f0 response_code=200
+
+2023-07-27 00:44:29,612 INFO: 
+Description's index 4 just added.
+
+2023-07-27 00:44:30,430 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7477 request_id=12810d27ff33c537a94468d1429ce928 response_code=200
+
+2023-07-27 00:44:30,431 INFO: 
+Description's index 2 just added.
+
+2023-07-27 00:44:31,215 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8261 request_id=d3c64123659ec00204bc512fe3815b16 response_code=200
+
+2023-07-27 00:44:31,216 INFO: 
+Description's index 1 just added.
+
+2023-07-27 00:44:31,721 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8305 request_id=e0d263bae914f59dc9750f626d4cdcfe response_code=200
+
+2023-07-27 00:44:31,722 INFO: 
+Description's index 0 just added.
+
+2023-07-27 00:44:32,716 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9761 request_id=dd3d64880b7282a6f005153281354945 response_code=200
+
+2023-07-27 00:44:32,717 INFO: 
+Description's index 5 just added.
+
+2023-07-27 01:20:50,342 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6966 request_id=c7ddbb1f1faa4ea4bf96ce266e771650 response_code=200
+
+2023-07-27 01:20:50,348 INFO: 
+Description's index 5 just added.
+
+2023-07-27 01:20:50,855 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7030 request_id=d2db95b621b0c71638069cfe2c3aa87e response_code=200
+
+2023-07-27 01:20:50,856 INFO: 
+Description's index 2 just added.
+
+2023-07-27 01:20:51,570 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8257 request_id=f6d3541c28b425f9ae298cbd0b8fae01 response_code=200
+
+2023-07-27 01:20:51,572 INFO: 
+Description's index 4 just added.
+
+2023-07-27 01:20:52,076 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8299 request_id=587109aecbd26fadfd7c049431ab002a response_code=200
+
+2023-07-27 01:20:52,077 INFO: 
+Description's index 6 just added.
+
+2023-07-27 01:20:52,582 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8674 request_id=4e6fce078c5e9aec5a7e0a5cd481fd6b response_code=200
+
+2023-07-27 01:20:52,583 INFO: 
+Description's index 0 just added.
+
+2023-07-27 01:20:55,051 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=11666 request_id=5b136322e9cdda18484ee8e44603f9a9 response_code=200
+
+2023-07-27 01:20:55,052 INFO: 
+Description's index 3 just added.
+
+2023-07-27 01:20:56,894 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=13422 request_id=f7e459ac3938bd35967962245d090d28 response_code=200
+
+2023-07-27 01:20:56,895 INFO: 
+Description's index 1 just added.
+
+2023-07-27 01:21:01,387 INFO: 
+e5_base_v2_data.parquet has been updated
+
