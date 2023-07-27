@@ -139,9 +139,9 @@ async def summarise_descriptions(descriptions: list) -> list:
 				words_per_text = count_words(text)
 				if words_per_text > 50:
 					description_summary, cost = await async_summarise_job_gpt(session, text)
+					await asyncio.sleep(.2)
 					print(f"Description with index {i} just added.")
 					logging.info(f"Description's index {i} just added.")
-					time.sleep(.5)
 					return i, description_summary, cost
 				else:
 					logging.info(f"Description with index {i} is too short for being summarised. Number of words: {words_per_text}")
@@ -151,7 +151,7 @@ async def summarise_descriptions(descriptions: list) -> list:
 				attempts += 1
 				print(f"{e}. Retrying attempt {attempts}...")
 				logging.warning(f"{e}. Retrying attempt {attempts}...")
-				time.sleep(2**attempts)  # exponential backoff
+				await asyncio.sleep(2**attempts)  # exponential backoff
 		else:
 			print(f"Description with index {i} could not be summarised after 5 attempts.")
 			return i, text, 0
