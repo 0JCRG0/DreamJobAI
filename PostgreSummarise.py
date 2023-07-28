@@ -15,7 +15,7 @@ import pandas as pd
 from chromadb.utils import embedding_functions
 from chromadb.config import Settings
 from datetime import datetime, timedelta
-from utils.handy import num_tokens, count_words, LoggingMain, truncated_string, save_df_to_csv, summary_specs_txt_file, original_specs_txt_file
+from utils.handy import num_tokens, count_words, LoggingMain, truncated_string, save_df_to_csv, summary_specs_txt_file, original_specs_txt_file, clean_rows
 from utils.AsyncSummariseJob import async_summarise_job_gpt
 from EmbeddingsOpenAI import embeddings_openai
 from EmbeddingsE5 import embedding_e5_base_v2
@@ -52,10 +52,10 @@ def fetch_data_from_table(table_name:str) -> list :
 	two_hours_ago = datetime.now() - timedelta(hours=2)
 
 	# Fetch rows from the table with the specified conditions
-	cur.execute(f"SELECT id, title, description, location FROM {table_name} WHERE timestamp >= %s", (two_hours_ago,))
+	#cur.execute(f"SELECT id, title, description, location FROM {table_name} WHERE timestamp >= %s", (two_hours_ago,))
 
 	
-	#cur.execute(f"SELECT id, title, description, location FROM {table_name}")
+	cur.execute(f"SELECT id, title, description, location FROM {table_name}")
 
 	# Fetch all rows from the table
 	rows = cur.fetchall()
@@ -67,29 +67,50 @@ def fetch_data_from_table(table_name:str) -> list :
 	# Separate the columns into individual lists
 	ids = [row[0] for row in rows]
 	titles = [row[1] for row in rows]
-	descriptions = [row[2] for row in rows]
 	locations = [row[3] for row in rows]
+	descriptions = [row[2] for row in rows]
 
-	return ids, titles, descriptions, locations
+	return ids, titles, locations, descriptions
 
-ids, titles, descriptions, locations = fetch_data_from_table("no_usa")
+ids, titles, locations, descriptions = fetch_data_from_table("test")
+
+def rows_to_nested_list(title_list: list, location_list: list, description_list: list) -> list:
+    
+    #Titles
+    formatted_titles = ["###title: {}###".format(title) for title in title_list]
+    cleaned_titles = [clean_rows(title) for title in formatted_titles]
+    #Locations
+    formatted_locations = ["###location: {}###".format(location) for location in location_list]
+    cleaned_locations = [clean_rows(location) for location in formatted_locations]
+    #Descriptions
+    formatted_descriptions = ["###description: {}###".format(description) for description in description_list]
+    cleaned_descriptions = [clean_rows(description) for description in formatted_descriptions]
+
+    #NEST THE LISTS
+    jobs_info = [[title, location, description] for title, location, description in zip(cleaned_titles, cleaned_locations, cleaned_descriptions)]
+
+    return jobs_info
+
+jobs_info= rows_to_nested_list(titles, locations, descriptions)
+
 
 def raw_descriptions_to_batches(max_tokens: int, embedding_model: str, print_messages: bool = True) -> list:
 	batches = []
 	total_tokens = 0
 	truncation_counter = 0  # Counter for truncations
 
-	for i in descriptions:
-		tokens_description = num_tokens(i)
+	for i in jobs_info:
+		text = " ".join(i)  # Join the elements of the list into a single string
+		tokens_description = num_tokens(text)
 		if tokens_description <= max_tokens:
-			batches.append(i)
+			batches.append(text)
 		else:
 			#TRUNCATE IF STRING MORE THAN x TOKENS
-			job_truncated = truncated_string(i, model=model, max_tokens=max_tokens)
+			job_truncated = truncated_string(text, model=model, max_tokens=max_tokens)
 			batches.append(job_truncated)
 			truncation_counter += 1
 
-		total_tokens += num_tokens(i)  # Update the total tokens by adding the tokens of the current job
+		total_tokens += num_tokens(text)  # Update the total tokens by adding the tokens of the current job
 
 	#Get approximate cost for embeddings
 	if embedding_model == "openai":
@@ -143,14 +164,14 @@ async def summarise_descriptions(descriptions: list) -> list:
 					logging.info(f"Description's index {i} just added.")
 					return i, description_summary, cost
 				else:
-					logging.info(f"Description with index {i} is too short for being summarised. Number of words: {words_per_text}")
+					logging.warning(f"Description with index {i} is too short for being summarised. Number of words: {words_per_text}")
 					print(f"Description with index {i} is too short for being summarised. Number of words: {words_per_text}")
 					return i, text, 0
 			except (ServiceUnavailableError, Exception) as e:
 				attempts += 1
 				print(f"{e}. Retrying attempt {attempts}...")
 				logging.warning(f"{e}. Retrying attempt {attempts}...")
-				await asyncio.sleep(2**attempts)  # exponential backoff
+				await asyncio.sleep(5**attempts)  # exponential backoff
 		else:
 			print(f"Description with index {i} could not be summarised after 5 attempts.")
 			return i, text, 0
@@ -175,20 +196,25 @@ async def summarise_descriptions(descriptions: list) -> list:
 async def main(embedding_model:str):
 	raw_summarised_batches, raw_total_cost, raw_processed_time = await summarise_descriptions(raw_batches)
 
+	def passage_e5_format(summaries):
+		formatted_summary = ["passage: {}".format(summary) for summary in summaries]
+		return formatted_summary
+	
 	#SAVE THE DATA...
 
-	save_df_to_csv(ids, raw_batches, raw_summarised_batches)	
+	formatted_summarised_e5_batches = passage_e5_format(raw_summarised_batches)
+
+	save_df_to_csv(ids, raw_batches, formatted_summarised_e5_batches)	
 
 	summary_specs_txt_file(raw_total_cost, raw_processed_time)
 
 	#Embedding starts
 	if embedding_model == "openai":
-		embeddings_openai(batches_to_embed= raw_summarised_batches, batches_ids=ids, original_descriptions=raw_batches, db="parquet", filename="openai_embeddings_summary")
+		embeddings_openai(batches_to_embed= formatted_summarised_e5_batches, batches_ids=ids, original_descriptions=raw_batches, db="parquet", filename="openai_embeddings_summary")
 	elif embedding_model == "e5":
-		embedding_e5_base_v2(batches_to_embed = raw_summarised_batches, batches_ids= ids, original_descriptions=raw_batches, chunk_size=15)
+		embedding_e5_base_v2(batches_to_embed = formatted_summarised_e5_batches, batches_ids= ids, original_descriptions=raw_batches, chunk_size=15)
 
 
 if __name__ == "__main__":
 	asyncio.run(main("e5"))
-
 
