@@ -15,6 +15,12 @@ from utils.handy import LoggingMain, save_embeddings_to_parquet, append_parquet
 import pretty_errors
 from dotenv import load_dotenv
 import os
+from tenacity import (
+    retry,
+    stop_after_attempt,
+    wait_random_exponential,
+)  # for exponential backoff
+
 
 load_dotenv('.env')
 SAVE_PATH = os.getenv("SAVE_PATH")
@@ -24,8 +30,7 @@ E5_BASE_TOTAL_JOBS = os.getenv("E5_BASE_TOTAL_JOBS")
 
 LoggingMain()
 
-#TODO: MODIFY SO IT CAN BE CALLED BY postgresummary
-
+#@retry(wait=wait_random_exponential(min=1, max=60), stop=stop_after_attempt(6))
 def embedding_e5_base_v2(batches_to_embed: list[str], batches_ids: list[str], original_descriptions: list[str], chunk_size: int) -> list:
     
     INPUT_TEXT = batches_to_embed

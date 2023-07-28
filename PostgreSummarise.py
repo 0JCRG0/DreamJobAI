@@ -49,13 +49,13 @@ def fetch_data_from_table(table_name:str) -> list :
 	cur = conn.cursor()
 
 	# Calculate the timestamp for 3 hours ago
-	#two_hours_ago = datetime.now() - timedelta(hours=2)
+	two_hours_ago = datetime.now() - timedelta(hours=2)
 
 	# Fetch rows from the table with the specified conditions
-	#cur.execute(f"SELECT id, title, description, location FROM {table_name} WHERE timestamp >= %s", (two_hours_ago,))
+	cur.execute(f"SELECT id, title, description, location FROM {table_name} WHERE timestamp >= %s", (two_hours_ago,))
 
 	
-	cur.execute(f"SELECT id, title, description, location FROM {table_name}")
+	#cur.execute(f"SELECT id, title, description, location FROM {table_name}")
 
 	# Fetch all rows from the table
 	rows = cur.fetchall()
@@ -72,7 +72,7 @@ def fetch_data_from_table(table_name:str) -> list :
 
 	return ids, titles, descriptions, locations
 
-ids, titles, descriptions, locations = fetch_data_from_table("test")
+ids, titles, descriptions, locations = fetch_data_from_table("no_usa")
 
 def raw_descriptions_to_batches(max_tokens: int, embedding_model: str, print_messages: bool = True) -> list:
 	batches = []
@@ -139,7 +139,6 @@ async def summarise_descriptions(descriptions: list) -> list:
 				words_per_text = count_words(text)
 				if words_per_text > 50:
 					description_summary, cost = await async_summarise_job_gpt(session, text)
-					await asyncio.sleep(.2)
 					print(f"Description with index {i} just added.")
 					logging.info(f"Description's index {i} just added.")
 					return i, description_summary, cost

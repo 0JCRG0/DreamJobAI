@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 import pandas as pd
 import pretty_errors
 from aiohttp import ClientSession
+import asyncio
 from typing import Tuple
 
 load_dotenv('.env')
@@ -42,6 +43,7 @@ assistant_query=""" Remember to think step by step.
 
 
 async def async_summarise_job_gpt(session, job_description: str) -> Tuple[str, float]:
+    await asyncio.sleep(.5)
     openai.aiosession.set(session)
     response = await openai.ChatCompletion.acreate(
         messages=[

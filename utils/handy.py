@@ -60,14 +60,14 @@ def LoggingMain():
 def original_specs_txt_file(content: str): 
 	timestamp = datetime.datetime.now()
 	with open(SAVE_PATH + '/specs.txt', 'a') as file:
-		file.write(f"At {timestamp}\n")
-		file.write("RAW BATCHES SPECS: \n")
+		file.write(f"\nAt {timestamp}\n")
+		file.write("RAW BATCHES SPECS: ------- \n")
 		file.write(content)
 
 def summary_specs_txt_file(total_cost: float, processed_time: float): 
 	with open(SAVE_PATH + '/specs.txt', 'a') as file:
-		file.write("\nSUMMARISED BATCHES SPECS: \n")
-		file.write(f"Total Cost: {total_cost:.2f}\n")
+		file.write("\nSUMMARISED BATCHES SPECS: ---------- \n")
+		file.write(f"Total Cost: ${total_cost:.2f} USD\n")
 		file.write(f"Processed Time: {processed_time:.2f} seconds\n\n")
 
 def save_df_to_csv(id, original, summary):
