@@ -6097,3 +6097,324 @@ Description's index 70 just added.
 2023-07-27 14:03:00,550 INFO: 
 e5_base_v2_data.parquet has been updated
 
+2023-07-28 00:49:10,672 WARNING: 
+Description with index 3 is too short for being summarised. Number of words: 31
+
+2023-07-28 00:49:10,678 WARNING: 
+Description with index 4 is too short for being summarised. Number of words: 30
+
+2023-07-28 00:49:10,678 WARNING: 
+Description with index 5 is too short for being summarised. Number of words: 42
+
+2023-07-28 00:49:10,678 WARNING: 
+Description with index 6 is too short for being summarised. Number of words: 41
+
+2023-07-28 00:49:10,678 WARNING: 
+Description with index 7 is too short for being summarised. Number of words: 38
+
+2023-07-28 00:49:10,678 WARNING: 
+Description with index 8 is too short for being summarised. Number of words: 23
+
+2023-07-28 00:49:10,678 WARNING: 
+Description with index 9 is too short for being summarised. Number of words: 35
+
+2023-07-28 00:49:10,678 WARNING: 
+Description with index 10 is too short for being summarised. Number of words: 32
+
+2023-07-28 00:49:10,678 WARNING: 
+Description with index 11 is too short for being summarised. Number of words: 33
+
+2023-07-28 00:49:10,679 WARNING: 
+Description with index 12 is too short for being summarised. Number of words: 40
+
+2023-07-28 00:49:10,679 WARNING: 
+Description with index 13 is too short for being summarised. Number of words: 34
+
+2023-07-28 00:49:10,679 WARNING: 
+Description with index 14 is too short for being summarised. Number of words: 36
+
+2023-07-28 00:49:10,679 WARNING: 
+Description with index 15 is too short for being summarised. Number of words: 31
+
+2023-07-28 00:49:10,679 WARNING: 
+Description with index 16 is too short for being summarised. Number of words: 38
+
+2023-07-28 00:49:17,469 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5881 request_id=a527f24b7ac67d29d74585cc554d6bdc response_code=200
+
+2023-07-28 00:49:17,474 INFO: 
+Description's index 27 just added.
+
+2023-07-28 00:49:17,637 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6201 request_id=22d755e55eaad59e6a65330c64173fd5 response_code=200
+
+2023-07-28 00:49:17,638 INFO: 
+Description's index 19 just added.
+
+2023-07-28 00:49:17,978 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6446 request_id=6cd611b964a59219fb204f8b9cbe8db3 response_code=200
+
+2023-07-28 00:49:17,979 INFO: 
+Description's index 28 just added.
+
+2023-07-28 00:49:18,082 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=None response_code=502
+
+2023-07-28 00:49:18,083 INFO: 
+error_code=502 error_message='Bad gateway.' error_param=None error_type=cf_bad_gateway message='OpenAI API error received' stream_error=False
+
+2023-07-28 00:49:18,083 WARNING: 
+Bad gateway. {"error":{"code":502,"message":"Bad gateway.","param":null,"type":"cf_bad_gateway"}} 502 {'error': {'code': 502, 'message': 'Bad gateway.', 'param': None, 'type': 'cf_bad_gateway'}} <CIMultiDictProxy('Date': 'Fri, 28 Jul 2023 06:49:18 GMT', 'Content-Type': 'application/json', 'Content-Length': '84', 'Connection': 'keep-alive', 'X-Frame-Options': 'SAMEORIGIN', 'Referrer-Policy': 'same-origin', 'Cache-Control': 'private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0', 'Expires': 'Thu, 01 Jan 1970 00:00:01 GMT', 'Server': 'cloudflare', 'CF-RAY': '7edb2e45fe1621b4-GDL', 'alt-svc': 'h3=":443"; ma=86400')>. Retrying attempt 1...
+
+2023-07-28 00:49:18,132 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=None response_code=502
+
+2023-07-28 00:49:18,132 INFO: 
+error_code=502 error_message='Bad gateway.' error_param=None error_type=cf_bad_gateway message='OpenAI API error received' stream_error=False
+
+2023-07-28 00:49:18,132 WARNING: 
+Bad gateway. {"error":{"code":502,"message":"Bad gateway.","param":null,"type":"cf_bad_gateway"}} 502 {'error': {'code': 502, 'message': 'Bad gateway.', 'param': None, 'type': 'cf_bad_gateway'}} <CIMultiDictProxy('Date': 'Fri, 28 Jul 2023 06:49:18 GMT', 'Content-Type': 'application/json', 'Content-Length': '84', 'Connection': 'keep-alive', 'X-Frame-Options': 'SAMEORIGIN', 'Referrer-Policy': 'same-origin', 'Cache-Control': 'private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0', 'Expires': 'Thu, 01 Jan 1970 00:00:01 GMT', 'Server': 'cloudflare', 'CF-RAY': '7edb2e460992219c-GDL', 'alt-svc': 'h3=":443"; ma=86400')>. Retrying attempt 1...
+
+2023-07-28 00:49:19,309 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7705 request_id=0d0fd7e09548d57e15c3ccacfb511e90 response_code=200
+
+2023-07-28 00:49:19,310 INFO: 
+Description's index 1 just added.
+
+2023-07-28 00:49:19,331 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7797 request_id=2edebece6eaa4c36dabeb13ca372681a response_code=200
+
+2023-07-28 00:49:19,332 INFO: 
+Description's index 23 just added.
+
+2023-07-28 00:49:19,486 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7932 request_id=af6224461727641c579e0845e3dd479b response_code=200
+
+2023-07-28 00:49:19,487 INFO: 
+Description's index 22 just added.
+
+2023-07-28 00:49:20,332 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8752 request_id=a0fc7833ed5627a462ae975ac74ebd6f response_code=200
+
+2023-07-28 00:49:20,333 INFO: 
+Description's index 26 just added.
+
+2023-07-28 00:49:20,334 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8631 request_id=e828d0b8d21a48da8af52e5ef428d4d9 response_code=200
+
+2023-07-28 00:49:20,334 INFO: 
+Description's index 17 just added.
+
+2023-07-28 00:49:20,819 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9376 request_id=84c4edc80d697ba51dbb422445989640 response_code=200
+
+2023-07-28 00:49:20,820 INFO: 
+Description's index 0 just added.
+
+2023-07-28 00:49:21,663 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=10024 request_id=7ad91a5ac701810883effb3e40e16b8f response_code=200
+
+2023-07-28 00:49:21,663 INFO: 
+Description's index 18 just added.
+
+2023-07-28 00:49:22,383 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=10798 request_id=343fdf80131f0ba6e4927000991ab18b response_code=200
+
+2023-07-28 00:49:22,385 INFO: 
+Description's index 30 just added.
+
+2023-07-28 00:49:22,586 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=11027 request_id=46e5264574ac3b896de1f0f17d80d6bf response_code=200
+
+2023-07-28 00:49:22,588 INFO: 
+Description's index 29 just added.
+
+2023-07-28 00:49:22,726 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=11098 request_id=e9575ac1c760221a24b921918b40c2f0 response_code=200
+
+2023-07-28 00:49:22,727 INFO: 
+Description's index 2 just added.
+
+2023-07-28 00:49:23,302 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=11716 request_id=321b5c59a326274722fc5ab85791f9cc response_code=200
+
+2023-07-28 00:49:23,303 INFO: 
+Description's index 20 just added.
+
+2023-07-28 00:49:23,884 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=12412 request_id=937283f0aed2cc5a7af6b7aa8777a223 response_code=200
+
+2023-07-28 00:49:23,885 INFO: 
+Description's index 25 just added.
+
+2023-07-28 00:49:29,843 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8902 request_id=48b87bde0b39ae9f9413e61409dd3f71 response_code=200
+
+2023-07-28 00:49:29,844 INFO: 
+Description's index 21 just added.
+
+2023-07-28 00:49:31,118 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=10316 request_id=79aa307723434c98a3a6347a77689fb3 response_code=200
+
+2023-07-28 00:49:31,118 INFO: 
+Description's index 24 just added.
+
+2023-07-28 00:49:41,147 INFO: 
+e5_base_v2_data.parquet has been updated
+
+2023-07-28 03:12:27,334 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=11046 request_id=e9557ad2cbc3124b634cc2e4789db585 response_code=200
+
+2023-07-28 03:12:27,349 INFO: 
+Description's index 0 just added.
+
+2023-07-28 03:12:28,392 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=12209 request_id=eaad22a5dc6f9af01687605c3fa8eea6 response_code=200
+
+2023-07-28 03:12:28,392 INFO: 
+Description's index 5 just added.
+
+2023-07-28 03:12:28,506 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=12316 request_id=110ca2a49cd082f2abd5c5fcb025c077 response_code=200
+
+2023-07-28 03:12:28,506 INFO: 
+Description's index 6 just added.
+
+2023-07-28 03:12:28,861 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=12657 request_id=1b5d4f2069df8a99c466011a38d43a73 response_code=200
+
+2023-07-28 03:12:28,862 INFO: 
+Description's index 1 just added.
+
+2023-07-28 03:12:28,881 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=12601 request_id=c91810ba2469ef8fbf5edf52716782f9 response_code=200
+
+2023-07-28 03:12:28,882 INFO: 
+Description's index 4 just added.
+
+2023-07-28 03:12:29,576 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=13288 request_id=268b288acb376b1ca928db4a9dc228b4 response_code=200
+
+2023-07-28 03:12:29,577 INFO: 
+Description's index 2 just added.
+
+2023-07-28 03:12:30,482 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=14054 request_id=83c2c1cbcc2c6c682e010c35e4f843a9 response_code=200
+
+2023-07-28 03:12:30,482 INFO: 
+Description's index 3 just added.
+
+2023-07-28 03:12:35,226 INFO: 
+e5_base_v2_data.parquet has been updated
+
+2023-07-28 03:14:53,785 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=11802 request_id=07d4ee79921212dbee922e6bafaaa304 response_code=200
+
+2023-07-28 03:14:53,794 INFO: 
+Description's index 2 just added.
+
+2023-07-28 03:14:54,106 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=12122 request_id=f1078995a3babd8fb580fd3e190f0be9 response_code=200
+
+2023-07-28 03:14:54,106 INFO: 
+Description's index 6 just added.
+
+2023-07-28 03:14:54,241 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=12289 request_id=f7fe21a11ded1b3ad718ff52634f7536 response_code=200
+
+2023-07-28 03:14:54,241 INFO: 
+Description's index 4 just added.
+
+2023-07-28 03:14:54,421 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=12464 request_id=74da90bb26669ac32abef17640dbdb5e response_code=200
+
+2023-07-28 03:14:54,421 INFO: 
+Description's index 5 just added.
+
+2023-07-28 03:14:55,033 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=12984 request_id=2b1131203d07f9fa562f1d1ee5a55870 response_code=200
+
+2023-07-28 03:14:55,034 INFO: 
+Description's index 0 just added.
+
+2023-07-28 03:18:13,333 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=12085 request_id=186c9709111c03e6abe0c71e46816c96 response_code=200
+
+2023-07-28 03:18:13,346 INFO: 
+Description's index 5 just added.
+
+2023-07-28 03:18:13,347 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=12135 request_id=301ba94cfd45726881b0cf5e371600b5 response_code=200
+
+2023-07-28 03:18:13,347 INFO: 
+Description's index 0 just added.
+
+2023-07-28 03:18:13,411 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=12248 request_id=5e32765e2953f84bc4043f220e5374d1 response_code=200
+
+2023-07-28 03:18:13,411 INFO: 
+Description's index 2 just added.
+
+2023-07-28 03:18:13,455 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=12215 request_id=121bf0cc77c4ad129f68315cb2b7b1a1 response_code=200
+
+2023-07-28 03:18:13,455 INFO: 
+Description's index 1 just added.
+
+2023-07-28 03:18:14,049 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=12815 request_id=0f4ebb3d41552d42407cf320e6ab736c response_code=200
+
+2023-07-28 03:18:14,050 INFO: 
+Description's index 4 just added.
+
+2023-07-28 03:18:15,791 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=14521 request_id=a9b483188acf55911e94ab266983d7ea response_code=200
+
+2023-07-28 03:18:15,791 INFO: 
+Description's index 6 just added.
+
+2023-07-28 03:20:35,872 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=11614 request_id=a9ffeb2dacfd66593ad13c3fe88dc734 response_code=200
+
+2023-07-28 03:20:35,876 INFO: 
+Description's index 6 just added.
+
+2023-07-28 03:20:35,955 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=11734 request_id=e5a7fa5e1f17e01647f1be653edd1e1e response_code=200
+
+2023-07-28 03:20:35,956 INFO: 
+Description's index 2 just added.
+
+2023-07-28 03:20:36,391 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=12193 request_id=50a1335350b3975d99e32f50cf542f3c response_code=200
+
+2023-07-28 03:20:36,392 INFO: 
+Description's index 0 just added.
+
+2023-07-28 03:20:36,392 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=12137 request_id=7daf97b5be0a449de2748d97841f506a response_code=200
+
+2023-07-28 03:20:36,392 INFO: 
+Description's index 1 just added.
+
+2023-07-28 03:20:37,000 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=12788 request_id=6d6544bf59df794b5ea0b6de36a9aed1 response_code=200
+
+2023-07-28 03:20:37,001 INFO: 
+Description's index 3 just added.
+
+2023-07-28 03:20:37,031 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=12878 request_id=93abb41662037b96a1224cbf6222c2c5 response_code=200
+
+2023-07-28 03:20:37,031 INFO: 
+Description's index 4 just added.
+
+2023-07-28 03:20:37,082 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=12922 request_id=a2ca0f43036ec241167732cdf58c387b response_code=200
+
+2023-07-28 03:20:37,082 INFO: 
+Description's index 5 just added.
+
+2023-07-28 03:20:41,582 INFO: 
+e5_base_v2_data.parquet has been updated
+
