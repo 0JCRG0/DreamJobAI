@@ -4,12 +4,15 @@ import tiktoken
 import pandas as pd
 import logging
 import datetime
+from torch import Tensor
+from transformers import AutoTokenizer, AutoModel
 import pyarrow.parquet as pq
 from dotenv import load_dotenv
 import os
 
 load_dotenv(".env")
-LOGGER_PATH = os.getenv("LOGGER_PATH")
+LOGGER_MAIN = os.getenv("LOGGER_MAIN")
+LOGGER_GPT4 = os.getenv("LOGGER_GPT4")
 SAVE_PATH = os.getenv("SAVE_PATH")
 
 def clean_rows(s):
@@ -53,7 +56,16 @@ def LoggingMain():
 	log_format = '%(asctime)s %(levelname)s: \n%(message)s\n'
 
 	# Configure the logger with the custom format
-	logging.basicConfig(filename=LOGGER_PATH,
+	logging.basicConfig(filename=LOGGER_MAIN,
+						level=logging.INFO,
+						format=log_format)
+
+def LoggingGPT4():
+	# Define a custom format with bold text
+	log_format = '%(asctime)s %(levelname)s: \n%(message)s\n'
+
+	# Configure the logger with the custom format
+	logging.basicConfig(filename=LOGGER_GPT4,
 						level=logging.INFO,
 						format=log_format)
 
@@ -104,3 +116,20 @@ def append_parquet(new_df: pd.DataFrame):
 	# Write back to Parquet
 	df.to_parquet('/Users/juanreyesgarcia/Library/CloudStorage/OneDrive-FundacionUniversidaddelasAmericasPuebla/DEVELOPER/PROJECTS/DreamedJobAI/data/e5_base_v2_data.parquet', engine='pyarrow')
 	logging.info("e5_base_v2_data.parquet has been updated")
+
+def average_pool(last_hidden_states: Tensor,
+                attention_mask: Tensor) -> Tensor:
+    last_hidden = last_hidden_states.masked_fill(~attention_mask[..., None].bool(), 0.0)
+    return last_hidden.sum(dim=1) / attention_mask.sum(dim=1)[..., None]
+
+def e5_base_v2_query(query):
+    tokenizer = AutoTokenizer.from_pretrained('intfloat/e5-base-v2')
+    model = AutoModel.from_pretrained('intfloat/e5-base-v2')
+
+    query_e5_format = f"query: {query}"
+
+    batch_dict = tokenizer(query_e5_format, max_length=512, padding=True, truncation=True, return_tensors='pt')
+
+    outputs = model(**batch_dict)
+    query_embedding = average_pool(outputs.last_hidden_state, batch_dict['attention_mask']).detach().numpy().flatten()
+    return query_embedding
