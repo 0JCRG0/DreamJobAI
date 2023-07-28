@@ -14,31 +14,29 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 MODEL= "gpt-3.5-turbo"
 
 
-delimiters = "####"
+delimiters = "----"
+delimiters_job_info = '####'
 
 system_query = f""" 
 
-Your task is to extract "relevant information" of a job opening/
+Your task is to extract the specified information from a job opening/
 posted by a company, with the aim of effectively matching /
 potential candidates for the position./
 
-From the job opening below, delimited by {delimiters} characters, extract 
-"relevant information" in at most 200 words. /
-Your main focus is the category of Job Information./
+The job opening below is delimited by {delimiters} characters./
+Within each job opening there are three sections delimited by {delimiters_job_info} characters: title, location and description./
 
-Relevant information to extract: 
+Extract the following information from its respective section and output your response in the following format:/
 
-Job Information (150 words max):  extract any essential details about the specific position being advertised. Focus on job title, /
-job objective, responsibilities/key duties, qualifications/requirements and preferred skills/experience. /
+Title: found in the "title" section.
+Location: found in the "location" section or in the "description" section.
+Job Objective: found in the "description" section.
+Responsibilities/Key duties: found in the "description" section.
+Qualifications/Requirements/Experience: found in the "description" section.
+Preferred Skills/Nice to Have: found in the "description" section.
+About the company: found in the "description" section.
+Compensation and Benefits: found in the "description" section.
 
-About the company and Compensation and Benefits (50 words max): extract any information about the hiring company,/
-such as company name, location, culture, values, or mission. /
-Also, extract any financial aspects and additional perks associated with the job./
-/ 
-
-"""
-
-assistant_query=""" Remember to think step by step.
 """
 
 
@@ -52,7 +50,7 @@ async def async_summarise_job_gpt(session, job_description: str) -> Tuple[str, f
         ],
         model=MODEL,
         temperature=0,
-        max_tokens = 350
+        max_tokens = 400
     )
     response_message = response['choices'][0]['message']['content']
     total_cost = 0

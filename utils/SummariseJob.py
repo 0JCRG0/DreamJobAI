@@ -11,31 +11,29 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 MODEL= "gpt-3.5-turbo"
 
 
-delimiters = "####"
+delimiters = "----"
+delimiters_job_info = '####'
 
 system_query = f""" 
 
-Your task is to extract "relevant information" of a job opening/
+Your task is to extract the specified information of a job opening/
 posted by a company, with the aim of effectively matching /
 potential candidates for the position./
 
-From the job opening below, delimited by {delimiters} characters, extract 
-"relevant information" in at most 200 words. /
-Your main focus is the category of Job Information./
+The job opening below is delimited by {delimiters} characters./
+Within each job opening there are three sections delimited by {delimiters_job_info} characters: title, location and description./
 
-Relevant information to extract: 
+Extract the following information from its respective section and output your response in the following format:/
 
-Job Information (150 words max):  extract any essential details about the specific position being advertised. Focus on job title, /
-job objective, responsibilities/key duties, qualifications/requirements and preferred skills/experience. /
+Title: found in the "title" section.
+Location: found in the "location" section or in the "description" section.
+Job Objective: found in the "description" section.
+Responsibilities/Key duties: found in the "description" section.
+Qualifications/Requirements: found in the "description" section.
+Preferred Skills/Experience: found in the "description" section.
+About the company: found in the "description" section.
+Compensation and Benefits: found in the "description" section.
 
-About the company and Compensation and Benefits (50 words max): extract any information about the hiring company,/
-such as company name, location, culture, values, or mission. /
-Also, extract any financial aspects and additional perks associated with the job./
-/ 
-
-"""
-
-assistant_query=""" Remember to think step by step.
 """
 
 def summarise_job_gpt(job_description: str) -> str:
@@ -67,5 +65,5 @@ def summarise_job_gpt(job_description: str) -> str:
     return response_message, total_cost
 
 if __name__ == "__main__":
-    x = "Hey there Were AKKO  a venture funded  fastgrowing insurtech company with a passionate solutionforward and collaborative team focused on disrupting the device protection space Our mission is simple  Leveraging technology to make protecting peoples tech easier and more affordable Most peoples lives have become techcentric and AKKO provides customers with peace of mind that their tech is safe guarded in a transparent and seamless way Backed by amazing investors such as Mundi Fika and Pear we are just getting started THE DAYTODAY Develop and manage data systems and databases Extract data from primary and secondary sources and removing corrupted data Establish KPIs that provide actionable insights Use data to analyze trends to help inform business policies and decisions Collaborate with engineers and developers to develop and streamline data governance strategies Ensure data is accurate and highquality Analyze data for trends and patterns and interpret data with a clear objective in mind Communicate analytic solutions to stakeholders and implement improvements and solutions WHAT MAKES YOU QUALIFIED Minimum one year experience working as a data analyst or similar role preferably for a startup with a bachelors degree in Statistics Computer Science Mathematics or equivalent practical experience Knowledge of relational and nonrelational NoSQL databases Python NumPy SciPy or R for statistical analysis Data visualization Looker Studio Power BI Tableau Pythons Matplotlib and Seaborn or similar Proficiency in Excel Actuarial knowledge or experience is a plus All around team player fast and selflearning individual Proactive and solutionforward bias for action Ability to drive forward work independently while communicating and working across functions Passion for data Experience working on highscale productiongrade projects WHY YOULL LOVE IT HERE Unlimited vacation and paid sick time Competitive health benefits including medical dental and vision insurance Robust 401k program  to invest in your future Monthly wellness stipend eg gym yoga meditation etc  we value your wellbeing Monthly treat yourself stipend  dinner on us Remote workspace stipend  Work from home or from a shared workspace  you decide Paid volunteer time  giving back to our community is important to us Annual learning credit explore personal interests that excite you and so much more The base salary for this position ranges from 65000 to 100000 Compensation varies based on jobrelated factors including business needs experience level of responsibility and qualifications WHAT ELSE ARE WE LOOKING FOR Our team is fostered around our core values Collaborate Work together to be more effective lift up others and win together Aim High Set ambitious goals Embrace Diversity Seek different perspectives bring our true self to work Customer Love Serve the end user and listen to them Nurture Empathy Listen and strive to truly understand others Take Action Be proactive be an owner value speed Maintain Integrity Build the AKKO you are proud to work at Data Driven Use data to iterate find truth CCPA disclosure notice at getakkocomlegal"
+    x = "###title: Software Engineer II Compliance at Chainalysis### ###location: Remote### ###description: Job DescriptionThe Compliance organization is focused on growing the crypto ecosystem by simplifying the work needed for compliance and risk management at a massive scale. Our goal is to ensure developers can send data for any crypto asset and network scale our systems to make sure we can handle the increasing volumes of data and provide meaningful insights to our customers. Backend engineers will be critical to that mission by building and scaling the APIs and data layers our customers rely on every day to stop crime understand risk and strategize about their business. Working alongside infrastructure and security-focused engineers they obsess over making our services highly available and safe for our customers to use for their most sensitive and real-time blockchain workflows. They deeply understand what is possible with cloud-native technologies and use those insights to enable our customers to push the boundaries of the cryptocurrency landscape.&nbsp; In one year you’ll know you were successful if…  You have built a high-availability scalable API leveraging the most relevant services from AWS You’ve added features to our product suite that detect activities for market manipulation fraud behavioral patterning and more. You have built cloud-native data ingestion and aggregation processes that intake gigabytes of data per day. You have helped modernize our stack to a streaming architecture. Your team’s services are easy to set up locally and their health in production is simple to understand.&nbsp; You have debugged production issues and participated in a blameless post-mortem process to make our systems stronger.&nbsp;  A background like this helps:&nbsp;  Designed and implemented microservices-based systems in a major cloud provider like AWS or GCP. Experience with object-oriented programming languages. We mostly use Java but appreciate a variety of languages!&nbsp; A bias to ship and iterate alongside product management and design partners Exposure to or interest in the cryptocurrency technology ecosystem Listed in: Cryptocurrency Jobs Remote Crypto Jobs Security Crypto Jobs Developer Web3 Jobs Compliance Web3 Jobs Data Crypto Jobs Full Time Web3 Jobs.###     "
     print(summarise_job_gpt(x))
