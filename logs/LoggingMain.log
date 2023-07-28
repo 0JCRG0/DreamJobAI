@@ -4159,3 +4159,1941 @@ Description's index 1 just added.
 2023-07-27 01:21:01,387 INFO: 
 e5_base_v2_data.parquet has been updated
 
+2023-07-27 13:24:13,490 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6232 request_id=ab540aa539a875f81cca7a27f120e2d4 response_code=200
+
+2023-07-27 13:24:13,496 INFO: 
+Description's index 5 just added.
+
+2023-07-27 13:24:14,003 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6461 request_id=5cf6862b9a34b1116054cac6a175e649 response_code=200
+
+2023-07-27 13:24:14,004 INFO: 
+Description's index 6 just added.
+
+2023-07-27 13:24:14,510 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6981 request_id=a0d949dc2121511f41b5768c7cd1e025 response_code=200
+
+2023-07-27 13:24:14,510 INFO: 
+Description's index 2 just added.
+
+2023-07-27 13:24:15,015 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6852 request_id=a83edc3bf58b4264969c00f737233d24 response_code=200
+
+2023-07-27 13:24:15,016 INFO: 
+Description's index 4 just added.
+
+2023-07-27 13:24:17,376 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=10129 request_id=69040fe68be3eb12cb959e0595765fa0 response_code=200
+
+2023-07-27 13:24:17,377 INFO: 
+Description's index 3 just added.
+
+2023-07-27 13:24:17,880 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=10291 request_id=1fd5d1473874d628e58910ae0ae446b3 response_code=200
+
+2023-07-27 13:24:17,882 INFO: 
+Description's index 0 just added.
+
+2023-07-27 13:24:18,388 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=10388 request_id=606b6dfca1db825ad2bff7cdba9e1706 response_code=200
+
+2023-07-27 13:24:18,389 INFO: 
+Description's index 1 just added.
+
+2023-07-27 13:24:23,071 INFO: 
+e5_base_v2_data.parquet has been updated
+
+2023-07-27 13:31:03,187 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6152 request_id=66b08bdfa9ba415bf1c0be37f7943c12 response_code=200
+
+2023-07-27 13:31:03,395 INFO: 
+Description's index 5 just added.
+
+2023-07-27 13:31:03,798 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6853 request_id=15a7614c64f82e6a6e27df8771e9b3d8 response_code=200
+
+2023-07-27 13:31:03,819 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6903 request_id=de812b6e5c0e300851d03a5ba8be2f44 response_code=200
+
+2023-07-27 13:31:04,000 INFO: 
+Description's index 2 just added.
+
+2023-07-27 13:31:04,020 INFO: 
+Description's index 4 just added.
+
+2023-07-27 13:31:04,710 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7726 request_id=87ac30b629a69359c1885e5c9dd0799d response_code=200
+
+2023-07-27 13:31:04,912 INFO: 
+Description's index 6 just added.
+
+2023-07-27 13:31:05,172 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8254 request_id=bbfe8c773c5e80df71a156026885b4ad response_code=200
+
+2023-07-27 13:31:05,374 INFO: 
+Description's index 3 just added.
+
+2023-07-27 13:31:07,151 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=10208 request_id=dc56a5913a5dcee4ccb357821e734b7e response_code=200
+
+2023-07-27 13:31:07,354 INFO: 
+Description's index 0 just added.
+
+2023-07-27 13:31:07,902 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=10967 request_id=02fa7b52155ce790e8671eb2481f1b37 response_code=200
+
+2023-07-27 13:31:08,104 INFO: 
+Description's index 1 just added.
+
+2023-07-27 13:31:12,231 INFO: 
+e5_base_v2_data.parquet has been updated
+
+2023-07-27 14:01:20,312 INFO: 
+Description with index 5 is too short for being summarised. Number of words: 24
+
+2023-07-27 14:01:20,341 INFO: 
+Description with index 98 is too short for being summarised. Number of words: 1
+
+2023-07-27 14:01:20,341 INFO: 
+Description with index 99 is too short for being summarised. Number of words: 2
+
+2023-07-27 14:01:20,610 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=4a060849043e4889554d27963e43343c response_code=429
+
+2023-07-27 14:01:20,610 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 88756 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:20,610 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 88756 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-27 14:01:20,611 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=27f71aaf0e34fbd1d5b84e7df132842f response_code=429
+
+2023-07-27 14:01:20,611 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89626 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:20,611 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89626 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-27 14:01:20,612 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=ea40aae989fd8e661e629272df11dc2a response_code=429
+
+2023-07-27 14:01:20,612 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89626 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:20,612 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89626 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-27 14:01:20,614 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=5aef5b9e7f83ab8a058fe1e7f7c0eb9b response_code=429
+
+2023-07-27 14:01:20,614 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89622 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:20,614 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89622 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-27 14:01:20,614 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=3649ae4cb009ce5e837d943fb69546fb response_code=429
+
+2023-07-27 14:01:20,614 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89624 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:20,615 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89624 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-27 14:01:20,615 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=05204143b23399faaf75843c2d56d5a2 response_code=429
+
+2023-07-27 14:01:20,616 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89622 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:20,616 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89622 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-27 14:01:20,616 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=eb672b0885043a15d88160445ed8fd09 response_code=429
+
+2023-07-27 14:01:20,616 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89621 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:20,616 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89621 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-27 14:01:20,617 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=357212f375db9ab3b2614605f565f958 response_code=429
+
+2023-07-27 14:01:20,617 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89618 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:20,617 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89618 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-27 14:01:20,617 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=c52884d8e15551f360664a883c214b61 response_code=429
+
+2023-07-27 14:01:20,617 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89615 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:20,617 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89615 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-27 14:01:20,618 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=235c65083edc62bc93f10acb899a73a9 response_code=429
+
+2023-07-27 14:01:20,618 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89614 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:20,618 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89614 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-27 14:01:20,618 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=bab6eb5e3c01ad828bdc390ad1597dc0 response_code=429
+
+2023-07-27 14:01:20,618 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89618 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:20,618 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89618 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-27 14:01:20,620 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=a5253c882b26ee9bba53d764b110c903 response_code=429
+
+2023-07-27 14:01:20,620 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89614 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:20,620 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89614 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-27 14:01:20,620 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=00c0e9e52400f0f850e0496c0ee4d3d3 response_code=429
+
+2023-07-27 14:01:20,620 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89610 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:20,620 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89610 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-27 14:01:20,621 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=f614589bcdb9e9edfa6d066148b9bfec response_code=429
+
+2023-07-27 14:01:20,621 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89612 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:20,621 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89612 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-27 14:01:20,622 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=fd23c10d13bb77779d9a6daaacd78d7b response_code=429
+
+2023-07-27 14:01:20,622 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89615 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:20,622 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89615 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-27 14:01:20,622 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=e87e481834d07e7dc1db365f9f7be425 response_code=429
+
+2023-07-27 14:01:20,622 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89612 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:20,622 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89612 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-27 14:01:20,622 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=893803ef650113f88f790face214ed60 response_code=429
+
+2023-07-27 14:01:20,623 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89611 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:20,623 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89611 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-27 14:01:20,623 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=7103de4871be7e2d83a2a55bc654bca0 response_code=429
+
+2023-07-27 14:01:20,623 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89609 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:20,623 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89609 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-27 14:01:20,623 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=d527107f012335a057c568736134a769 response_code=429
+
+2023-07-27 14:01:20,623 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89609 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:20,623 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89609 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-27 14:01:20,624 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=a5d304c3417bd7f4263a014418715109 response_code=429
+
+2023-07-27 14:01:20,624 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89609 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:20,624 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89609 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-27 14:01:20,625 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=4724dc325674455d55e85db30cf57a69 response_code=429
+
+2023-07-27 14:01:20,626 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89614 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:20,626 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89614 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-27 14:01:20,626 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=b8262ac55d366ccdd1646282c309d9e9 response_code=429
+
+2023-07-27 14:01:20,626 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89610 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:20,626 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89610 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-27 14:01:20,629 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=65e4bf1f631b277786a97cc2555e5354 response_code=429
+
+2023-07-27 14:01:20,629 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89599 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:20,629 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89599 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-27 14:01:20,631 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=48114aec57f2e62bcd37496c8ac40283 response_code=429
+
+2023-07-27 14:01:20,631 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89596 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:20,631 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89596 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-27 14:01:20,631 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=a0057b493ed2673b095a4c3008c520dd response_code=429
+
+2023-07-27 14:01:20,631 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89608 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:20,631 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89608 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-27 14:01:20,632 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=66961eafdf58b572e6c4fc281910f35c response_code=429
+
+2023-07-27 14:01:20,632 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89617 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:20,632 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89617 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-27 14:01:20,634 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=0aea3e3e44242af3596f23c20b48e80d response_code=429
+
+2023-07-27 14:01:20,634 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89599 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:20,634 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89599 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-27 14:01:20,635 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=a21c635e28e57e1c2f8ae81b3ef49378 response_code=429
+
+2023-07-27 14:01:20,635 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89596 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:20,635 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89596 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-27 14:01:20,635 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=b02b4073a7554d518fdd215b7cb51237 response_code=429
+
+2023-07-27 14:01:20,635 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89592 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:20,635 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89592 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-27 14:01:20,636 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=951ec5acb867e9e06382d48748f7a1ec response_code=429
+
+2023-07-27 14:01:20,637 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89596 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:20,637 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89596 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-27 14:01:20,648 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=7ebb6c3019439fb39cdcc558cecc3dfa response_code=429
+
+2023-07-27 14:01:20,648 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89572 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:20,648 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89572 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-27 14:01:20,668 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=c89cc4a98bb10f674786dec1820b1964 response_code=429
+
+2023-07-27 14:01:20,668 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89539 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:20,668 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89539 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-27 14:01:20,672 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=52d1cc566617f355288acad25ca9e951 response_code=429
+
+2023-07-27 14:01:20,672 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89533 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:20,673 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89533 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-27 14:01:20,673 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=f1f06b9b5e68600f01ed23c757d66bcd response_code=429
+
+2023-07-27 14:01:20,673 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89534 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:20,673 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89534 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-27 14:01:20,677 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=dd5a67943d084479dc061a025b336db0 response_code=429
+
+2023-07-27 14:01:20,677 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89528 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:20,677 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89528 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-27 14:01:20,679 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=17ee37e02868a578357e2929d66342e0 response_code=429
+
+2023-07-27 14:01:20,679 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89528 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:20,679 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89528 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-27 14:01:20,679 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=8c694a30d63c181508fd6c0c80bde231 response_code=429
+
+2023-07-27 14:01:20,680 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89523 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:20,680 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89523 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-27 14:01:20,680 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=707527125024ffc8947806c37cb63933 response_code=429
+
+2023-07-27 14:01:20,680 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89525 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:20,680 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89525 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 1...
+
+2023-07-27 14:01:22,681 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=746071dfc0ff82022ff4173a29d58c10 response_code=429
+
+2023-07-27 14:01:22,682 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89917 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:22,682 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89917 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 2...
+
+2023-07-27 14:01:22,682 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=ff17e66934bef1b47888fb9c017dfd2d response_code=429
+
+2023-07-27 14:01:22,682 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89917 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:22,682 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89917 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 2...
+
+2023-07-27 14:01:22,683 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=027ef8b508b241f0cac470300acdbb2d response_code=429
+
+2023-07-27 14:01:22,683 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89918 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:22,684 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89918 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 2...
+
+2023-07-27 14:01:22,685 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=00b2cd30b912617e339a013ac1ce3fdb response_code=429
+
+2023-07-27 14:01:22,685 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89912 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:22,685 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89912 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 2...
+
+2023-07-27 14:01:22,685 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=4fdf83a035617f33d49526cb23bae042 response_code=429
+
+2023-07-27 14:01:22,685 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89914 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:22,685 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89914 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 2...
+
+2023-07-27 14:01:22,686 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=64ea0602b3ce327273c7aa3087783151 response_code=429
+
+2023-07-27 14:01:22,686 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89914 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:22,686 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89914 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 2...
+
+2023-07-27 14:01:22,686 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=554d48e8a8f5eab187812b591ae40e02 response_code=429
+
+2023-07-27 14:01:22,686 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89911 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:22,686 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89911 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 2...
+
+2023-07-27 14:01:22,686 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=4a31929528f0a4eadd37ed89efdb8bdd response_code=429
+
+2023-07-27 14:01:22,687 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89914 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:22,687 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89914 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 2...
+
+2023-07-27 14:01:22,689 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=f327e6e6ec9d093aff66b7217d8615eb response_code=429
+
+2023-07-27 14:01:22,689 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89909 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:22,689 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89909 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 2...
+
+2023-07-27 14:01:22,693 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=0c19643044947d9b4e860914b426d628 response_code=429
+
+2023-07-27 14:01:22,693 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89911 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:22,693 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89911 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 2...
+
+2023-07-27 14:01:22,697 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=2dbcda98906e54761a4f10b41a7bf03a response_code=429
+
+2023-07-27 14:01:22,697 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89896 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:22,697 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89896 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 2...
+
+2023-07-27 14:01:22,698 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=ac3a0985cb7bec8a4c909ed9b6292d81 response_code=429
+
+2023-07-27 14:01:22,698 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89892 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:22,698 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89892 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 2...
+
+2023-07-27 14:01:22,699 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=998ce976be44bd38d22eea71bd3bfe1e response_code=429
+
+2023-07-27 14:01:22,699 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89894 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:22,699 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89894 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 2...
+
+2023-07-27 14:01:22,700 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=9318158e7c41d1e014d3b315c8b01e2d response_code=429
+
+2023-07-27 14:01:22,700 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89893 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:22,700 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89893 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 2...
+
+2023-07-27 14:01:22,700 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=9a0285ba86a1f6c9b4d62f76bebd8015 response_code=429
+
+2023-07-27 14:01:22,700 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89892 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:22,700 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89892 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 2...
+
+2023-07-27 14:01:22,702 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=0d6c28f73592ac9ddde12b216e66c906 response_code=429
+
+2023-07-27 14:01:22,702 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89889 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:22,703 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89889 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 2...
+
+2023-07-27 14:01:22,704 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=5982068ecd64e61976346637a02a5ef1 response_code=429
+
+2023-07-27 14:01:22,704 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89887 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:22,704 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89887 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 2...
+
+2023-07-27 14:01:22,708 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=ff52c4045fc4259db967463598595cb2 response_code=429
+
+2023-07-27 14:01:22,708 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89885 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:22,708 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89885 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 2...
+
+2023-07-27 14:01:22,709 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=3a00a5f1da0d1fbd79b50a3a9990ad01 response_code=429
+
+2023-07-27 14:01:22,709 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89875 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:22,709 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89875 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 2...
+
+2023-07-27 14:01:22,711 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=4e8a110de831c3866808aa650a3a3490 response_code=429
+
+2023-07-27 14:01:22,712 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89873 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:22,712 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89873 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 2...
+
+2023-07-27 14:01:22,712 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=c19ac6d1bae9482576ed44ef224f6eee response_code=429
+
+2023-07-27 14:01:22,712 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89870 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:22,712 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89870 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 2...
+
+2023-07-27 14:01:22,712 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=112cb1cffcb65ad8ad0816c80d680ae7 response_code=429
+
+2023-07-27 14:01:22,712 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89874 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:22,712 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89874 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 2...
+
+2023-07-27 14:01:22,713 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=e28a24a7edc7dd7097eaddbcf92f6d97 response_code=429
+
+2023-07-27 14:01:22,713 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89875 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:22,713 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89875 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 2...
+
+2023-07-27 14:01:22,713 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=4694ea21e9b05415d6bd496cb1206403 response_code=429
+
+2023-07-27 14:01:22,713 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89875 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:22,713 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89875 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 2...
+
+2023-07-27 14:01:22,713 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=6515ce8e747c34e2d172925c751b4a24 response_code=429
+
+2023-07-27 14:01:22,714 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89877 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:22,714 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89877 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 2...
+
+2023-07-27 14:01:22,714 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=a65b2fb4bae86ee67c4e47d28bb485c2 response_code=429
+
+2023-07-27 14:01:22,714 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89869 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:22,714 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89869 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 2...
+
+2023-07-27 14:01:22,716 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=547548db5b52c153324c46fae7554be1 response_code=429
+
+2023-07-27 14:01:22,717 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89866 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:22,717 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89866 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 2...
+
+2023-07-27 14:01:22,720 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=28bf72b31c753c389aa3b762c7a48ca1 response_code=429
+
+2023-07-27 14:01:22,720 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89861 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:22,720 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89861 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 2...
+
+2023-07-27 14:01:22,726 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=68bfaa6f2ff6afd0c874ef0cb55e6b58 response_code=429
+
+2023-07-27 14:01:22,726 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89850 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:22,726 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89850 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 2...
+
+2023-07-27 14:01:22,733 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=5f411ba9de125f08f50bfe53e7dee876 response_code=429
+
+2023-07-27 14:01:22,733 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89840 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:22,733 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89840 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 2...
+
+2023-07-27 14:01:22,742 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=ff81524f7ff69fbf29532f1ff6b9ed76 response_code=429
+
+2023-07-27 14:01:22,742 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89829 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:22,742 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89829 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 2...
+
+2023-07-27 14:01:22,742 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=fd871e650c8a9a4660af7274ae6a5fb7 response_code=429
+
+2023-07-27 14:01:22,742 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89827 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:22,742 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89827 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 2...
+
+2023-07-27 14:01:22,744 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=748207dfc9599fec51247fdf068b95c3 response_code=429
+
+2023-07-27 14:01:22,744 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89825 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:22,744 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89825 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 2...
+
+2023-07-27 14:01:22,747 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=ef5be6df096829c4e0948fb8f9af68cc response_code=429
+
+2023-07-27 14:01:22,748 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89822 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:22,748 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89822 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 2...
+
+2023-07-27 14:01:22,748 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=35e1bf05632fcbec930c7cd1d66ff1b7 response_code=429
+
+2023-07-27 14:01:22,748 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89822 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:22,748 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89822 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 2...
+
+2023-07-27 14:01:22,785 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=787e798844d16b6bb8efcac2f41e55b6 response_code=429
+
+2023-07-27 14:01:22,785 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89777 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:22,785 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89777 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 2...
+
+2023-07-27 14:01:24,706 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=4071 request_id=f211f18dc46ee46e452e77db3b7243a9 response_code=200
+
+2023-07-27 14:01:24,768 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=4053 request_id=c66596beca55bab88760e48ea535e066 response_code=200
+
+2023-07-27 14:01:24,859 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=4232 request_id=500f3d4f0ec6e7bb57a8e7caaf76e892 response_code=200
+
+2023-07-27 14:01:24,909 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=4272 request_id=45c9eaa0d165ac37e6f51a69254904a3 response_code=200
+
+2023-07-27 14:01:24,912 INFO: 
+Description's index 39 just added.
+
+2023-07-27 14:01:24,970 INFO: 
+Description's index 67 just added.
+
+2023-07-27 14:01:25,060 INFO: 
+Description's index 24 just added.
+
+2023-07-27 14:01:25,111 INFO: 
+Description's index 59 just added.
+
+2023-07-27 14:01:25,132 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=4576 request_id=0928488372a526cdb01044623a4ea07d response_code=200
+
+2023-07-27 14:01:25,334 INFO: 
+Description's index 18 just added.
+
+2023-07-27 14:01:25,370 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=4739 request_id=a8abe2218efbc00f586eee94bc928804 response_code=200
+
+2023-07-27 14:01:25,573 INFO: 
+Description's index 21 just added.
+
+2023-07-27 14:01:26,319 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5783 request_id=d90ac1a3d0dc614dabea902c5a6dc29a response_code=200
+
+2023-07-27 14:01:26,397 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5852 request_id=ee813dfea1e3c28ad70084dce41eacca response_code=200
+
+2023-07-27 14:01:26,521 INFO: 
+Description's index 17 just added.
+
+2023-07-27 14:01:26,578 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5608 request_id=aa36a281f2b6cde44ee7b80964e157ad response_code=200
+
+2023-07-27 14:01:26,591 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6005 request_id=58eba973aecb55dc7b8158b5bc24b273 response_code=200
+
+2023-07-27 14:01:26,599 INFO: 
+Description's index 7 just added.
+
+2023-07-27 14:01:26,733 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6202 request_id=3700c10d4582733666f94337d93274ce response_code=200
+
+2023-07-27 14:01:26,755 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=3df9f81b97efd2bcb0aee6a7e25c89af response_code=429
+
+2023-07-27 14:01:26,755 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89716 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:26,755 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89716 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 3...
+
+2023-07-27 14:01:26,756 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=51da21039717edf9eeeac8900b51020e response_code=429
+
+2023-07-27 14:01:26,756 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89715 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:26,756 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89715 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 3...
+
+2023-07-27 14:01:26,757 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=54c875bb991e99fac4512232468df13f response_code=429
+
+2023-07-27 14:01:26,757 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89711 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:26,757 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89711 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 3...
+
+2023-07-27 14:01:26,758 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=47dd13a8794d5be7312569293df83400 response_code=429
+
+2023-07-27 14:01:26,758 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89708 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:26,758 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89708 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 3...
+
+2023-07-27 14:01:26,759 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6220 request_id=4581ee87d5e56f0aa5602f60da814b8c response_code=200
+
+2023-07-27 14:01:26,759 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=bcde24c6158617f8e7ddee36e291f827 response_code=429
+
+2023-07-27 14:01:26,759 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89708 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:26,760 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89708 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 3...
+
+2023-07-27 14:01:26,760 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=9aa610ed21ff557e19b669549b1cf636 response_code=429
+
+2023-07-27 14:01:26,760 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89706 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:26,760 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89706 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 3...
+
+2023-07-27 14:01:26,763 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=b834768faca80f8a3f1949222b7bb30b response_code=429
+
+2023-07-27 14:01:26,763 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89699 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:26,764 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89699 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 3...
+
+2023-07-27 14:01:26,764 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=845e8d497c6799911661303b30303ec2 response_code=429
+
+2023-07-27 14:01:26,764 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89696 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:26,765 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89696 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 3...
+
+2023-07-27 14:01:26,768 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=b7beac3c1ecbcd7fa87155cbe8cc3a08 response_code=429
+
+2023-07-27 14:01:26,768 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89694 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:26,768 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89694 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 3...
+
+2023-07-27 14:01:26,769 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=f6d1a10a7e8578fbae7ceb6a24ab315e response_code=429
+
+2023-07-27 14:01:26,769 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89692 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:26,769 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89692 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 3...
+
+2023-07-27 14:01:26,772 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=d130f22c208b5be723f6fe579b310db7 response_code=429
+
+2023-07-27 14:01:26,773 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89686 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:26,773 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89686 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 3...
+
+2023-07-27 14:01:26,773 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=a790da8692a7ba987d832dd46fd15f15 response_code=429
+
+2023-07-27 14:01:26,773 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89687 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:26,774 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89687 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 3...
+
+2023-07-27 14:01:26,779 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=8d09643b6e5643f09bc6b16bb03acace response_code=429
+
+2023-07-27 14:01:26,780 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89678 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:26,780 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89678 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 3...
+
+2023-07-27 14:01:26,781 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=c2dd8905794c29b3e7688a725142c5b1 response_code=429
+
+2023-07-27 14:01:26,781 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89675 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:26,781 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89675 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 3...
+
+2023-07-27 14:01:26,781 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=d5eced3d0013eb174b0d999dcdb54034 response_code=429
+
+2023-07-27 14:01:26,781 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89680 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:26,782 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89680 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 3...
+
+2023-07-27 14:01:26,782 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=93c5828d737c0c94e0f7556ad9cb53b8 response_code=429
+
+2023-07-27 14:01:26,783 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89671 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:26,783 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89671 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 3...
+
+2023-07-27 14:01:26,783 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=c3e768b9d76389c40d957c26d851a8a0 response_code=429
+
+2023-07-27 14:01:26,784 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89673 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:26,784 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89673 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 3...
+
+2023-07-27 14:01:26,784 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=a8fd2be7b8d53f8b76bf8a6c608aedeb response_code=429
+
+2023-07-27 14:01:26,785 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89674 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:26,785 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89674 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 3...
+
+2023-07-27 14:01:26,786 INFO: 
+Description's index 27 just added.
+
+2023-07-27 14:01:26,787 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=ec1fd3f03a1a5db9db422e0472369e8a response_code=429
+
+2023-07-27 14:01:26,787 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89669 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:26,788 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89669 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 3...
+
+2023-07-27 14:01:26,788 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=27b1607da67783d2e45ad8f4f1e67d9f response_code=429
+
+2023-07-27 14:01:26,788 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89666 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:26,788 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89666 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 3...
+
+2023-07-27 14:01:26,788 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=0117498f52f1817c9c35b29f4e54663c response_code=429
+
+2023-07-27 14:01:26,789 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89666 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:26,789 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89666 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 3...
+
+2023-07-27 14:01:26,789 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=76f41816ffe7e476836324699fdaed0a response_code=429
+
+2023-07-27 14:01:26,789 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89666 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:26,789 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89666 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 3...
+
+2023-07-27 14:01:26,790 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=bd72142a874ad062ccecb6524955685b response_code=429
+
+2023-07-27 14:01:26,790 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89658 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:26,790 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89658 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 3...
+
+2023-07-27 14:01:26,792 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=61008956c91b32650f00b8791a4f192b response_code=429
+
+2023-07-27 14:01:26,792 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89653 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:26,792 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89653 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 3...
+
+2023-07-27 14:01:26,792 INFO: 
+Description's index 49 just added.
+
+2023-07-27 14:01:26,797 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=da34dc8f1c8c8f1c57f1fc64ec7eef7e response_code=429
+
+2023-07-27 14:01:26,797 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89646 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:26,797 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89646 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 3...
+
+2023-07-27 14:01:26,806 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=ef5e915fc30e8aeb57a98b16afc444b5 response_code=429
+
+2023-07-27 14:01:26,806 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89630 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:26,806 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89630 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 3...
+
+2023-07-27 14:01:26,810 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=8c1e8481a3a09743d21703b05522f107 response_code=429
+
+2023-07-27 14:01:26,810 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89625 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:26,810 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89625 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 3...
+
+2023-07-27 14:01:26,814 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=5835a8e2340b56b830f6e83cb7526e86 response_code=429
+
+2023-07-27 14:01:26,814 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89621 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:26,814 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89621 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 3...
+
+2023-07-27 14:01:26,814 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=16b1b6fb04fc5d237381d3e3f85726aa response_code=429
+
+2023-07-27 14:01:26,815 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89617 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:26,815 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89617 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 3...
+
+2023-07-27 14:01:26,817 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=28b2537af838001d0e594bd7d839bee1 response_code=429
+
+2023-07-27 14:01:26,817 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89614 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:26,817 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89614 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 3...
+
+2023-07-27 14:01:26,818 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6215 request_id=ed38424f1bde861a9f1b5091c2674258 response_code=200
+
+2023-07-27 14:01:26,826 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=ea574d68a26bcbb56c8d48b2a8496a87 response_code=429
+
+2023-07-27 14:01:26,827 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89630 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:26,827 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89630 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 3...
+
+2023-07-27 14:01:26,854 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=0dc3ce3eee9bd040d825c2349403e04e response_code=429
+
+2023-07-27 14:01:26,854 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89556 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:26,854 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89556 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 3...
+
+2023-07-27 14:01:26,901 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6361 request_id=0cf538844683a34de03ff0b0955862e8 response_code=200
+
+2023-07-27 14:01:26,911 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6267 request_id=cfcb6eb555c8295bf6c4a8183b87550c response_code=200
+
+2023-07-27 14:01:26,935 INFO: 
+Description's index 2 just added.
+
+2023-07-27 14:01:26,949 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6380 request_id=c1cad824b3223ba7a475870e51935a1e response_code=200
+
+2023-07-27 14:01:26,960 INFO: 
+Description's index 0 just added.
+
+2023-07-27 14:01:26,981 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6085 request_id=bfb0de80073d782508ff2d4a03eafee3 response_code=200
+
+2023-07-27 14:01:27,020 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6393 request_id=2318f0c91a124a5e1f9c26fc0bd6dd49 response_code=200
+
+2023-07-27 14:01:27,022 INFO: 
+Description's index 29 just added.
+
+2023-07-27 14:01:27,060 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6508 request_id=bce06fa22c46510a01597b5c283a0720 response_code=200
+
+2023-07-27 14:01:27,103 INFO: 
+Description's index 20 just added.
+
+2023-07-27 14:01:27,112 INFO: 
+Description's index 36 just added.
+
+2023-07-27 14:01:27,123 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6479 request_id=f473ec266ffa2aa38ceb805c3e3d1c63 response_code=200
+
+2023-07-27 14:01:27,142 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6508 request_id=d9d660f16e68e37df1282246c6a4d91d response_code=200
+
+2023-07-27 14:01:27,151 INFO: 
+Description's index 19 just added.
+
+2023-07-27 14:01:27,183 INFO: 
+Description's index 60 just added.
+
+2023-07-27 14:01:27,189 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6381 request_id=87317bffc1486952f646a417ecee02fa response_code=200
+
+2023-07-27 14:01:27,222 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6655 request_id=aeb8ea432dc2d187fe8e2c89c22bfbbe response_code=200
+
+2023-07-27 14:01:27,223 INFO: 
+Description's index 22 just added.
+
+2023-07-27 14:01:27,244 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6674 request_id=ff5cfa2ef8ac8bfc24e5a2c94e8cb354 response_code=200
+
+2023-07-27 14:01:27,262 INFO: 
+Description's index 13 just added.
+
+2023-07-27 14:01:27,264 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6638 request_id=c74dc87e4c939e1b7432165eeb47db8c response_code=200
+
+2023-07-27 14:01:27,288 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6651 request_id=53b690cea9e241383a8d149221ede7ef response_code=200
+
+2023-07-27 14:01:27,326 INFO: 
+Description's index 56 just added.
+
+2023-07-27 14:01:27,335 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6694 request_id=e4467fc2f9a0df65b245406af7c6d439 response_code=200
+
+2023-07-27 14:01:27,342 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6750 request_id=b7d1f6daf6184d71e2d50338377206a6 response_code=200
+
+2023-07-27 14:01:27,343 INFO: 
+Description's index 53 just added.
+
+2023-07-27 14:01:27,391 INFO: 
+Description's index 55 just added.
+
+2023-07-27 14:01:27,424 INFO: 
+Description's index 41 just added.
+
+2023-07-27 14:01:27,446 INFO: 
+Description's index 44 just added.
+
+2023-07-27 14:01:27,466 INFO: 
+Description's index 38 just added.
+
+2023-07-27 14:01:27,490 INFO: 
+Description's index 50 just added.
+
+2023-07-27 14:01:27,535 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6976 request_id=ea37d3729ace138c3d3e4468450c098f response_code=200
+
+2023-07-27 14:01:27,536 INFO: 
+Description's index 54 just added.
+
+2023-07-27 14:01:27,544 INFO: 
+Description's index 48 just added.
+
+2023-07-27 14:01:27,714 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7065 request_id=f4b9df6d1d5c433d2452acb2cdf264e0 response_code=200
+
+2023-07-27 14:01:27,737 INFO: 
+Description's index 35 just added.
+
+2023-07-27 14:01:27,796 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7140 request_id=ab12fef932c23f4a889f010002f24d70 response_code=200
+
+2023-07-27 14:01:27,865 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7163 request_id=38c8894e205d48fb343b845eadda8e1e response_code=200
+
+2023-07-27 14:01:27,916 INFO: 
+Description's index 73 just added.
+
+2023-07-27 14:01:27,928 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7350 request_id=99f90171296caaa1e2266dc3116b5d6f response_code=200
+
+2023-07-27 14:01:27,997 INFO: 
+Description's index 68 just added.
+
+2023-07-27 14:01:28,007 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7430 request_id=881c0c09a5589e05f6575c537acca00d response_code=200
+
+2023-07-27 14:01:28,067 INFO: 
+Description's index 62 just added.
+
+2023-07-27 14:01:28,119 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7403 request_id=311f5243aede24cbad17c921c6dcb55d response_code=200
+
+2023-07-27 14:01:28,130 INFO: 
+Description's index 64 just added.
+
+2023-07-27 14:01:28,165 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7622 request_id=84d79cd463bf3e0a950e288e9b781466 response_code=200
+
+2023-07-27 14:01:28,173 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7541 request_id=b4af1d1ed136d52b1fb7bc05caa8df93 response_code=200
+
+2023-07-27 14:01:28,175 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7508 request_id=350446d83399f19df5a87389e739489b response_code=200
+
+2023-07-27 14:01:28,209 INFO: 
+Description's index 47 just added.
+
+2023-07-27 14:01:28,321 INFO: 
+Description's index 58 just added.
+
+2023-07-27 14:01:28,368 INFO: 
+Description's index 23 just added.
+
+2023-07-27 14:01:28,375 INFO: 
+Description's index 33 just added.
+
+2023-07-27 14:01:28,376 INFO: 
+Description's index 4 just added.
+
+2023-07-27 14:01:28,381 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7737 request_id=6838faeaa5356b647ba63c5e2b6471b7 response_code=200
+
+2023-07-27 14:01:28,530 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7939 request_id=e0dd1af69a6ec47c0fa4fc7bc1dd9eff response_code=200
+
+2023-07-27 14:01:28,549 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7916 request_id=3a9bf58ece447a7ec292e698ab167e9c response_code=200
+
+2023-07-27 14:01:28,558 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7977 request_id=65f3226f1d4f7d2733154db45d7286b2 response_code=200
+
+2023-07-27 14:01:28,571 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8031 request_id=0cc3a71c342f7f867f9928f1d01b31b5 response_code=200
+
+2023-07-27 14:01:28,580 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8051 request_id=6a21c9cfbc77ff6adbbf9f6f80375fd8 response_code=200
+
+2023-07-27 14:01:28,582 INFO: 
+Description's index 74 just added.
+
+2023-07-27 14:01:28,586 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7957 request_id=b2fd2cb06d5311235c8a114ab87eda2c response_code=200
+
+2023-07-27 14:01:28,732 INFO: 
+Description's index 34 just added.
+
+2023-07-27 14:01:28,750 INFO: 
+Description's index 61 just added.
+
+2023-07-27 14:01:28,759 INFO: 
+Description's index 79 just added.
+
+2023-07-27 14:01:28,773 INFO: 
+Description's index 15 just added.
+
+2023-07-27 14:01:28,781 INFO: 
+Description's index 6 just added.
+
+2023-07-27 14:01:28,788 INFO: 
+Description's index 26 just added.
+
+2023-07-27 14:01:28,884 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8324 request_id=7f19b2f074292703c909c5364b87b0c0 response_code=200
+
+2023-07-27 14:01:28,897 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8354 request_id=d625deb8503117ea00652509ecef8c26 response_code=200
+
+2023-07-27 14:01:28,936 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8068 request_id=c9dd1282fd21241f459369b8c6a05f85 response_code=200
+
+2023-07-27 14:01:29,086 INFO: 
+Description's index 43 just added.
+
+2023-07-27 14:01:29,099 INFO: 
+Description's index 14 just added.
+
+2023-07-27 14:01:29,137 INFO: 
+Description's index 30 just added.
+
+2023-07-27 14:01:29,290 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8598 request_id=81215493bd21a73f4a4752f5fcf212ec response_code=200
+
+2023-07-27 14:01:29,427 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8867 request_id=ce15cc5d6f7d901dd0f5828c1b28cd11 response_code=200
+
+2023-07-27 14:01:29,492 INFO: 
+Description's index 12 just added.
+
+2023-07-27 14:01:29,503 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8886 request_id=4b8307079d7871c68515bd62b12d0693 response_code=200
+
+2023-07-27 14:01:29,629 INFO: 
+Description's index 37 just added.
+
+2023-07-27 14:01:29,704 INFO: 
+Description's index 25 just added.
+
+2023-07-27 14:01:29,905 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8918 request_id=506b9b8832f8b9fe9b1ce6410dee04ec response_code=200
+
+2023-07-27 14:01:29,923 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9372 request_id=68e0b104359a7e0414dfff497b0ec0fc response_code=200
+
+2023-07-27 14:01:29,988 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9444 request_id=4e2e6e3ca3ef62e877ca4f35170d8e79 response_code=200
+
+2023-07-27 14:01:30,022 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9377 request_id=b30a69e35a4d561a1737f668072e8186 response_code=200
+
+2023-07-27 14:01:30,073 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9506 request_id=d44d1eb36d71bc1bb632e4e43bdc62b7 response_code=200
+
+2023-07-27 14:01:30,107 INFO: 
+Description's index 40 just added.
+
+2023-07-27 14:01:30,125 INFO: 
+Description's index 10 just added.
+
+2023-07-27 14:01:30,165 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9391 request_id=a4d313b0149bef8aaea16df266c19f2e response_code=200
+
+2023-07-27 14:01:30,191 INFO: 
+Description's index 1 just added.
+
+2023-07-27 14:01:30,224 INFO: 
+Description's index 46 just added.
+
+2023-07-27 14:01:30,275 INFO: 
+Description's index 32 just added.
+
+2023-07-27 14:01:30,369 INFO: 
+Description's index 11 just added.
+
+2023-07-27 14:01:30,400 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7677 request_id=540dc134d2cd632d365ad5ecc1fe3cb7 response_code=200
+
+2023-07-27 14:01:30,434 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9638 request_id=4c473e2071e26e696f663bd280a4eb2b response_code=200
+
+2023-07-27 14:01:30,436 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9852 request_id=a2f273178ba58c7219eff10f03937b56 response_code=200
+
+2023-07-27 14:01:30,602 INFO: 
+Description's index 66 just added.
+
+2023-07-27 14:01:30,637 INFO: 
+Description's index 16 just added.
+
+2023-07-27 14:01:30,637 INFO: 
+Description's index 3 just added.
+
+2023-07-27 14:01:30,825 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=10022 request_id=46bb477f57fe7ffc3520a014233a101f response_code=200
+
+2023-07-27 14:01:30,827 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=10124 request_id=68e03db64fa7a95da62169f8a1c36e49 response_code=200
+
+2023-07-27 14:01:30,968 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=10373 request_id=199b8e96a7ca430d5c87451042057a0f response_code=200
+
+2023-07-27 14:01:30,995 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=10277 request_id=d279256a7648e69af6b2fa557441ce63 response_code=200
+
+2023-07-27 14:01:31,027 INFO: 
+Description's index 71 just added.
+
+2023-07-27 14:01:31,028 INFO: 
+Description's index 45 just added.
+
+2023-07-27 14:01:31,108 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=10549 request_id=6c0db7b65df2ffb4eaad52ecdd4cabe0 response_code=200
+
+2023-07-27 14:01:31,171 INFO: 
+Description's index 8 just added.
+
+2023-07-27 14:01:31,198 INFO: 
+Description's index 69 just added.
+
+2023-07-27 14:01:31,310 INFO: 
+Description's index 51 just added.
+
+2023-07-27 14:01:31,398 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=10822 request_id=10d7dadd9d0a00c21c26fcdd300095e3 response_code=200
+
+2023-07-27 14:01:31,418 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=10883 request_id=083f7d67a6ac40bb0b444e57cd95d728 response_code=200
+
+2023-07-27 14:01:31,457 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=10743 request_id=1d5b0d760df39faed1fb79565a002104 response_code=200
+
+2023-07-27 14:01:31,600 INFO: 
+Description's index 28 just added.
+
+2023-07-27 14:01:31,620 INFO: 
+Description's index 9 just added.
+
+2023-07-27 14:01:31,658 INFO: 
+Description's index 52 just added.
+
+2023-07-27 14:01:32,377 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9413 request_id=25dcdadae360ce739346aa5835cde123 response_code=200
+
+2023-07-27 14:01:32,579 INFO: 
+Description's index 86 just added.
+
+2023-07-27 14:01:34,469 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7688 request_id=e666bf92f169586b8e9c96839cf34202 response_code=200
+
+2023-07-27 14:01:34,671 INFO: 
+Description's index 78 just added.
+
+2023-07-27 14:01:34,831 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=edf82ba4137a4ba61b97e66a5d26ce86 response_code=429
+
+2023-07-27 14:01:34,832 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 88777 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:34,832 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 88777 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 4...
+
+2023-07-27 14:01:34,834 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=12485310c831f343deb5152f9b4acc1f response_code=429
+
+2023-07-27 14:01:34,834 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 88776 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:34,834 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 88776 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 4...
+
+2023-07-27 14:01:34,835 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=2e638c28518f5aac10d691725f698f03 response_code=429
+
+2023-07-27 14:01:34,835 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 88770 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:34,835 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 88770 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 4...
+
+2023-07-27 14:01:34,838 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=63a457e2d621d16d3a177a7ea4b9fc39 response_code=429
+
+2023-07-27 14:01:34,838 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89642 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:34,838 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89642 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 4...
+
+2023-07-27 14:01:34,840 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=4fe16ddeb7b1629862c54251022a4370 response_code=429
+
+2023-07-27 14:01:34,840 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 88777 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:34,840 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 88777 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 4...
+
+2023-07-27 14:01:34,845 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=7f4c0521d064b65e540865d9456e66f9 response_code=429
+
+2023-07-27 14:01:34,845 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89631 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:34,845 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89631 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 4...
+
+2023-07-27 14:01:34,845 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=65ddc606055d1fd692cf8111551413b2 response_code=429
+
+2023-07-27 14:01:34,846 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89631 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:34,846 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89631 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 4...
+
+2023-07-27 14:01:34,847 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=2fb5da654dacc91598372ca9bb4a382f response_code=429
+
+2023-07-27 14:01:34,847 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89627 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:34,848 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89627 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 4...
+
+2023-07-27 14:01:34,849 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=f81b74084d8661e6a3b367b9cb4ca48a response_code=429
+
+2023-07-27 14:01:34,850 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89624 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:34,850 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89624 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 4...
+
+2023-07-27 14:01:34,851 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=2dd593eb09667b3445b52c83c374b252 response_code=429
+
+2023-07-27 14:01:34,851 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89621 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:34,851 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89621 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 4...
+
+2023-07-27 14:01:34,851 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=831bcc7dbf4e45fdd56eb747cb85da22 response_code=429
+
+2023-07-27 14:01:34,852 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89621 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:34,852 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89621 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 4...
+
+2023-07-27 14:01:34,852 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=28294c16fb88e3c893aef88d1fa9c35a response_code=429
+
+2023-07-27 14:01:34,852 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89620 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:34,853 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89620 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 4...
+
+2023-07-27 14:01:34,853 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=ec05dc5b3042571ab4d00cfefe79c33a response_code=429
+
+2023-07-27 14:01:34,853 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89616 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:34,853 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89616 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 4...
+
+2023-07-27 14:01:34,854 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=e1f037b11fd435681f40880e4c88a531 response_code=429
+
+2023-07-27 14:01:34,855 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89616 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:34,855 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89616 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 4...
+
+2023-07-27 14:01:34,855 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=5ea4094fadedb792bd0a02d10c6f0dd9 response_code=429
+
+2023-07-27 14:01:34,855 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89627 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:34,855 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89627 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 4...
+
+2023-07-27 14:01:34,858 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=f16f80f79280732f77152da869f6597d response_code=429
+
+2023-07-27 14:01:34,859 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89611 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:34,859 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89611 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 4...
+
+2023-07-27 14:01:34,859 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=838ea6e863b2360f46287ece73ba7805 response_code=429
+
+2023-07-27 14:01:34,860 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89609 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:34,860 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89609 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 4...
+
+2023-07-27 14:01:34,864 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=ee8f60578b59dc752f7c55162abd54b8 response_code=429
+
+2023-07-27 14:01:34,864 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89607 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:34,864 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89607 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 4...
+
+2023-07-27 14:01:34,869 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=eda57b77bf0524b59d53840f120cb694 response_code=429
+
+2023-07-27 14:01:34,869 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89597 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:34,869 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89597 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 4...
+
+2023-07-27 14:01:34,873 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=46c63c6f6478aa06bbbc3abbcef09044 response_code=429
+
+2023-07-27 14:01:34,873 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89587 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:34,873 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89587 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 4...
+
+2023-07-27 14:01:34,877 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=73d3ad2a2dece489ad2011fa87c33b0a response_code=429
+
+2023-07-27 14:01:34,878 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89583 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:34,878 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89583 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 4...
+
+2023-07-27 14:01:34,882 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=282c099bc8a80ad6781a1f5551803111 response_code=429
+
+2023-07-27 14:01:34,882 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89577 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:34,883 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89577 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 4...
+
+2023-07-27 14:01:34,886 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=d6b2a6f4ad4e6862c5f45110013cfb24 response_code=429
+
+2023-07-27 14:01:34,886 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89568 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:34,887 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89568 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 4...
+
+2023-07-27 14:01:34,888 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=8f0f1ab5b28a5a226be40cfdacd30b24 response_code=429
+
+2023-07-27 14:01:34,888 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89566 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:34,888 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89566 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 4...
+
+2023-07-27 14:01:34,923 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=39c1267c9638caed46810aff5c0707fd response_code=429
+
+2023-07-27 14:01:34,924 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89519 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:34,924 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89519 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 4...
+
+2023-07-27 14:01:35,530 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8745 request_id=a61e27ca61819b6a008f8d53faebc825 response_code=200
+
+2023-07-27 14:01:35,733 INFO: 
+Description's index 76 just added.
+
+2023-07-27 14:01:36,031 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9247 request_id=27d7273db2f46c2641888f7894651cb7 response_code=200
+
+2023-07-27 14:01:36,233 INFO: 
+Description's index 93 just added.
+
+2023-07-27 14:01:36,390 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9607 request_id=036899966efdd3c032ce9285dbe3fea2 response_code=200
+
+2023-07-27 14:01:36,592 INFO: 
+Description's index 75 just added.
+
+2023-07-27 14:01:40,858 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=5982 request_id=1d4476b995414264766ae77e2e01e34f response_code=200
+
+2023-07-27 14:01:41,061 INFO: 
+Description's index 42 just added.
+
+2023-07-27 14:01:42,193 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7229 request_id=50867ab5ea2a7c11c97e7e4e9a5e6bfc response_code=200
+
+2023-07-27 14:01:42,324 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7469 request_id=da16dc4c7770f303241ecada36bc90ab response_code=200
+
+2023-07-27 14:01:42,326 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7461 request_id=d66754cb9b92e473bb2a73d7146b0686 response_code=200
+
+2023-07-27 14:01:42,395 INFO: 
+Description's index 90 just added.
+
+2023-07-27 14:01:42,526 INFO: 
+Description's index 95 just added.
+
+2023-07-27 14:01:42,527 INFO: 
+Description's index 92 just added.
+
+2023-07-27 14:01:43,010 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8079 request_id=327cc60bcade75d14b6cac355693a32b response_code=200
+
+2023-07-27 14:01:43,213 INFO: 
+Description's index 94 just added.
+
+2023-07-27 14:01:44,854 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9879 request_id=f7f4e303e4188f257a9130f58f33c65a response_code=200
+
+2023-07-27 14:01:45,056 INFO: 
+Description's index 96 just added.
+
+2023-07-27 14:01:45,574 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=10668 request_id=751fe7323a2aa8a006c755bc20c58892 response_code=200
+
+2023-07-27 14:01:45,776 INFO: 
+Description's index 84 just added.
+
+2023-07-27 14:01:50,983 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=0ff14cab562811e03a3d5a3a5ecafd1d response_code=429
+
+2023-07-27 14:01:50,984 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 88379 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:50,984 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 88379 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 5...
+
+2023-07-27 14:01:50,991 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=53ca62a01a8f42581adc2504ee131a70 response_code=429
+
+2023-07-27 14:01:50,991 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89861 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:50,991 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89861 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 5...
+
+2023-07-27 14:01:50,992 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=deb60fde064c7beb2dd2301c813f7c6d response_code=429
+
+2023-07-27 14:01:50,992 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89867 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:50,992 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89867 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 5...
+
+2023-07-27 14:01:50,992 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=42dedce86a9b2e24241d70daf3b7e7c0 response_code=429
+
+2023-07-27 14:01:50,992 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89854 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:50,992 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89854 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 5...
+
+2023-07-27 14:01:50,993 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=660819081f77622030bc7a4ed96cd7da response_code=429
+
+2023-07-27 14:01:50,993 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89858 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:50,993 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89858 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 5...
+
+2023-07-27 14:01:50,993 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=8c9252fec178f91127c0f0446e36c713 response_code=429
+
+2023-07-27 14:01:50,993 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89854 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:50,993 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89854 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 5...
+
+2023-07-27 14:01:50,994 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=41fda9a4fb86b5494b30a9c66c75dd90 response_code=429
+
+2023-07-27 14:01:50,994 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89854 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:50,994 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89854 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 5...
+
+2023-07-27 14:01:51,017 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=8640e6d818f46989c7a9a608f69af620 response_code=429
+
+2023-07-27 14:01:51,017 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89817 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:51,017 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89817 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 5...
+
+2023-07-27 14:01:51,051 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=cc4174067df2fbf034d41f147e1fd5cd response_code=429
+
+2023-07-27 14:01:51,052 INFO: 
+error_code=rate_limit_exceeded error_message='Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89766 / min. Contact us through our help center at help.openai.com if you continue to have issues.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+
+2023-07-27 14:01:51,052 WARNING: 
+Rate limit reached for default-gpt-3.5-turbo in organization org-4rV7ejhGu4Ld8adTnBbj9gsY on tokens per min. Limit: 90000 / min. Current: 89766 / min. Contact us through our help center at help.openai.com if you continue to have issues.. Retrying attempt 5...
+
+2023-07-27 14:01:55,094 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=3895 request_id=89378d4e99675a284fabb5c7da90a3fa response_code=200
+
+2023-07-27 14:01:55,095 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=3998 request_id=c89f6e0ba0ee6e5f367d1ffcc82f924c response_code=200
+
+2023-07-27 14:01:55,296 INFO: 
+Description's index 106 just added.
+
+2023-07-27 14:01:55,296 INFO: 
+Description's index 65 just added.
+
+2023-07-27 14:01:57,325 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6368 request_id=116b11ff68c0c777c86ba07902a845d3 response_code=200
+
+2023-07-27 14:01:57,527 INFO: 
+Description's index 87 just added.
+
+2023-07-27 14:01:57,755 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=6771 request_id=ed96ab2601f339f5d33e39f5219e09f2 response_code=200
+
+2023-07-27 14:01:57,958 INFO: 
+Description's index 97 just added.
+
+2023-07-27 14:01:58,749 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7740 request_id=b407e45d768a232ff2c7f27df5b54609 response_code=200
+
+2023-07-27 14:01:58,812 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7798 request_id=fb71e043b0b0f88aa05571e96532a887 response_code=200
+
+2023-07-27 14:01:58,933 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7972 request_id=842d91a90100b2f0c4b97eb1b6ce27a0 response_code=200
+
+2023-07-27 14:01:58,934 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7930 request_id=06c7aa6a4cd50602a97444a2f594b2df response_code=200
+
+2023-07-27 14:01:58,951 INFO: 
+Description's index 88 just added.
+
+2023-07-27 14:01:59,014 INFO: 
+Description's index 31 just added.
+
+2023-07-27 14:01:59,135 INFO: 
+Description's index 83 just added.
+
+2023-07-27 14:01:59,135 INFO: 
+Description's index 77 just added.
+
+2023-07-27 14:01:59,394 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8108 request_id=caef4943d06c22d320479b76e79e4eb7 response_code=200
+
+2023-07-27 14:01:59,476 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8529 request_id=a77fd4ce33d911fb61baada049710963 response_code=200
+
+2023-07-27 14:01:59,595 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=8654 request_id=961183716f0105cb1fdee7489c2938d2 response_code=200
+
+2023-07-27 14:01:59,595 INFO: 
+Description's index 89 just added.
+
+2023-07-27 14:01:59,677 INFO: 
+Description's index 57 just added.
+
+2023-07-27 14:01:59,796 INFO: 
+Description's index 100 just added.
+
+2023-07-27 14:02:00,213 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9168 request_id=12868d14d1ada8a784584fe282fa72f4 response_code=200
+
+2023-07-27 14:02:00,414 INFO: 
+Description's index 101 just added.
+
+2023-07-27 14:02:00,829 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=9741 request_id=c446dd5d69bf897f1708d84d2f6764e6 response_code=200
+
+2023-07-27 14:02:01,031 INFO: 
+Description's index 80 just added.
+
+2023-07-27 14:02:01,135 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=10057 request_id=a6a10cbe7850a9ba7024a6b731da7d96 response_code=200
+
+2023-07-27 14:02:01,337 INFO: 
+Description's index 81 just added.
+
+2023-07-27 14:02:01,757 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=10748 request_id=edd54aee161d20424f15d8432e194079 response_code=200
+
+2023-07-27 14:02:01,837 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=10804 request_id=dcf6a15669e1a1cfa29be4c4101d9b3e response_code=200
+
+2023-07-27 14:02:01,959 INFO: 
+Description's index 102 just added.
+
+2023-07-27 14:02:02,039 INFO: 
+Description's index 70 just added.
+
+2023-07-27 14:03:00,550 INFO: 
+e5_base_v2_data.parquet has been updated
+
