@@ -12,8 +12,6 @@ import asyncio
 import time
 from openai.error import ServiceUnavailableError
 import pandas as pd
-from chromadb.utils import embedding_functions
-from chromadb.config import Settings
 from datetime import datetime, timedelta
 from utils.handy import num_tokens, count_words, LoggingMain, truncated_string, save_df_to_csv, summary_specs_txt_file, original_specs_txt_file, clean_rows
 from utils.AsyncSummariseJob import async_summarise_job_gpt
@@ -49,13 +47,13 @@ def fetch_data_from_table(table_name:str) -> list :
 	cur = conn.cursor()
 
 	# Calculate the timestamp for 3 hours ago
-	two_hours_ago = datetime.now() - timedelta(hours=2)
+	three_hours_ago = datetime.now() - timedelta(hours=3)
 
 	# Fetch rows from the table with the specified conditions
-	#cur.execute(f"SELECT id, title, description, location FROM {table_name} WHERE timestamp >= %s", (two_hours_ago,))
+	cur.execute(f"SELECT id, title, description, location FROM {table_name} WHERE timestamp >= %s", (three_hours_ago,))
 
 	
-	cur.execute(f"SELECT id, title, description, location FROM {table_name}")
+	#cur.execute(f"SELECT id, title, description, location FROM {table_name}")
 
 	# Fetch all rows from the table
 	rows = cur.fetchall()
@@ -72,7 +70,7 @@ def fetch_data_from_table(table_name:str) -> list :
 
 	return ids, titles, locations, descriptions
 
-ids, titles, locations, descriptions = fetch_data_from_table("test")
+ids, titles, locations, descriptions = fetch_data_from_table("no_usa")
 
 def rows_to_nested_list(title_list: list, location_list: list, description_list: list) -> list:
     
@@ -167,7 +165,7 @@ async def summarise_descriptions(descriptions: list) -> list:
 					logging.warning(f"Description with index {i} is too short for being summarised. Number of words: {words_per_text}")
 					print(f"Description with index {i} is too short for being summarised. Number of words: {words_per_text}")
 					return i, text, 0
-			except (ServiceUnavailableError, Exception) as e:
+			except (Exception, ServiceUnavailableError) as e:
 				attempts += 1
 				print(f"{e}. Retrying attempt {attempts}...")
 				logging.warning(f"{e}. Retrying attempt {attempts}...")

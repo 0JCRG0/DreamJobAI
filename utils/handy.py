@@ -3,7 +3,7 @@ from chromadb.utils import embedding_functions
 import tiktoken
 import pandas as pd
 import logging
-import datetime
+from datetime import datetime, timedelta
 from torch import Tensor
 from transformers import AutoTokenizer, AutoModel
 import pyarrow.parquet as pq
@@ -70,7 +70,7 @@ def LoggingGPT4():
 						format=log_format)
 
 def original_specs_txt_file(content: str): 
-	timestamp = datetime.datetime.now()
+	timestamp = datetime.now()
 	with open(SAVE_PATH + '/specs.txt', 'a') as file:
 		file.write(f"\nAt {timestamp}\n")
 		file.write("RAW BATCHES SPECS: ------- \n")
@@ -133,3 +133,15 @@ def e5_base_v2_query(query):
     outputs = model(**batch_dict)
     query_embedding = average_pool(outputs.last_hidden_state, batch_dict['attention_mask']).detach().numpy().flatten()
     return query_embedding
+
+def filter_last_two_weeks(df:pd.DataFrame) -> pd.DataFrame:
+    # Get the current date
+    current_date = datetime.now().date()
+    
+    # Calculate the date two weeks ago from the current date
+    two_weeks_ago = current_date - timedelta(days=14)
+    
+    # Filter the DataFrame to keep only rows with timestamps in the last two weeks
+    filtered_df = df[df["timestamp"].dt.date >= two_weeks_ago]
+    
+    return filtered_df
