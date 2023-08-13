@@ -75,13 +75,13 @@ ids, titles, locations, descriptions = fetch_data_from_table("no_usa")
 def rows_to_nested_list(title_list: list, location_list: list, description_list: list) -> list:
     
     #Titles
-    formatted_titles = ["###title: {}###".format(title) for title in title_list]
+    formatted_titles = ["####title: {}####".format(title) for title in title_list]
     cleaned_titles = [clean_rows(title) for title in formatted_titles]
     #Locations
-    formatted_locations = ["###location: {}###".format(location) for location in location_list]
+    formatted_locations = ["####location: {}####".format(location) for location in location_list]
     cleaned_locations = [clean_rows(location) for location in formatted_locations]
     #Descriptions
-    formatted_descriptions = ["###description: {}###".format(description) for description in description_list]
+    formatted_descriptions = ["####description: {}####".format(description) for description in description_list]
     cleaned_descriptions = [clean_rows(description) for description in formatted_descriptions]
 
     #NEST THE LISTS
@@ -123,6 +123,7 @@ def raw_descriptions_to_batches(max_tokens: int, embedding_model: str, print_mes
 			f"AVERAGE NUMBER OF TOKENS PER BATCH: {average_tokens_per_batch}\n" \
 			f"APPROXIMATE COST OF EMBEDDING: ${approximate_cost} USD\n"
 	
+	#TODO: This should be log not txt file
 	original_specs_txt_file(content)
 
 	if print_messages:
