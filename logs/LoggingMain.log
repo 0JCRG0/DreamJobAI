@@ -7078,3 +7078,60 @@ Description's index 50 just added.
 2023-07-28 13:53:29,331 INFO: 
 e5_base_v2_data.parquet has been updated
 
+2023-08-14 09:52:25,811 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=7451 request_id=63b50cd3c2f30f9e42f1e6dde00aca52 response_code=200
+
+2023-08-14 09:52:25,818 INFO: 
+Description's index 3 just added.
+
+2023-08-14 09:52:31,449 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=12962 request_id=fa7f579df003e6356bd3a42c0a3fbee8 response_code=200
+
+2023-08-14 09:52:31,450 INFO: 
+Description's index 5 just added.
+
+2023-08-14 09:52:31,764 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=13105 request_id=4e2b7e14bead45e72d63151b0a2d715d response_code=200
+
+2023-08-14 09:52:31,765 INFO: 
+Description's index 6 just added.
+
+2023-08-14 09:52:33,013 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=14846 request_id=b9f8d0d50b9b78563aa1397d61dc6a9e response_code=200
+
+2023-08-14 09:52:33,015 INFO: 
+Description's index 8 just added.
+
+2023-08-14 09:52:33,518 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=15010 request_id=65232e6c831bb17a5c6ad2f5e4ba8d9d response_code=200
+
+2023-08-14 09:52:33,519 INFO: 
+Description's index 1 just added.
+
+2023-08-14 09:52:34,075 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=15313 request_id=6380565e6f4a1251c1545d60d0b36e7d response_code=200
+
+2023-08-14 09:52:34,077 INFO: 
+Description's index 7 just added.
+
+2023-08-14 09:52:34,080 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=15587 request_id=bc0e97f6288f54225e08c99514590780 response_code=200
+
+2023-08-14 09:52:34,081 INFO: 
+Description's index 2 just added.
+
+2023-08-14 09:52:34,260 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=15510 request_id=4ff391b56ce9bd8590bd1ed33f75c915 response_code=200
+
+2023-08-14 09:52:34,261 INFO: 
+Description's index 0 just added.
+
+2023-08-14 09:52:34,420 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=15467 request_id=218fd7da35d11080359847df2a09a7b1 response_code=200
+
+2023-08-14 09:52:34,421 INFO: 
+Description's index 4 just added.
+
+2023-08-14 09:52:38,885 INFO: 
+e5_base_v2_data.parquet has been updated
+
