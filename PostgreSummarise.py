@@ -7,6 +7,7 @@ import logging
 import chromadb
 import timeit
 import time
+from datetime import datetime, date, timedelta
 from aiohttp import ClientSession
 import asyncio
 import time
@@ -40,54 +41,65 @@ LoggingMain()
 
 model = "gpt-3.5-turbo"  # only matters insofar as it selects which tokenizer to use
 
-def fetch_data_from_table(table_name:str) -> list :
+
+#Uncomment after first call
+
+with open(SAVE_PATH + '/max_id.txt', 'r') as f:
+	max_id = int(f.read())
+
+
+def postgre_to_df(table_name:str, max_id:int = 0) -> list :
 	conn = psycopg2.connect(user=user, password=password, host=host, port=port, database=database)
 
 	# Create a cursor object
 	cur = conn.cursor()
 
-	# Calculate the timestamp for 3 hours ago
-	three_hours_ago = datetime.now() - timedelta(hours=3)
+	# Fetch new data from the table where id is greater than max_id
+	cur.execute(f"SELECT id, title, description, location, timestamp FROM {table_name} WHERE id > {max_id}")
+	new_data = cur.fetchall()
 
-	# Fetch rows from the table with the specified conditions
-	cur.execute(f"SELECT id, title, description, location FROM {table_name} WHERE timestamp >= %s", (three_hours_ago,))
-
-	
-	#cur.execute(f"SELECT id, title, description, location FROM {table_name}")
-
-	# Fetch all rows from the table
-	rows = cur.fetchall()
+	# If new_data is not empty, update max_id with the maximum id from new_data
+	if new_data:
+		max_id = max(row[0] for row in new_data)
 
 	# Close the database connection
+	conn.commit()
 	cur.close()
 	conn.close()
-
+	
 	# Separate the columns into individual lists
-	ids = [row[0] for row in rows]
-	titles = [row[1] for row in rows]
-	locations = [row[3] for row in rows]
-	descriptions = [row[2] for row in rows]
+	ids = [row[0] for row in new_data]
+	titles = [row[1] for row in new_data]
+	descriptions = [row[2] for row in new_data]
+	locations = [row[3] for row in new_data]
+	timestamp = [row[4] for row in new_data]
 
-	return ids, titles, locations, descriptions
+	return ids, titles, locations, descriptions, timestamp, max_id
 
-ids, titles, locations, descriptions = fetch_data_from_table("no_usa")
+
+##Comment after first call
+#max_id = 0
+
+ids, titles, locations, descriptions, timestamps, max_id = postgre_to_df("test", max_id)
+print(max_id, len(ids))
+
 
 def rows_to_nested_list(title_list: list, location_list: list, description_list: list) -> list:
-    
-    #Titles
-    formatted_titles = ["####title: {}####".format(title) for title in title_list]
-    cleaned_titles = [clean_rows(title) for title in formatted_titles]
-    #Locations
-    formatted_locations = ["####location: {}####".format(location) for location in location_list]
-    cleaned_locations = [clean_rows(location) for location in formatted_locations]
-    #Descriptions
-    formatted_descriptions = ["####description: {}####".format(description) for description in description_list]
-    cleaned_descriptions = [clean_rows(description) for description in formatted_descriptions]
+	
+	#Titles
+	formatted_titles = ["####title: {}####".format(title) for title in title_list]
+	cleaned_titles = [clean_rows(title) for title in formatted_titles]
+	#Locations
+	formatted_locations = ["####location: {}####".format(location) for location in location_list]
+	cleaned_locations = [clean_rows(location) for location in formatted_locations]
+	#Descriptions
+	formatted_descriptions = ["####description: {}####".format(description) for description in description_list]
+	cleaned_descriptions = [clean_rows(description) for description in formatted_descriptions]
 
-    #NEST THE LISTS
-    jobs_info = [[title, location, description] for title, location, description in zip(cleaned_titles, cleaned_locations, cleaned_descriptions)]
+	#NEST THE LISTS
+	jobs_info = [[title, location, description] for title, location, description in zip(cleaned_titles, cleaned_locations, cleaned_descriptions)]
 
-    return jobs_info
+	return jobs_info
 
 jobs_info= rows_to_nested_list(titles, locations, descriptions)
 
@@ -209,11 +221,13 @@ async def main(embedding_model:str):
 
 	#Embedding starts
 	if embedding_model == "openai":
-		embeddings_openai(batches_to_embed= formatted_summarised_e5_batches, batches_ids=ids, original_descriptions=raw_batches, db="parquet", filename="openai_embeddings_summary")
+		embeddings_openai(batches_to_embed= formatted_summarised_e5_batches, batches_ids=ids, original_timestamps=timestamps, original_descriptions=raw_batches, db="parquet", filename="openai_embeddings_summary")
 	elif embedding_model == "e5":
-		embedding_e5_base_v2(batches_to_embed = formatted_summarised_e5_batches, batches_ids= ids, original_descriptions=raw_batches, chunk_size=15)
+		embedding_e5_base_v2(batches_to_embed = formatted_summarised_e5_batches, batches_ids=ids, original_timestamps=timestamps, original_descriptions=raw_batches, chunk_size=15)
 
+#At the end of the script, save max_id to the file
+with open(SAVE_PATH + '/max_id.txt', 'w') as f:
+	f.write(str(max_id))
 
 if __name__ == "__main__":
 	asyncio.run(main("e5"))
-
