@@ -4,17 +4,11 @@ from dotenv import load_dotenv
 import pretty_errors
 import openai
 import logging
-import chromadb
-import timeit
-import time
-from datetime import datetime, date, timedelta
-from aiohttp import ClientSession
-import asyncio
 import time
 from openai.error import ServiceUnavailableError
 import pandas as pd
 from datetime import datetime, timedelta
-from utils.handy import num_tokens, count_words, LoggingMain, truncated_string, save_df_to_csv, summary_specs_txt_file, original_specs_txt_file, clean_rows
+from utils.handy import num_tokens, count_words, LoggingMain, truncated_string, save_df_to_csv, summary_specs_txt_file, original_specs_txt_file, clean_rows, passage_e5_format
 from utils.AsyncSummariseJob import async_summarise_job_gpt
 from EmbeddingsOpenAI import embeddings_openai
 from EmbeddingsE5 import embedding_e5_base_v2
@@ -152,82 +146,18 @@ def raw_descriptions_to_batches(max_tokens: int, embedding_model: str, print_mes
 
 raw_batches = raw_descriptions_to_batches(max_tokens=1000, embedding_model="e5", print_messages = True)
 
-df_raw_batches = pd.DataFrame({
-	"ids": ids,
-	"descriptions":raw_batches})
+formatted_e5_batches = passage_e5_format(raw_batches)
 
-df_raw_batches.to_csv(SAVE_PATH + "/raw_batches.csv", index=False)
-
-
-async def summarise_descriptions(descriptions: list) -> list:
-	#start timer
-	start_time = asyncio.get_event_loop().time()
-	total_cost = 0
-
-	async def process_description(session, i, text):
-		attempts = 0
-		while attempts < 5:
-			try:
-				words_per_text = count_words(text)
-				if words_per_text > 50:
-					description_summary, cost = await async_summarise_job_gpt(session, text)
-					print(f"Description with index {i} just added.")
-					logging.info(f"Description's index {i} just added.")
-					return i, description_summary, cost
-				else:
-					logging.warning(f"Description with index {i} is too short for being summarised. Number of words: {words_per_text}")
-					print(f"Description with index {i} is too short for being summarised. Number of words: {words_per_text}")
-					return i, text, 0
-			except (Exception, ServiceUnavailableError) as e:
-				attempts += 1
-				print(f"{e}. Retrying attempt {attempts}...")
-				logging.warning(f"{e}. Retrying attempt {attempts}...")
-				await asyncio.sleep(5**attempts)  # exponential backoff
-		else:
-			print(f"Description with index {i} could not be summarised after 5 attempts.")
-			return i, text, 0
-
-	async with ClientSession() as session:
-		tasks = [process_description(session, i, text) for i, text in enumerate(descriptions)]
-		results = await asyncio.gather(*tasks)
-
-	# Sort the results by the index and extract the summaries and costs
-	results.sort()
-	descriptions_summarised = [result[1] for result in results]
-	costs = [result[2] for result in results]
-	total_cost = sum(costs)
-
-	#await close_session()
-	#processed_time = timeit.default_timer() - start_time
-	elapsed_time = asyncio.get_event_loop().time() - start_time
-
-	return descriptions_summarised, total_cost, elapsed_time
-
-
-async def main(embedding_model:str):
-	raw_summarised_batches, raw_total_cost, raw_processed_time = await summarise_descriptions(raw_batches)
-
-	def passage_e5_format(summaries):
-		formatted_summary = ["passage: {}".format(summary) for summary in summaries]
-		return formatted_summary
-	
-	#SAVE THE DATA...
-
-	formatted_summarised_e5_batches = passage_e5_format(raw_summarised_batches)
-
-	save_df_to_csv(ids, raw_batches, formatted_summarised_e5_batches)	
-
-	summary_specs_txt_file(raw_total_cost, raw_processed_time)
-
+def main(embedding_model:str):
 	#Embedding starts
 	if embedding_model == "openai":
-		embeddings_openai(batches_to_embed= formatted_summarised_e5_batches, batches_ids=ids, original_timestamps=timestamps, original_descriptions=raw_batches, db="parquet", filename="openai_embeddings_summary")
+		embeddings_openai(batches_to_embed= raw_batches, batches_ids=ids, original_timestamps=timestamps, db="parquet", filename="openai_embeddings_summary")
 	elif embedding_model == "e5":
-		embedding_e5_base_v2(batches_to_embed = formatted_summarised_e5_batches, batches_ids=ids, original_timestamps=timestamps, original_descriptions=raw_batches, chunk_size=15)
+		embedding_e5_base_v2(batches_to_embed = raw_batches, batches_ids=ids, original_timestamps=timestamps, chunk_size=15)
 
 #At the end of the script, save max_id to the file
 with open(SAVE_PATH + '/max_id.txt', 'w') as f:
 	f.write(str(max_id))
 
 if __name__ == "__main__":
-	asyncio.run(main("e5"))
+	main("e5")
