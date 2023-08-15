@@ -7135,3 +7135,228 @@ Description's index 4 just added.
 2023-08-14 09:52:38,885 INFO: 
 e5_base_v2_data.parquet has been updated
 
+2023-08-14 12:15:18,068 WARNING: 
+asyncio.run() cannot be called from a running event loop. Retrying in 5 seconds. Number of retries: 1
+
+2023-08-14 12:15:23,086 WARNING: 
+asyncio.run() cannot be called from a running event loop. Retrying in 5 seconds. Number of retries: 2
+
+2023-08-14 12:15:28,087 WARNING: 
+asyncio.run() cannot be called from a running event loop. Retrying in 5 seconds. Number of retries: 3
+
+2023-08-14 12:15:33,091 WARNING: 
+asyncio.run() cannot be called from a running event loop. Retrying in 5 seconds. Number of retries: 4
+
+2023-08-14 12:15:38,096 WARNING: 
+asyncio.run() cannot be called from a running event loop. Retrying in 5 seconds. Number of retries: 5
+
+2023-08-14 12:15:43,102 WARNING: 
+asyncio.run() cannot be called from a running event loop. Retrying in 5 seconds. Number of retries: 6
+
+2023-08-14 12:15:48,108 ERROR: 
+Check logs!!!! Main function was not callable. Setting json to default
+
+2023-08-14 12:15:48,109 INFO: 
+type of the json object: <class 'list'> Data: [{'id': '', 'suitability': '', 'explanation': ''}]
+
+2023-08-14 12:15:48,125 INFO: 
+Getting the ids from the json object: <class 'str'>, ('')
+
+2023-08-14 12:17:42,467 WARNING: 
+asyncio.run() cannot be called from a running event loop. Retrying in 5 seconds. Number of retries: 1
+
+2023-08-14 12:17:47,473 WARNING: 
+asyncio.run() cannot be called from a running event loop. Retrying in 5 seconds. Number of retries: 2
+
+2023-08-14 12:17:52,478 WARNING: 
+asyncio.run() cannot be called from a running event loop. Retrying in 5 seconds. Number of retries: 3
+
+2023-08-14 12:17:57,485 WARNING: 
+asyncio.run() cannot be called from a running event loop. Retrying in 5 seconds. Number of retries: 4
+
+2023-08-14 12:32:06,756 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=12619 request_id=24874e6db9bb15e7dfee38679034aae4 response_code=200
+
+2023-08-14 12:32:06,777 INFO: 
+Description just added.
+
+2023-08-14 12:32:08,190 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=13410 request_id=669915aa6cfae91a5df1c18af8cfcfe1 response_code=200
+
+2023-08-14 12:32:08,194 INFO: 
+Description just added.
+
+2023-08-14 12:32:09,192 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=15053 request_id=7305c9d3f830e7fbb852ee71e3808f07 response_code=200
+
+2023-08-14 12:32:09,195 INFO: 
+Description just added.
+
+2023-08-14 12:32:10,701 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=16556 request_id=197cc7b6de1e6f4930f37e72de79d82f response_code=200
+
+2023-08-14 12:32:10,705 INFO: 
+Description just added.
+
+2023-08-14 12:32:10,706 INFO: 
+TOTAL COST: 0.002. TOTAL ELAPSED TIME: 17.25781041700975
+
+2023-08-14 12:32:10,957 INFO: 
+TOTAL COST: 0.003. TOTAL ELAPSED TIME: 15.74779291699815
+
+2023-08-14 12:32:10,957 INFO: 
+TOTAL COST: 0.002. TOTAL ELAPSED TIME: 13.329325209007948
+
+2023-08-14 12:32:10,958 INFO: 
+TOTAL COST: 0.002. TOTAL ELAPSED TIME: 14.74685408300138
+
+2023-08-14 12:32:10,959 INFO: 
+[{'role': 'system', 'content': "\n\nYou are a job recruiter for a large recruitment agency./\nYou will be provided with a candidate's CV./\nThe CV will be delimited with #### characters./\nYou will also be provided with the Job IDs (delimited by angle brackets) /\nand corresponding descriptions (delimited by triple dashes)/\nfor the available job openings./\n\nPerform the following steps:/\n\nStep 1 - Classify the provided CV into a suitability category for each job opening./\nStep 2 - For each ID briefly explain in one sentence your reasoning behind the chosen suitability category./\nStep 3 - Only provide your output in json format with the keys: id, suitability and explanation./\n\nDo not classify a CV into a suitability category until you have classify the CV yourself.\n\nSuitability categories: Highly Suitable, Moderately Suitable, Potentially Suitable, Marginally Suitable and Not Suitable./\n\nHighly Suitable: CVs in this category closely align with the job opening, demonstrating extensive relevant experience, skills, and qualifications. The candidate possesses all or most of the necessary requirements and is an excellent fit for the role./\nModerately Suitable: CVs falling into this category show a reasonable match to the job opening. The candidate possesses some relevant experience, skills, and qualifications that align with the role, but there may be minor gaps or areas for improvement. With some additional training or development, they could become an effective candidate./\nPotentially Suitable: CVs in this category exhibit potential and may possess transferable skills or experience that could be valuable for the job opening. Although they may not meet all the specific requirements, their overall profile suggests that they could excel with the right support and training./\nMarginally Suitable: CVs falling into this category show limited alignment with the job opening. The candidate possesses a few relevant skills or experience, but there are significant gaps or deficiencies in their qualifications. They may require substantial training or experience to meet the requirements of the role./\nNot Suitable: CVs in this category do not match the requirements and qualifications of the job opening. The candidate lacks the necessary skills, experience, or qualifications, making them unsuitable for the role./\n"}, {'role': 'user', 'content': '####(\'Qualifications: \n- LLB Law degree from Universidad de las Américas Puebla (UDLAP) with an accumulated average of 9.4/10.\n- Currently on an international exchange at the University of Bristol for the final year of studying Law.\n- Member of the Honours Program at UDLAP, conducting research on FinTech, Financial Inclusion, Blockchain, Cryptocurrencies, and Smart Contracts.\n\nPrevious job titles:\n- Data Analyst at Tata Consultancy Services México, where I cleansed, interpreted, and analyzed data using Python and SQL Server to produce visual reports with Power BI.\n- Legal Assistant at BLACKSHIIP Venture Capital, responsible for proofreading and drafting legal documents, as well as assisting with negotiations of International Share Purchase Agreements.\n\nResponsibilities/Key Duties:\n- Developed and introduced A/B testing to make data-driven business decisions as a Data Analyst Jr. at AMATL GRÁFICOS.\n- Taught mental arithmetic as a Mathematics Instructor at ALOHA Mental Arithmetic.\n- Led and assisted individuals with physical and mental disabilities as a Special Needs Counsellor at Camp Merrywood and YMCA Camp Independence.\n\nSkills:\n- Proficient in Python, SQL Server, Tableau, Power BI, Bash/Command Line, Git & GitHub, and Office 365.\n- Strong written and verbal communication skills, teamwork, ability to work under pressure, attention to detail, and leadership skills.\n- Knowledge in machine learning, probabilities & statistics, and proofreading.\n\nOther Achievements:\n- Published paper on "Smart Legal Contracts: From Theory to Reality" and participated in the IDEAS Summer Program on Intelligence, Data, Ethics, and Society at the University of California, San Diego.####'}, {'role': 'assistant', 'content': "\n\n\n\n Available job openings:\n\n\n\nID:<43386>\nJob Description:---Title: Business Analyst - Payment Transactions\nLocation: Poland\nJob Objective: Join our team as a Business Analyst! In your role as Technical Business Analyst Cheques and Payment Investigation, you will be part of our vision to digitalize and automate the payment investigation process and improve the current workflow for our internal customers with innovative technologies. You will also support traditional paper-based payments method like foreign cheques. As BA responsible in this business area, you will be able to drive this change and define adequate solutions. For this, you will analyze business requirements and be able to configure the system and translate the requirements to the test scope and provide this to development team or external vendor. You will use modern IT infrastructure and tools and work in an environment of Agile product development.\nResponsibilities/Key duties: As a Business Analyst, you are responsible for the translation of business requirements into IT solutions and associated applications. You will act as a link between business experts of Payment Transactions and IT development or maintenance teams. Your main duty is understanding and analyzing business requirements actual/target and defining and designing the appropriate functional solutions either as parametrization within the application or as a functional IT concept to be realized by the development team. You will advise and consult business as well as IT experts on functional concepts of the application and on business process or workflow optimization. You will create concepts as business process models as well as business data or object models or specifications for the solution. You will also define functional test scenarios as well as quality assurance measures and support test activities on test environments. In case of incidents or issues, you will analyze and design solutions of the problems in close collaboration with other involved teams. You are one of the experts within your scrum team for all aspects of functional and business analysis aspects for the Fincase and Comcheque – the application which supports payment investigations and foreign cheques.\nQualifications/Requirements/Experience: Understanding and analyzing business requirements actual/target. Gathering documentation of business requirements and design/development of functional solution/function IT---\n\nID:<43385>\nJob Description:---Title: Administrative Assistant - Engineering\nLocation: Canada\nJob Objective: An Administrative Assistant at Mozilla provides support to another individual or group of individuals by managing calendars and appointments, coordinating activities between teams and departments, making travel arrangements, and providing other specialized administrative support to extend the effectiveness and efficiency of those they support.\nResponsibilities/Key duties: Understands the business priorities of your leaders to best leverage their time. Prioritizes multiple dynamic senior leader calendars with the ability to anticipate issues and ensure successful meeting coordination. Schedules and maintains meetings, travel itineraries, and coordinates related arrangements for assigned leaders. Supports special projects which may include team offsites, events, onboarding, and culture/team building programs. Handles distribution lists and organization charts. Arranges business travel and tracks expenses. May reconcile departmental budgets and invoices. Partners with Executive Assistants to synchronize and align on pivotal initiatives across leaders. Constructs and distributes reports upon request which may require working with other parts of the organization to gather information. Identifies key issues and patterns from partial/conflicting data. Takes a broad perspective to problems and identifies new less obvious solutions. Creates and reinforces open partnerships with leaders to help run an effective and efficient working team, keeping all members organized, advised, and on task. Maintains confidential information and proprietary reports. As requested, prepares communications including but not limited to e-mails, reports, presentations, agendas, and minutes. Distributes information to the broader team on the leaders' behalf. Ad hoc tasks as assigned based on the needs of the business.\nQualifications/Requirements/Experience: 4-6 years of proven experience providing administrative support to multiple leaders, preferably at the VP level, in fast-paced remote global environments. Demonstrated ability to set and manage expectations. Excellent communication and interpersonal skills. Receptive to learning and adapting to new experiences. Ability to apply thoughtful judgment to complex situations. Dedication to confidentiality and discretion. Strong relationship building skills with the ability to maintain composure under pressure. Team---\n\nID:<43384>\nJob Description:---Title: Recruiter Japanese\nLocation: Worldwide\nJob Objective: David Kennedy Recruitment is looking for a Japanese-speaking freelance recruiter to join their team. The role involves connecting talented individuals with their dream jobs and hiring in Japanese.\nResponsibilities/Key duties: \n- Utilize various channels such as job boards, social media, and networking to find and attract top-notch candidates\n- Conduct interviews, assess qualifications, and determine the perfect fit for specific job roles\n- Work closely with the Service Delivery Manager and Managing Director to ensure smooth recruitment processes for candidates\n- Maintain a pipeline of talented candidates for future opportunities and build lasting relationships with them\n- Coordinate interviews between candidates and hiring managers\n- Keep candidate profiles in the Applicant Tracking System (ATS) well-described and updated for future reference\nQualifications/Requirements/Experience: \n- Proficient in spoken and written Japanese and English\n- Previous experience as a recruiter or in a similar role is preferred\n- Stellar communication and people skills\n- Ability to handle multiple recruitment projects and work independently\n- Strong time management, responsiveness, and organizational abilities\n- Knowledge of recruitment best practices and sourcing techniques is a plus\n- Familiarity with ATS and recruitment software is a bonus\nPreferred Skills/Nice to Have: Familiarity with applicant tracking systems (ATS) and recruitment software.\nAbout the company: David Kennedy Recruitment is a collaborative and supportive team environment that connects clients with exceptional talent in the Japanese-speaking market and beyond.\nCompensation and Benefits: The role offers a commission-based structure, fully remote work from anywhere in the world, and the freedom to manage your own schedule. Enjoy a competitive compensation structure and the smoothness, fairness, and clarity of collaboration with David Kennedy Recruitment.---\n\nID:<43383>\nJob Description:---Title: Recruiter Swedish\nLocation: Worldwide\nJob Objective: To find and attract top-notch candidates for various job roles and build lasting relationships with them.\nResponsibilities/Key duties: \n- Dive into various channels like job boards, social media, and networking to find and attract top-notch candidates.\n- Conduct interviews, assess qualifications, and determine the perfect fit for specific job roles.\n- Work closely with the Service Delivery Manager and Managing Director to ensure smooth recruitment processes for candidates.\n- Maintain a steady pipeline of talented candidates for future opportunities.\n- Coordinate interviews between candidates and hiring managers.\n- Keep candidate profiles in the Applicant Tracking System (ATS) well-described and updated.\nQualifications/Requirements/Experience: \n- Proficient in Swedish and English spoken and written.\n- Previous experience as a recruiter or in a similar role is a huge asset.\n- Stellar communication and people skills.\n- Ability to juggle multiple recruitment projects and work independently.\n- Great time management, responsiveness, and organizational abilities.\n- Knowledge of recruitment best practices and sourcing techniques is nice to have.\n- Familiarity with ATS and recruitment software is a bonus.\nPreferred Skills/Nice to Have: Familiarity with applicant tracking systems (ATS) and recruitment software.\nAbout the company: David Kennedy Recruitment is a company that connects talented individuals with their dream jobs. They offer a commission-based structure for freelance recruiters and provide a collaborative and supportive team environment.\nCompensation and Benefits: Enjoy a competitive always-on-time commission-based compensation structure. Embrace the freedom and flexibility of fully remote work from anywhere in the world and manage your own schedule. Enjoy the smoothness, fairness, and clarity of collaboration with David Kennedy Recruitment.---\n"}]
+
+2023-08-14 12:32:32,790 INFO: 
+
+PROMPT TOKENS USED:2329
+ COMPLETION TOKENS USED:232
+ 
+TOTAL TOKENS USED:2561
+
+
+2023-08-14 12:32:32,791 INFO: 
+MODEL USED: gpt-4. COST FOR CLASSIFYING: $0.084 USD
+
+2023-08-14 12:32:34,398 INFO: 
+ID: 43386 has the following relatedness=0.785
+
+2023-08-14 12:32:34,398 INFO: 
+ID: 43385 has the following relatedness=0.775
+
+2023-08-14 12:32:34,398 INFO: 
+ID: 43384 has the following relatedness=0.758
+
+2023-08-14 12:32:34,398 INFO: 
+ID: 43383 has the following relatedness=0.749
+
+2023-08-14 12:32:34,398 INFO: 
+
+ DreamedJobAI finished! all in: 42.94 seconds 
+
+
+2023-08-14 12:32:34,398 INFO: 
+Response is a valid json object. Done in loop number: 1
+
+2023-08-14 12:32:34,398 INFO: 
+type of the json object: <class 'list'> Data: [{'id': '43386', 'suitability': 'Potentially Suitable', 'explanation': 'The candidate has experience in data analysis and is proficient in Python, SQL Server, and Power BI, which could be useful in a Business Analyst role, but lacks specific experience in payment transactions.'}, {'id': '43385', 'suitability': 'Marginally Suitable', 'explanation': 'The candidate has strong communication and organizational skills, but lacks the administrative experience and familiarity with managing calendars, travel arrangements, and departmental budgets required for the Administrative Assistant role.'}, {'id': '43384', 'suitability': 'Not Suitable', 'explanation': 'The candidate does not have recruitment experience or proficiency in Japanese, making them unsuitable for the Japanese-speaking Recruiter role.'}, {'id': '43383', 'suitability': 'Not Suitable', 'explanation': 'The candidate does not have recruitment experience or proficiency in Swedish, making them unsuitable for the Swedish-speaking Recruiter role.'}]
+
+2023-08-14 12:32:34,408 INFO: 
+Getting the ids from the json object: <class 'str'>, ('43386', '43385', '43384', '43383')
+
+2023-08-14 12:40:11,293 WARNING: 
+the JSON object must be str, bytes or bytearray, not coroutine. Retrying in 5 seconds. Number of retries: 1
+
+2023-08-14 12:40:16,300 WARNING: 
+the JSON object must be str, bytes or bytearray, not coroutine. Retrying in 5 seconds. Number of retries: 2
+
+2023-08-14 12:40:21,305 WARNING: 
+the JSON object must be str, bytes or bytearray, not coroutine. Retrying in 5 seconds. Number of retries: 3
+
+2023-08-14 12:40:26,309 WARNING: 
+the JSON object must be str, bytes or bytearray, not coroutine. Retrying in 5 seconds. Number of retries: 4
+
+2023-08-14 12:40:41,156 WARNING: 
+This event loop is already running. Retrying in 5 seconds. Number of retries: 1
+
+2023-08-14 12:40:46,167 WARNING: 
+This event loop is already running. Retrying in 5 seconds. Number of retries: 2
+
+2023-08-14 12:40:51,173 WARNING: 
+This event loop is already running. Retrying in 5 seconds. Number of retries: 3
+
+2023-08-14 12:40:56,177 WARNING: 
+This event loop is already running. Retrying in 5 seconds. Number of retries: 4
+
+2023-08-14 13:14:57,465 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=12860 request_id=d0a9f6f0db852543edfdf541ed7ef565 response_code=200
+
+2023-08-14 13:14:57,477 INFO: 
+Description just added.
+
+2023-08-14 13:14:57,629 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=13031 request_id=1db8610e4f50df3eae6a376861e82e74 response_code=200
+
+2023-08-14 13:14:57,630 INFO: 
+Description just added.
+
+2023-08-14 13:15:00,871 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=16264 request_id=9dbc84b01937735715002a74151277bf response_code=200
+
+2023-08-14 13:15:00,872 INFO: 
+Description just added.
+
+2023-08-14 13:15:00,894 INFO: 
+message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=16278 request_id=617bcc81a2a2d5d7bf65067e43f562a6 response_code=200
+
+2023-08-14 13:15:00,894 INFO: 
+Description just added.
+
+2023-08-14 13:15:00,895 INFO: 
+TOTAL COST: 0.002. TOTAL ELAPSED TIME: 17.02086312501342
+
+2023-08-14 13:15:01,095 INFO: 
+TOTAL COST: 0.003. TOTAL ELAPSED TIME: 16.9991513749992
+
+2023-08-14 13:15:01,096 INFO: 
+TOTAL COST: 0.002. TOTAL ELAPSED TIME: 13.756083792002755
+
+2023-08-14 13:15:01,097 INFO: 
+TOTAL COST: 0.002. TOTAL ELAPSED TIME: 13.603203708989895
+
+2023-08-14 13:15:01,098 INFO: 
+[{'role': 'system', 'content': "\n\nYou are a job recruiter for a large recruitment agency./\nYou will be provided with a candidate's CV./\nThe CV will be delimited with #### characters./\nYou will also be provided with the Job IDs (delimited by angle brackets) /\nand corresponding descriptions (delimited by triple dashes)/\nfor the available job openings./\n\nPerform the following steps:/\n\nStep 1 - Classify the provided CV into a suitability category for each job opening./\nStep 2 - For each ID briefly explain in one sentence your reasoning behind the chosen suitability category./\nStep 3 - Only provide your output in json format with the keys: id, suitability and explanation./\n\nDo not classify a CV into a suitability category until you have classify the CV yourself.\n\nSuitability categories: Highly Suitable, Moderately Suitable, Potentially Suitable, Marginally Suitable and Not Suitable./\n\nHighly Suitable: CVs in this category closely align with the job opening, demonstrating extensive relevant experience, skills, and qualifications. The candidate possesses all or most of the necessary requirements and is an excellent fit for the role./\nModerately Suitable: CVs falling into this category show a reasonable match to the job opening. The candidate possesses some relevant experience, skills, and qualifications that align with the role, but there may be minor gaps or areas for improvement. With some additional training or development, they could become an effective candidate./\nPotentially Suitable: CVs in this category exhibit potential and may possess transferable skills or experience that could be valuable for the job opening. Although they may not meet all the specific requirements, their overall profile suggests that they could excel with the right support and training./\nMarginally Suitable: CVs falling into this category show limited alignment with the job opening. The candidate possesses a few relevant skills or experience, but there are significant gaps or deficiencies in their qualifications. They may require substantial training or experience to meet the requirements of the role./\nNot Suitable: CVs in this category do not match the requirements and qualifications of the job opening. The candidate lacks the necessary skills, experience, or qualifications, making them unsuitable for the role./\n"}, {'role': 'user', 'content': '####(\'Qualifications: \n- LLB Law degree from Universidad de las Américas Puebla (UDLAP) with an accumulated average of 9.4/10.\n- Currently on an international exchange at the University of Bristol for the final year of studying Law.\n- Member of the Honours Program at UDLAP, conducting research on FinTech, Financial Inclusion, Blockchain, Cryptocurrencies, and Smart Contracts.\n\nPrevious job titles:\n- Data Analyst at Tata Consultancy Services México, where I cleansed, interpreted, and analyzed data using Python and SQL Server to produce visual reports with Power BI.\n- Legal Assistant at BLACKSHIIP Venture Capital, responsible for proofreading and drafting legal documents, as well as assisting with negotiations of International Share Purchase Agreements.\n\nResponsibilities/Key Duties:\n- Developed and introduced A/B testing to make data-driven business decisions as a Data Analyst Jr. at AMATL GRÁFICOS.\n- Taught mental arithmetic as a Mathematics Instructor at ALOHA Mental Arithmetic.\n- Led and assisted individuals with physical and mental disabilities as a Special Needs Counsellor at Camp Merrywood and YMCA Camp Independence.\n\nSkills:\n- Proficient in Python, SQL Server, Tableau, Power BI, Bash/Command Line, Git & GitHub, and Office 365.\n- Strong written and verbal communication skills, teamwork, ability to work under pressure, attention to detail, and leadership skills.\n- Knowledge in machine learning, probabilities & statistics, and proofreading.\n\nOther Achievements:\n- Published paper on "Smart Legal Contracts: From Theory to Reality" and participated in the IDEAS Summer Program on Intelligence, Data, Ethics, and Society at the University of California, San Diego.####'}, {'role': 'assistant', 'content': "\n\n\n\n Available job openings:\n\n\n\nID:<43386>\nJob Description:---Title: Business Analyst - Payment Transactions\nLocation: Poland\nJob Objective: Join our team as a Business Analyst! In your role as Technical Business Analyst Cheques and Payment Investigation, you will be part of our vision to digitalize and automate the payment investigation process and improve the current workflow for our internal customers with innovative technologies. You will also support traditional paper-based payments method like foreign cheques. As BA responsible in this business area, you will be able to drive this change and define adequate solutions. For this, you will analyze business requirements and be able to configure the system and translate the requirements to the test scope and provide this to development team or external vendor. You will use modern IT infrastructure and tools and work in an environment of Agile product development.\nResponsibilities/Key duties: As a Business Analyst, you are responsible for the translation of business requirements into IT solutions and associated applications. You will act as a link between business experts of Payment Transactions and IT development or maintenance teams. Your main duty is understanding and analyzing business requirements actual/target and defining and designing the appropriate functional solutions either as parametrization within the application or as a functional IT concept to be realized by the development team. You will advise and consult business as well as IT experts on functional concepts of the application and on business process or workflow optimization. You will create concepts as business process models as well as business data or object models or specifications for the solution. You will also define functional test scenarios as well as quality assurance measures and support test activities on test environments. In case of incidents or issues, you will analyze and design solutions of the problems in close collaboration with other involved teams. You are one of the experts within your scrum team for all aspects of functional and business analysis aspects for the Fincase and Comcheque – the application which supports payment investigations and foreign cheques.\nQualifications/Requirements/Experience: Understanding and analyzing business requirements actual/target. Gathering documentation of business requirements and design/development of functional solution/function IT---\n\nID:<43385>\nJob Description:---Title: Administrative Assistant - Engineering\nLocation: Canada\nJob Objective: An Administrative Assistant at Mozilla provides support to another individual or group of individuals by managing calendars and appointments, coordinating activities between teams and departments, making travel arrangements, and providing other specialized administrative support to extend the effectiveness and efficiency of those they support.\nResponsibilities/Key duties: Understands the business priorities of your leaders to best leverage their time. Prioritizes multiple dynamic senior leader calendars with the ability to anticipate issues and ensure successful meeting coordination. Schedules and maintains meetings, travel itineraries, and coordinates related arrangements for assigned leaders. Supports special projects which may include team offsites, events, onboarding, and culture/team building programs. Handles distribution lists and organization charts. Arranges business travel and tracks expenses. May reconcile departmental budgets and invoices. Partners with Executive Assistants to synchronize and align on pivotal initiatives across leaders. Constructs and distributes reports upon request which may require working with other parts of the organization to gather information. Identifies key issues and patterns from partial/conflicting data. Takes a broad perspective to problems and identifies new less obvious solutions. Creates and reinforces open partnerships with leaders to help run an effective and efficient working team, keeping all members organized, advised, and on task. Maintains confidential information and proprietary reports. As requested, prepares communications including but not limited to e-mails, reports, presentations, agendas, and minutes. Distributes information to the broader team on the leaders' behalf. Ad hoc tasks as assigned based on the needs of the business.\nQualifications/Requirements/Experience: 4-6 years of proven experience providing administrative support to multiple leaders, preferably at the VP level, in fast-paced remote global environments. Demonstrated ability to set and manage expectations. Excellent communication and interpersonal skills. Receptive to learning and adapting to new experiences. Ability to apply thoughtful judgment to complex situations. Dedication to confidentiality and discretion. Strong relationship building skills with the ability to maintain composure under pressure. Team---\n\nID:<43384>\nJob Description:---Title: Recruiter Japanese\nLocation: Worldwide\nJob Objective: To find and attract top-notch candidates for various job roles, specifically in the Japanese-speaking market.\nResponsibilities/Key duties: \n- Dive into various channels like job boards, social media, and networking to find and attract top-notch candidates.\n- Conduct interviews, assess qualifications, and determine the perfect fit for specific job roles.\n- Work closely with the Service Delivery Manager and Managing Director to ensure smooth recruitment processes.\n- Maintain a steady pipeline of talented candidates for future opportunities and build lasting relationships with them.\n- Coordinate interviews between candidates and hiring managers.\n- Keep candidate profiles in the Applicant Tracking System (ATS) well-described and updated.\n\nQualifications/Requirements/Experience: \n- Proficient in Japanese and English spoken and written.\n- Previous experience as a recruiter or in a similar role is a huge asset.\n- Stellar communication and people skills.\n- Ability to juggle multiple recruitment projects and work independently.\n- Great time management, responsiveness, and organizational abilities.\n- Knowledge of recruitment best practices and sourcing techniques is nice to have.\n- Familiarity with ATS and recruitment software is a bonus.\n\nPreferred Skills/Nice to Have: Familiarity with applicant tracking systems (ATS) and recruitment software.\n\nAbout the company: David Kennedy Recruitment is a company that connects talented individuals with their dream jobs. They offer a commission-based structure for freelance recruiters and provide a collaborative and supportive team environment.\n\nCompensation and Benefits: Enjoy a competitive always-on-time commission-based compensation structure. Embrace the freedom and flexibility of fully remote work from anywhere in the world and manage your own schedule. Dive into various industries and work with diverse mainly white-collar clients. Enjoy the smoothness, fairness, and clarity of collaboration with David Kennedy Recruitment.---\n\nID:<43383>\nJob Description:---Title: Recruiter Swedish\nLocation: Worldwide\nJob Objective: David Kennedy Recruitment is looking for a Swedish-speaking freelance recruiter to join their team. The role involves connecting talented individuals with their dream jobs and hiring in Swedish.\nResponsibilities/Key duties: \n- Utilize various channels such as job boards, social media, and networking to find and attract top-notch candidates\n- Conduct interviews, assess qualifications, and determine the perfect fit for specific job roles\n- Work closely with the Service Delivery Manager and Managing Director to ensure smooth recruitment processes for candidates\n- Maintain a pipeline of talented candidates for future opportunities and build lasting relationships with them\n- Coordinate interviews between candidates and hiring managers\n- Keep candidate profiles in the Applicant Tracking System (ATS) well-described and updated for future reference\nQualifications/Requirements/Experience: \n- Proficient in spoken and written Swedish and English\n- Previous experience as a recruiter or in a similar role is preferred\n- Stellar communication and people skills\n- Ability to handle multiple recruitment projects and work independently\n- Strong time management, responsiveness, and organizational abilities\n- Knowledge of recruitment best practices and sourcing techniques is a plus\n- Familiarity with ATS and recruitment software is a bonus\nPreferred Skills/Nice to Have: Familiarity with applicant tracking systems (ATS) and recruitment software.\nAbout the company: David Kennedy Recruitment is a collaborative and supportive team environment that connects clients with exceptional talent in the Swedish-speaking market and beyond.\nCompensation and Benefits: The role offers a commission-based structure, allowing for competitive and timely compensation. The position is fully remote, providing freedom and flexibility to work from anywhere in the world and manage your own schedule.---\n"}]
+
+2023-08-14 13:15:28,319 INFO: 
+
+PROMPT TOKENS USED:2338
+ COMPLETION TOKENS USED:212
+ 
+TOTAL TOKENS USED:2550
+
+
+2023-08-14 13:15:28,319 INFO: 
+MODEL USED: gpt-4. COST FOR CLASSIFYING: $0.083 USD
+
+2023-08-14 13:15:29,788 INFO: 
+ID: 43386 has the following relatedness=0.785
+
+2023-08-14 13:15:29,789 INFO: 
+ID: 43385 has the following relatedness=0.775
+
+2023-08-14 13:15:29,789 INFO: 
+ID: 43384 has the following relatedness=0.758
+
+2023-08-14 13:15:29,789 INFO: 
+ID: 43383 has the following relatedness=0.749
+
+2023-08-14 13:15:29,789 INFO: 
+
+ DreamedJobAI finished! all in: 47.74 seconds 
+
+
+2023-08-14 13:15:29,789 INFO: 
+Response is a valid json object. Done in loop number: 1
+
+2023-08-14 13:15:29,789 INFO: 
+type of the json object: <class 'list'> Data: [{'id': '43386', 'suitability': 'Potentially Suitable', 'explanation': 'The candidate has experience in data analysis and is proficient in Python, SQL Server, and Power BI, which could be useful in a Business Analyst role, but lacks specific experience in payment transactions and business analysis.'}, {'id': '43385', 'suitability': 'Marginally Suitable', 'explanation': 'The candidate has strong communication and organizational skills, but lacks administrative experience and the specific skills required for an Administrative Assistant role.'}, {'id': '43384', 'suitability': 'Not Suitable', 'explanation': 'The candidate does not have experience in recruitment and is not proficient in Japanese, making them unsuitable for a Recruiter role in the Japanese-speaking market.'}, {'id': '43383', 'suitability': 'Not Suitable', 'explanation': 'The candidate does not have experience in recruitment and is not proficient in Swedish, making them unsuitable for a Recruiter role in the Swedish-speaking market.'}]
+
+2023-08-14 13:15:29,789 INFO: 
+Getting the ids from the json object: <class 'str'>, ('43386', '43385', '43384', '43383')
+
+2023-08-14 13:15:29,868 INFO: 
+Empty DataFrame
+Columns: [id, title, link, location]
+Index: []
+
+2023-08-14 13:15:29,869 INFO: 
+Empty DataFrame
+Columns: [id, title, link, location]
+Index: []
+
