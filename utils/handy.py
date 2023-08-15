@@ -7,6 +7,7 @@ from datetime import datetime, timedelta
 from torch import Tensor
 from transformers import AutoTokenizer, AutoModel
 import pyarrow.parquet as pq
+from aiohttp import ClientSession
 from dotenv import load_dotenv
 import os
 
@@ -100,10 +101,10 @@ def count_words(text: str) -> int:
 	# Return the count of words
 	return len(words)
 
-def save_embeddings_to_parquet(data):
+def df_to_parquet(data: pd.DataFrame, filename:str):
 	df = pd.DataFrame(data)
-	df.to_parquet(SAVE_PATH+ f"/e5_base_v2_data.parquet", engine='pyarrow')
-	print(f"Saved embeddings to ../e5_base_v2_data.parquet")
+	df.to_parquet(SAVE_PATH+ f"/{filename}.parquet", engine='pyarrow')
+	print(f"Saved embeddings to ../{filename}.parquet")
 
 def append_parquet(new_df: pd.DataFrame):
 	# Load existing data
@@ -145,3 +146,7 @@ def filter_last_two_weeks(df:pd.DataFrame) -> pd.DataFrame:
     filtered_df = df[df["timestamp"].dt.date >= two_weeks_ago]
     
     return filtered_df
+
+def passage_e5_format(raw_descriptions):
+	formatted_batches = ["passage: {}".format(raw_description) for raw_description in raw_descriptions]
+	return formatted_batches
