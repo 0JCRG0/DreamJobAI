@@ -24,7 +24,7 @@ OPENAI_TOTAL_JOBS = os.getenv("OPENAI_TOTAL_JOBS")
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 #CALL IT
-def embeddings_openai(batches_to_embed: list[str], batches_ids: list[str], original_timestamps: list[str], original_descriptions: list[str], db: str, filename: str):
+def embeddings_openai(batches_to_embed: list[str], batches_ids: list[str], original_timestamps: list[str], db: str, filename: str):
     # calculate embeddings
     EMBEDDING_MODEL = "text-embedding-ada-002"  # OpenAI's embedding model
     BATCH_SIZE = 50  # you can submit up to 2048 embedding inputs per request
@@ -64,8 +64,7 @@ def embeddings_openai(batches_to_embed: list[str], batches_ids: list[str], origi
         elif db == "parquet":
             df_data = {
             'id': batches_ids,
-            'original': original_descriptions,
-            'summary': batches_to_embed,
+            'original': batches_to_embed,
             'embedding': embeddings,
             'timestamp': original_timestamps
         }
@@ -73,7 +72,7 @@ def embeddings_openai(batches_to_embed: list[str], batches_ids: list[str], origi
             df.to_parquet(SAVE_PATH+ f"/{filename}.parquet", engine='pyarrow')
             print(f"Saved embeddings to {filename}.parquet")
         elif db == "csv":
-            df = pd.DataFrame({"id": batches_ids, "original": original_descriptions, "summary": batches_to_embed, "embedding": embeddings})
+            df = pd.DataFrame({"id": batches_ids, "original": batches_to_embed, "embedding": embeddings})
             df.to_csv(SAVE_PATH+ f"/{filename}.csv", index=False)
             print(df.head())
     saving_openai_embeddings()
