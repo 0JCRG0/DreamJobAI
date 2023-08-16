@@ -11,7 +11,7 @@ from datetime import datetime
 import pyarrow as pa
 import pyarrow.parquet as pq
 import numpy as np
-from utils.handy import LoggingMain, save_embeddings_to_parquet, append_parquet
+from utils.handy import LoggingMain, append_parquet
 import pretty_errors
 from dotenv import load_dotenv
 import os
@@ -91,13 +91,10 @@ def embedding_e5_base_v2(batches_to_embed: list[str], batches_ids: list[str], or
         'embedding': list(EMBEDDINGS),
         'timestamp': INPUT_TIMESTAMPS
         }
-    
-    ##Uncomment below if you want to restart parquet file
-    #save_embeddings_to_parquet(df_data)
 
     new_data = pd.DataFrame(df_data)
 
-    append_parquet(new_data)
+    append_parquet(new_data, "e5_base_v2_data")
 
 
 
