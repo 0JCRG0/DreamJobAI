@@ -106,17 +106,19 @@ def df_to_parquet(data: pd.DataFrame, filename:str):
 	df.to_parquet(SAVE_PATH+ f"/{filename}.parquet", engine='pyarrow')
 	print(f"Saved embeddings to ../{filename}.parquet")
 
-def append_parquet(new_df: pd.DataFrame):
+def append_parquet(new_df: pd.DataFrame, filename: str):
 	# Load existing data
-	df = pd.read_parquet('/Users/juanreyesgarcia/Library/CloudStorage/OneDrive-FundacionUniversidaddelasAmericasPuebla/DEVELOPER/PROJECTS/DreamedJobAI/data/e5_base_v2_data.parquet')
+	df = pd.read_parquet(SAVE_PATH + f'/{filename}.parquet')
+	
+	logging.info(f"Preexisting df: {df}")
+	logging.info(f"df to append: {new_df}")
 
 	df = pd.concat([df, new_df], ignore_index=True)
-		# Remove duplicates based on 'id' column
-	df = df.drop_duplicates(subset='id')
+	df = df.drop_duplicates(subset='id', keep='last')
 
 	# Write back to Parquet
-	df.to_parquet('/Users/juanreyesgarcia/Library/CloudStorage/OneDrive-FundacionUniversidaddelasAmericasPuebla/DEVELOPER/PROJECTS/DreamedJobAI/data/e5_base_v2_data.parquet', engine='pyarrow')
-	logging.info("e5_base_v2_data.parquet has been updated")
+	df.to_parquet(SAVE_PATH + f'/{filename}.parquet', engine='pyarrow')
+	logging.info(f"{filename}.parquet has been updated")
 
 def average_pool(last_hidden_states: Tensor,
                 attention_mask: Tensor) -> Tensor:
@@ -150,3 +152,12 @@ def filter_last_two_weeks(df:pd.DataFrame) -> pd.DataFrame:
 def passage_e5_format(raw_descriptions):
 	formatted_batches = ["passage: {}".format(raw_description) for raw_description in raw_descriptions]
 	return formatted_batches
+
+def set_dataframe_display_options():
+    pd.set_option('display.max_columns', None)  # Show all columns
+    pd.set_option('display.max_rows', None)  # Show all rows
+    pd.set_option('display.width', None)  # Disable column width restriction
+    pd.set_option('display.expand_frame_repr', False)  # Disable wrapping to multiple lines
+    pd.set_option('display.max_colwidth', None)  # Display full contents of each column
+
+# Call the function to set the desired display options
