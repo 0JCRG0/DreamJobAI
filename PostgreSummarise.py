@@ -71,10 +71,10 @@ def postgre_to_df(table_name:str, max_id:int = 0) -> list :
 	return ids, titles, locations, descriptions, timestamp, max_id
 
 
-##Comment after first call
+##Comment after first call - to restart id count
 #max_id = 0
 
-ids, titles, locations, descriptions, timestamps, max_id = postgre_to_df("test", max_id)
+ids, titles, locations, descriptions, timestamps, max_id = postgre_to_df("main_jobs", max_id)
 print(max_id, len(ids))
 
 
