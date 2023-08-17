@@ -31,10 +31,11 @@ E5_BASE_TOTAL_JOBS = os.getenv("E5_BASE_TOTAL_JOBS")
 LoggingMain()
 
 #@retry(wait=wait_random_exponential(min=1, max=60), stop=stop_after_attempt(6))
-def embedding_e5_base_v2(batches_to_embed: list[str], batches_ids: list[str], original_timestamps: list[str], chunk_size: int) -> list:
+def embedding_e5_base_v2(batches_to_embed: list[str], batches_ids: list[str], batches_locations: list[str], original_timestamps: list[str], chunk_size: int) -> list:
     
     INPUT_TEXT = batches_to_embed
     INPUT_IDS = batches_ids
+    INPUT_LOCATIONS = batches_locations
     INPUT_TIMESTAMPS = original_timestamps
     TOKENIZER = AutoTokenizer.from_pretrained("intfloat/e5-base-v2")
     MODEL = AutoModel.from_pretrained("intfloat/e5-base-v2")
@@ -87,14 +88,17 @@ def embedding_e5_base_v2(batches_to_embed: list[str], batches_ids: list[str], or
 
     df_data = {
         'id': INPUT_IDS,
-        'original': INPUT_TEXT,
+        'description': INPUT_TEXT,
+        'location': INPUT_LOCATIONS,
         'embedding': list(EMBEDDINGS),
         'timestamp': INPUT_TIMESTAMPS
         }
 
     new_data = pd.DataFrame(df_data)
 
-    append_parquet(new_data, "e5_base_v2_data")
+    new_data.to_parquet(SAVE_PATH + f'/e5_base_v2_data.parquet', engine='pyarrow')
+
+    #append_parquet(new_data, "e5_base_v2_data")
 
 
 

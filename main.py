@@ -19,7 +19,7 @@ from utils.SummariseJob import summarise_job_gpt
 from utils.AsyncSummariseJob import async_summarise_description
 from torch import Tensor
 from transformers import AutoTokenizer, AutoModel
-from utils.handy import e5_base_v2_query, filter_last_two_weeks, append_parquet, num_tokens, set_dataframe_display_options
+from utils.handy import e5_base_v2_query, filter_last_two_weeks, append_parquet, num_tokens, set_dataframe_display_options, filter_df_per_country
 from tenacity import (
     retry,
     stop_after_attempt,
@@ -52,168 +52,172 @@ Load the embedded file
 
 logging.basicConfig(filename='/Users/juanreyesgarcia/Library/CloudStorage/OneDrive-FundacionUniversidaddelasAmericasPuebla/DEVELOPER/PROJECTS/DreamedJobAI/logs/LoggingGPT4.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-df_unfiltered = pd.read_parquet(E5_BASE_V2_DATA)
+async def main(user_id:str, user_country:str):
 
-df = filter_last_two_weeks(df_unfiltered)
+    df_unfiltered = pd.read_parquet(E5_BASE_V2_DATA)
 
-def ids_ranked_by_relatedness_e5(query: str,
-    df: pd.DataFrame,
-    min_n: int,
-    top_n: int,
-    relatedness_fn=lambda x, y: 1 - spatial.distance.cosine(x, y),
-) -> tuple[list[str], list[float]]:
-    
-    #the query is embedded using e5
-    query_embedding = e5_base_v2_query(query=query)
+    df_two_weeks = filter_last_two_weeks(df_unfiltered)
 
-    ids_and_relatednesses = [
-        (row["id"], relatedness_fn(query_embedding, row["embedding"]))
-        for i, row in df.iterrows()
-    ]
-    ids_and_relatednesses.sort(key=lambda x: x[1], reverse=True)
-    ids, relatednesses = zip(*ids_and_relatednesses)
-    return ids[min_n:top_n], relatednesses[min_n:top_n]     
-    #Returns a list of strings and relatednesses, sorted from most related to least.
+    df = filter_df_per_country(df=df_two_weeks, user_desired_country=user_country)
 
-async def async_query_summary(
-    query: str,
-    df: pd.DataFrame,
-    model: str,
-    token_budget: int,
-    min_n: int,
-    top_n: int
-) -> str:
-    #Return a message for GPT, with relevant source texts pulled from a dataframe.
-    ids, relatednesses = ids_ranked_by_relatedness_e5(query, df, min_n=min_n, top_n=top_n)
-    #Basically giving the most relevant IDs from the previous function
-    introduction = introduction_prompt
-    query_user = f"{query}"
-    message = introduction
-    # Create a list of tasks
-    tasks = [async_summarise_description(df[df['id'] == id]['original'].values[0]) for id in ids]
-
-    # Run the tasks concurrently
-    results = await asyncio.gather(*tasks)
-    job_summaries = []
-    total_cost_summaries = 0    
-
-    for id, result in zip(ids, results):
-        job_description_summary, cost, elapsed_time = result
+    def ids_ranked_by_relatedness_e5(query: str,
+        df: pd.DataFrame,
+        min_n: int,
+        top_n: int,
+        relatedness_fn=lambda x, y: 1 - spatial.distance.cosine(x, y),
+    ) -> tuple[list[str], list[float]]:
         
-        # Append summary to the list
-        job_summaries.append({
-            "id": id,
-            "summary": job_description_summary
-        })
-        #Append total cost
-        total_cost_summaries += cost
+        #the query is embedded using e5
+        query_embedding = e5_base_v2_query(query=query)
 
-        next_id = f'\nID:<{id}>\nJob Description:---{job_description_summary}---\n'
-        if (
-            num_tokens(message + next_id + query_user, model=model)
-            > token_budget
-        ):
-            break
-        else:
-            message += next_id
-    return query_user, message, job_summaries, total_cost_summaries
+        ids_and_relatednesses = [
+            (row["id"], relatedness_fn(query_embedding, row["embedding"]))
+            for i, row in df.iterrows()
+        ]
+        ids_and_relatednesses.sort(key=lambda x: x[1], reverse=True)
+        ids, relatednesses = zip(*ids_and_relatednesses)
+        return ids[min_n:top_n], relatednesses[min_n:top_n]     
+        #Returns a list of strings and relatednesses, sorted from most related to least.
 
-#@retry(wait=wait_random_exponential(min=1, max=60), stop=stop_after_attempt(6))
-async def ask(
-    #This query is your question, only parameter to fill in function
-    query: str,
-    min_n: int,
-    top_n: int,
-    df: pd.DataFrame = df,
-    model: str = GPT_MODEL,
-    token_budget: int = 8192,
-    log_gpt_messages: bool = True,
-) -> str:
-    #Answers a query using GPT and a dataframe of relevant texts and embeddings.
-    query_user, job_id_description, job_summaries, total_cost_summaries = await async_query_summary(query, df, model=model, token_budget=token_budget, min_n=min_n, top_n=top_n)
+    async def async_query_summary(
+        query: str,
+        df: pd.DataFrame,
+        model: str,
+        token_budget: int,
+        min_n: int,
+        top_n: int
+    ) -> str:
+        #Return a message for GPT, with relevant source texts pulled from a dataframe.
+        ids, relatednesses = ids_ranked_by_relatedness_e5(query, df, min_n=min_n, top_n=top_n)
+        #Basically giving the most relevant IDs from the previous function
+        introduction = introduction_prompt
+        query_user = f"{query}"
+        message = introduction
+        # Create a list of tasks
+        tasks = [async_summarise_description(df[df['id'] == id]['description'].values[0]) for id in ids]
 
-    #Save summaries in a df & then parquet -> append data if function called more than once
-    df_summaries = pd.DataFrame(job_summaries)
-    append_parquet(df_summaries, 'summaries')
-    
-    messages = [
-        {"role": "system", "content": system_prompt},
-        {"role": "user", "content": f"{delimiters}{query_user}{delimiters}"},
-        {"role": "assistant", "content": job_id_description}
-    ]
-    
-    if log_gpt_messages:
-        logging.info(messages)
-    response = openai.ChatCompletion.create(
-        model=model,
-        messages=messages,
-        temperature=0
-    )
-    response_message = response["choices"][0]["message"]["content"]
-    
-    #if print_cost_and_relatednesses:
-    total_tokens = response['usage']['total_tokens']
-    prompt_tokens = response['usage']['prompt_tokens']
-    completion_tokens = response['usage']['completion_tokens']
-    logging.info(f"\nOPERATION: GPT-3.5 TURBO SUMMARISING. \nTOTAL COST: ${total_cost_summaries} USD")
+        # Run the tasks concurrently
+        results = await asyncio.gather(*tasks)
+        job_summaries = []
+        total_cost_summaries = 0    
 
-    #Approximate cost
-    if GPT_MODEL == "gpt-4":
-        prompt_cost = round((prompt_tokens / 1000) * 0.03, 3)
-        completion_cost = round((completion_tokens / 1000) * 0.06, 3)
-        cost_classify = prompt_cost + completion_cost
-        logging.info(f"\nOPERATION: {GPT_MODEL} CLASSIFICATION \nPROMPT TOKENS USED:{prompt_tokens}\nCOMPLETION TOKENS USED:{completion_tokens}\nTOTAL TOKENS USED:{total_tokens}\nCOST FOR CLASSIFYING: ${cost_classify} USD")
-    elif GPT_MODEL == "gpt-3.5-turbo":
-        prompt_cost = round((prompt_tokens / 1000) * 0.0015, 3)
-        completion_cost = round((completion_tokens / 1000) * 0.002, 3)
-        cost_classify = prompt_cost + completion_cost
-        logging.info(f"\nOPERATION: {GPT_MODEL} CLASSIFICATION \nPROMPT TOKENS USED:{prompt_tokens}\nCOMPLETION TOKENS USED:{completion_tokens}\nTOTAL TOKENS USED:{total_tokens}\nCOST FOR CLASSIFYING: ${cost_classify} USD")
-    elif GPT_MODEL == "gpt-3.5-turbo-16k":
-        prompt_cost = round((prompt_tokens / 1000) * 0.003, 3)
-        completion_cost = round((completion_tokens / 1000) * 0.004, 3)
-        cost_classify = prompt_cost + completion_cost
-        logging.info(f"\nOPERATION: {GPT_MODEL} CLASSIFICATION \nPROMPT TOKENS USED:{prompt_tokens}\nCOMPLETION TOKENS USED:{completion_tokens}\nTOTAL TOKENS USED:{total_tokens}\nCOST FOR CLASSIFYING: ${cost_classify} USD")
+        for id, result in zip(ids, results):
+            job_description_summary, cost, elapsed_time = result
+            
+            # Append summary to the list
+            job_summaries.append({
+                "id": id,
+                "summary": job_description_summary
+            })
+            #Append total cost
+            total_cost_summaries += cost
 
-    #relatednesses
-    ids, relatednesses = ids_ranked_by_relatedness_e5(query=query, df=df, min_n=min_n, top_n=top_n)
-    for id, relatedness in zip(ids, relatednesses):
-        logging.info(f"ID: {id} has the following {relatedness=:.3f}")
-    
-    elapsed_time = (timeit.default_timer() - start_time) / 60
-    logging.info(f"\nGPT-3.5 TURBO & GPT-4 finished summarising and classifying! all in: {elapsed_time:.2f} minutes \n")
-    
-    return response_message
+            next_id = f'\nID:<{id}>\nJob Description:---{job_description_summary}---\n'
+            if (
+                num_tokens(message + next_id + query_user, model=model)
+                > token_budget
+            ):
+                break
+            else:
+                message += next_id
+        return query_user, message, job_summaries, total_cost_summaries
 
-async def check_output_GPT4(input_cv: str, min_n:int, top_n:int) -> str:
-    default = '[{"id": "", "suitability": "", "explanation": ""}]'
-    default_json = json.loads(default)
-    
-    for _ in range(6):
-        i = _ + 1
-        try:
-            python_string = await ask(query=input_cv, min_n=min_n, top_n=top_n)
+    #@retry(wait=wait_random_exponential(min=1, max=60), stop=stop_after_attempt(6))
+    async def ask(
+        #This query is your question, only parameter to fill in function
+        query: str,
+        min_n: int,
+        top_n: int,
+        df: pd.DataFrame = df,
+        model: str = GPT_MODEL,
+        token_budget: int = 8192,
+        log_gpt_messages: bool = True,
+    ) -> str:
+        #Answers a query using GPT and a dataframe of relevant texts and embeddings.
+        query_user, job_id_description, job_summaries, total_cost_summaries = await async_query_summary(query, df, model=model, token_budget=token_budget, min_n=min_n, top_n=top_n)
+
+        #Save summaries in a df & then parquet -> append data if function called more than once
+        df_summaries = pd.DataFrame(job_summaries)
+        append_parquet(df_summaries, 'summaries')
+        
+        messages = [
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": f"{delimiters}{query_user}{delimiters}"},
+            {"role": "assistant", "content": job_id_description}
+        ]
+        
+        if log_gpt_messages:
+            logging.info(messages)
+        response = openai.ChatCompletion.create(
+            model=model,
+            messages=messages,
+            temperature=0
+        )
+        response_message = response["choices"][0]["message"]["content"]
+        
+        #if print_cost_and_relatednesses:
+        total_tokens = response['usage']['total_tokens']
+        prompt_tokens = response['usage']['prompt_tokens']
+        completion_tokens = response['usage']['completion_tokens']
+        logging.info(f"\nOPERATION: GPT-3.5 TURBO SUMMARISING. \nTOTAL COST: ${total_cost_summaries} USD")
+
+        #Approximate cost
+        if GPT_MODEL == "gpt-4":
+            prompt_cost = round((prompt_tokens / 1000) * 0.03, 3)
+            completion_cost = round((completion_tokens / 1000) * 0.06, 3)
+            cost_classify = prompt_cost + completion_cost
+            logging.info(f"\nOPERATION: {GPT_MODEL} CLASSIFICATION \nPROMPT TOKENS USED:{prompt_tokens}\nCOMPLETION TOKENS USED:{completion_tokens}\nTOTAL TOKENS USED:{total_tokens}\nCOST FOR CLASSIFYING: ${cost_classify} USD")
+        elif GPT_MODEL == "gpt-3.5-turbo":
+            prompt_cost = round((prompt_tokens / 1000) * 0.0015, 3)
+            completion_cost = round((completion_tokens / 1000) * 0.002, 3)
+            cost_classify = prompt_cost + completion_cost
+            logging.info(f"\nOPERATION: {GPT_MODEL} CLASSIFICATION \nPROMPT TOKENS USED:{prompt_tokens}\nCOMPLETION TOKENS USED:{completion_tokens}\nTOTAL TOKENS USED:{total_tokens}\nCOST FOR CLASSIFYING: ${cost_classify} USD")
+        elif GPT_MODEL == "gpt-3.5-turbo-16k":
+            prompt_cost = round((prompt_tokens / 1000) * 0.003, 3)
+            completion_cost = round((completion_tokens / 1000) * 0.004, 3)
+            cost_classify = prompt_cost + completion_cost
+            logging.info(f"\nOPERATION: {GPT_MODEL} CLASSIFICATION \nPROMPT TOKENS USED:{prompt_tokens}\nCOMPLETION TOKENS USED:{completion_tokens}\nTOTAL TOKENS USED:{total_tokens}\nCOST FOR CLASSIFYING: ${cost_classify} USD")
+
+        #relatednesses
+        ids, relatednesses = ids_ranked_by_relatedness_e5(query=query, df=df, min_n=min_n, top_n=top_n)
+        for id, relatedness in zip(ids, relatednesses):
+            logging.info(f"ID: {id} has the following {relatedness=:.3f}")
+        
+        elapsed_time = (timeit.default_timer() - start_time) / 60
+        logging.info(f"\nGPT-3.5 TURBO & GPT-4 finished summarising and classifying! all in: {elapsed_time:.2f} minutes \n")
+        
+        return response_message
+
+    async def check_output_GPT4(input_cv: str, min_n:int, top_n:int) -> str:
+        default = '[{"id": "", "suitability": "", "explanation": ""}]'
+        default_json = json.loads(default)
+        
+        for _ in range(6):
+            i = _ + 1
             try:
-                data = json.loads(python_string)
-                logging.info(f"Response is a valid json object. Done in loop number: {i}")
-                return data
-            except json.JSONDecodeError:
+                python_string = await ask(query=input_cv, min_n=min_n, top_n=top_n)
+                try:
+                    data = json.loads(python_string)
+                    logging.info(f"Response is a valid json object. Done in loop number: {i}")
+                    return data
+                except json.JSONDecodeError:
+                    pass
+            except OpenAIError as e:
+                logging.warning(f"{e}. Retrying in 10 seconds. Number of retries: {i}")
+                time.sleep(10)
                 pass
-        except OpenAIError as e:
-            logging.warning(f"{e}. Retrying in 10 seconds. Number of retries: {i}")
-            time.sleep(10)
-            pass
-        except Exception as e:
-            logging.warning(f"{e}. Retrying in 5 seconds. Number of retries: {i}")
-            time.sleep(5)
-            pass
+            except Exception as e:
+                logging.warning(f"{e}. Retrying in 5 seconds. Number of retries: {i}")
+                time.sleep(5)
+                pass
 
-    logging.error("Check logs!!!! Main function was not callable. Setting json to default")
-    return default_json
+        logging.error("Check logs!!!! Main function was not callable. Setting json to default")
+        return default_json
 
-#Modify df options - useful for logging
-set_dataframe_display_options()
+    #Modify df options - useful for logging
+    set_dataframe_display_options()
 
-async def main():
+    #Define the rows to classify
     min_n=0
     top_n=10
 
@@ -328,4 +332,4 @@ async def main():
 
 
 if __name__ == "__main__":
-	asyncio.run(main())
+	asyncio.run(main("", "Mexico"))
