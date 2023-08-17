@@ -153,7 +153,7 @@ def main(embedding_model:str):
 	if embedding_model == "openai":
 		embeddings_openai(batches_to_embed= raw_batches, batches_ids=ids, original_timestamps=timestamps, db="parquet", filename="openai_embeddings_summary")
 	elif embedding_model == "e5":
-		embedding_e5_base_v2(batches_to_embed = raw_batches, batches_ids=ids, original_timestamps=timestamps, chunk_size=15)
+		embedding_e5_base_v2(batches_to_embed = raw_batches, batches_ids=ids, batches_locations=locations, original_timestamps=timestamps, chunk_size=15)
 
 #At the end of the script, save max_id to the file
 with open(SAVE_PATH + '/max_id.txt', 'w') as f:
