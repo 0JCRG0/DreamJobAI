@@ -3,6 +3,7 @@ from chromadb.utils import embedding_functions
 import tiktoken
 import pandas as pd
 import logging
+import json
 from datetime import datetime, timedelta
 from torch import Tensor
 from transformers import AutoTokenizer, AutoModel
@@ -154,10 +155,49 @@ def passage_e5_format(raw_descriptions):
 	return formatted_batches
 
 def set_dataframe_display_options():
+    # Call the function to set the desired display options
     pd.set_option('display.max_columns', None)  # Show all columns
     pd.set_option('display.max_rows', None)  # Show all rows
     pd.set_option('display.width', None)  # Disable column width restriction
     pd.set_option('display.expand_frame_repr', False)  # Disable wrapping to multiple lines
     pd.set_option('display.max_colwidth', None)  # Display full contents of each column
 
-# Call the function to set the desired display options
+def filter_df_per_country(df: pd.DataFrame, user_desired_country:str) -> pd.DataFrame:
+	# Load the JSON file into a Python dictionary
+	with open(SAVE_PATH + '/continent_countries_with_capitals.json', 'r') as f:
+		data = json.load(f)
+
+	# Function to get country information
+	def get_country_info(user_desired_country):
+		values = []
+		for continent, details in data.items():
+			for country in details['Countries']:
+				if country['country_name'] == user_desired_country:
+					values.append(country['country_name'])
+					values.append(country['country_code'])
+					values.append(country['capital_english'])
+					for subdivision in country['subdivisions']:
+						values.append(subdivision['subdivisions_code'])
+						values.append(subdivision['subdivisions_name'])
+		return values
+
+	# Get information for a specific country
+	country_values = get_country_info(user_desired_country)
+
+	# Convert 'location' column to lowercase
+	df['location'] = df['location'].str.lower()
+
+	# Convert all country values to lowercase
+	country_values = [value.lower() for value in country_values]
+
+	# Create a mask with all False
+	mask = pd.Series(False, index=df.index)
+
+	# Update the mask if 'location' column contains any of the country values
+	for value in country_values:
+		mask |= df['location'].str.contains(value, na=False)
+
+	# Filter DataFrame
+	filtered_df = df[mask]
+
+	return filtered_df
