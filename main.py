@@ -52,14 +52,9 @@ Load the embedded file
 
 logging.basicConfig(filename='/Users/juanreyesgarcia/Library/CloudStorage/OneDrive-FundacionUniversidaddelasAmericasPuebla/DEVELOPER/PROJECTS/DreamedJobAI/logs/LoggingGPT4.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-
-
-embeddings_path = E5_BASE_V2_DATA
-
-df_unfiltered = pd.read_parquet(embeddings_path)
+df_unfiltered = pd.read_parquet(E5_BASE_V2_DATA)
 
 df = filter_last_two_weeks(df_unfiltered)
-
 
 def ids_ranked_by_relatedness_e5(query: str,
     df: pd.DataFrame,
@@ -139,9 +134,6 @@ async def ask(
 
     #Save summaries in a df & then parquet -> append data if function called more than once
     df_summaries = pd.DataFrame(job_summaries)
-    #logging.info(df_summaries)
-    #df_summaries.to_parquet(SAVE_PATH+ f'/summaries.parquet', engine='pyarrow')
-
     append_parquet(df_summaries, 'summaries')
     
     messages = [
@@ -164,7 +156,6 @@ async def ask(
     prompt_tokens = response['usage']['prompt_tokens']
     completion_tokens = response['usage']['completion_tokens']
     logging.info(f"\nOPERATION: GPT-3.5 TURBO SUMMARISING. \nTOTAL COST: ${total_cost_summaries} USD")
-    #logging.info(f"OPERATION: {GPT_MODEL} CLASSIFYING \nPROMPT TOKENS USED:{prompt_tokens}\n COMPLETION TOKENS USED:{completion_tokens}\n \nTOTAL TOKENS USED:{total_tokens}\n)
 
     #Approximate cost
     if GPT_MODEL == "gpt-4":
@@ -219,7 +210,7 @@ async def check_output_GPT4(input_cv: str, min_n:int, top_n:int) -> str:
     logging.error("Check logs!!!! Main function was not callable. Setting json to default")
     return default_json
 
-#Modify df options
+#Modify df options - useful for logging
 set_dataframe_display_options()
 
 async def main():
@@ -253,8 +244,8 @@ async def main():
         # Filter the dataframe to only include the suitable jobs
         df_most_suitable = df_appended[df_appended['suitability'].isin(suitable_categories)] if 'suitability' in df_appended.columns else pd.DataFrame()
         
-        df_appended.to_parquet(SAVE_PATH + f"/df_appended.parquet", index=False)
-        df_most_suitable.to_parquet(SAVE_PATH + f"/df_most_suitable.parquet", index=False)
+        df_appended.to_parquet(SAVE_PATH + "/df_appended.parquet", index=False)
+        df_most_suitable.to_parquet(SAVE_PATH + "/df_most_suitable.parquet", index=False)
 
         # Break the loop if we have 10 suitable jobs
         if len(df_most_suitable) >= 10:

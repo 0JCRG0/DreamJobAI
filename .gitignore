@@ -6,3 +6,4 @@
 /.cfg
 __pycache__/
 utils/__pycache__
+*.json
