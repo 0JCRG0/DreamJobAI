@@ -2,7 +2,6 @@ import os
 import openai
 import psycopg2
 import pandas as pd
-import tiktoken  # for counting tokens
 from scipy import spatial
 import pretty_errors
 import timeit
@@ -11,20 +10,10 @@ import time
 import asyncio
 from openai.error import OpenAIError
 import json
-from typing import Callable
-from utils.preprocess import individual_preprocess
 from dotenv import load_dotenv
 from utils.prompts import *
-from utils.SummariseJob import summarise_job_gpt
 from utils.AsyncSummariseJob import async_summarise_description
-from torch import Tensor
-from transformers import AutoTokenizer, AutoModel
 from utils.handy import e5_base_v2_query, filter_last_two_weeks, append_parquet, num_tokens, set_dataframe_display_options, filter_df_per_country
-from tenacity import (
-    retry,
-    stop_after_attempt,
-    wait_random_exponential,
-)  # for exponential backoff
 
 
 load_dotenv('.env')
@@ -107,8 +96,12 @@ async def main(user_id:str, user_country:str):
             # Append summary to the list
             job_summaries.append({
                 "id": id,
-                "summary": job_description_summary
+                "summary": job_description_summary,
+                "user_id": user_id
             })
+
+            #all_users_ids.extend([user_id] * len(job_summaries))
+
             #Append total cost
             total_cost_summaries += cost
 
@@ -230,11 +223,11 @@ async def main(user_id:str, user_country:str):
     # Continue to call the function until we have 10 suitable jobs
     counter = 0
     while True:
-        checked_json = await check_output_GPT4(input_cv=abstract_cv, min_n=min_n, top_n=top_n)
+        json_output_GPT4 = await check_output_GPT4(input_cv=abstract_cv, min_n=min_n, top_n=top_n)
         
         # Convert the JSON to a dataframe and append it to the existing dataframe
-        df_original = pd.read_json(json.dumps(checked_json))
-        df_appended = pd.concat([df_appended, df_original], ignore_index=True)
+        df_json_output_GPT4 = pd.read_json(json.dumps(json_output_GPT4))
+        df_appended = pd.concat([df_appended, df_json_output_GPT4], ignore_index=True)
         
         counter += 1
         logging.info(f"Looking for suitable jobs. Current loop: {counter}")
@@ -332,4 +325,4 @@ async def main(user_id:str, user_country:str):
 
 
 if __name__ == "__main__":
-	asyncio.run(main("", "Mexico"))
+	asyncio.run(main("12", "Mexico"))
