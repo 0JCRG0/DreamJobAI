@@ -3,6 +3,7 @@ import os
 from dotenv import load_dotenv
 import pretty_errors
 import openai
+import timeit
 import logging
 import time
 from openai.error import ServiceUnavailableError
@@ -35,12 +36,12 @@ LoggingMain()
 
 model = "gpt-3.5-turbo"  # only matters insofar as it selects which tokenizer to use
 
+#Start the timer
+start_time = timeit.default_timer()
 
 #Uncomment after first call
-
 with open(SAVE_PATH + '/max_id.txt', 'r') as f:
 	max_id = int(f.read())
-
 
 def postgre_to_df(table_name:str, max_id:int = 0) -> list :
 	conn = psycopg2.connect(user=user, password=password, host=host, port=port, database=database)
@@ -75,7 +76,8 @@ def postgre_to_df(table_name:str, max_id:int = 0) -> list :
 #max_id = 0
 
 ids, titles, locations, descriptions, timestamps, max_id = postgre_to_df("main_jobs", max_id)
-print(max_id, len(ids))
+
+logging.info(f"\n\nEmbedding {len(ids)} jobs. Starting from ID number {max_id}")
 
 
 def rows_to_nested_list(title_list: list, location_list: list, description_list: list) -> list:
@@ -130,7 +132,9 @@ def raw_descriptions_to_batches(max_tokens: int, embedding_model: str, print_mes
 			f"APPROXIMATE COST OF EMBEDDING: ${approximate_cost} USD\n"
 	
 	#TODO: This should be log not txt file
-	original_specs_txt_file(content)
+	#original_specs_txt_file(content)
+
+	logging.info(f"\nRAW BATCHES SPECS: -------\n{content}")
 
 	if print_messages:
 		for i, batch in enumerate(batches, start=1):
@@ -144,7 +148,7 @@ def raw_descriptions_to_batches(max_tokens: int, embedding_model: str, print_mes
 	return batches
 
 
-raw_batches = raw_descriptions_to_batches(max_tokens=1000, embedding_model="e5", print_messages = True)
+raw_batches = raw_descriptions_to_batches(max_tokens=1000, embedding_model="e5", print_messages = False)
 
 formatted_e5_batches = passage_e5_format(raw_batches)
 
@@ -158,6 +162,11 @@ def main(embedding_model:str):
 #At the end of the script, save max_id to the file
 with open(SAVE_PATH + '/max_id.txt', 'w') as f:
 	f.write(str(max_id))
+
+elapsed_time = (timeit.default_timer() - start_time) / 60
+
+logging.info(f"Embedding done! Elapsed time: {elapsed_time} minutes.")
+logging.info(f"New max_id: {max_id}")
 
 if __name__ == "__main__":
 	main("e5")
