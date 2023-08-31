@@ -96,9 +96,9 @@ def embedding_e5_base_v2(batches_to_embed: list[str], batches_ids: list[str], ba
 
     new_data = pd.DataFrame(df_data)
 
-    new_data.to_parquet(SAVE_PATH + f'/e5_base_v2_data.parquet', engine='pyarrow')
+    #new_data.to_parquet(SAVE_PATH + f'/e5_base_v2_data.parquet', engine='pyarrow')
 
-    #append_parquet(new_data, "e5_base_v2_data")
+    append_parquet(new_data, "e5_base_v2_data")
 
 
 

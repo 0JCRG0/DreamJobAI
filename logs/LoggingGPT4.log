@@ -1775,3 +1775,19 @@ APPROXIMATE COST OF EMBEDDING: $0 USD
 2023-08-24 08:39:31,327 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
 2023-08-24 08:39:31,446 - DEBUG - https://huggingface.co:443 "HEAD /intfloat/e5-base-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
 2023-08-24 08:39:31,547 - DEBUG - https://huggingface.co:443 "HEAD /intfloat/e5-base-v2/resolve/main/config.json HTTP/1.1" 200 0
+2023-08-30 20:32:54,416 - INFO - 
+
+Embedding 2164 jobs. Starting from ID number 312321
+2023-08-30 20:32:56,970 - INFO - 
+RAW BATCHES SPECS: -------
+TOTAL NUMBER OF BATCHES: 2164
+TOTAL NUMBER OF TOKENS: 1609787
+NUMBER OF TRUNCATIONS: 450
+AVERAGE NUMBER OF TOKENS PER BATCH: 743.8941774491682
+APPROXIMATE COST OF EMBEDDING: $0 USD
+
+2023-08-30 20:32:56,975 - INFO - Embedding done! Elapsed time: 0.046356445833225735 minutes.
+2023-08-30 20:32:56,975 - INFO - New max_id: 312321
+2023-08-30 20:32:56,995 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2023-08-30 20:32:57,116 - DEBUG - https://huggingface.co:443 "HEAD /intfloat/e5-base-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2023-08-30 20:32:57,216 - DEBUG - https://huggingface.co:443 "HEAD /intfloat/e5-base-v2/resolve/main/config.json HTTP/1.1" 200 0
