@@ -1791,3 +1791,102 @@ APPROXIMATE COST OF EMBEDDING: $0 USD
 2023-08-30 20:32:56,995 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
 2023-08-30 20:32:57,116 - DEBUG - https://huggingface.co:443 "HEAD /intfloat/e5-base-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
 2023-08-30 20:32:57,216 - DEBUG - https://huggingface.co:443 "HEAD /intfloat/e5-base-v2/resolve/main/config.json HTTP/1.1" 200 0
+2023-10-03 18:05:35,183 - INFO - 
+
+Embedding 1582 jobs. Starting from ID number 323991
+2023-10-03 18:05:35,345 - DEBUG - Starting new HTTPS connection (1): openaipublic.blob.core.windows.net:443
+2023-10-03 18:05:35,602 - DEBUG - https://openaipublic.blob.core.windows.net:443 "GET /encodings/cl100k_base.tiktoken HTTP/1.1" 200 1681126
+2023-10-03 18:05:38,658 - INFO - 
+RAW BATCHES SPECS: -------
+TOTAL NUMBER OF BATCHES: 1582
+TOTAL NUMBER OF TOKENS: 1464385
+NUMBER OF TRUNCATIONS: 413
+AVERAGE NUMBER OF TOKENS PER BATCH: 925.6542351453855
+APPROXIMATE COST OF EMBEDDING: $0 USD
+
+2023-10-03 18:05:38,668 - INFO - Embedding done! Elapsed time: 0.0664874937501736 minutes.
+2023-10-03 18:05:38,669 - INFO - New max_id: 323991
+2023-10-03 18:05:38,695 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2023-10-03 18:05:38,819 - DEBUG - https://huggingface.co:443 "HEAD /intfloat/e5-base-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2023-10-03 18:05:39,013 - DEBUG - https://huggingface.co:443 "HEAD /intfloat/e5-base-v2/resolve/main/vocab.txt HTTP/1.1" 200 0
+2023-10-03 18:05:39,127 - DEBUG - https://huggingface.co:443 "HEAD /intfloat/e5-base-v2/resolve/main/tokenizer.json HTTP/1.1" 200 0
+2023-10-03 18:05:39,211 - DEBUG - https://huggingface.co:443 "HEAD /intfloat/e5-base-v2/resolve/main/added_tokens.json HTTP/1.1" 404 0
+2023-10-03 18:05:39,297 - DEBUG - https://huggingface.co:443 "HEAD /intfloat/e5-base-v2/resolve/main/special_tokens_map.json HTTP/1.1" 200 0
+2023-10-03 18:05:39,412 - DEBUG - https://huggingface.co:443 "HEAD /intfloat/e5-base-v2/resolve/main/config.json HTTP/1.1" 200 0
+2023-10-03 18:05:40,038 - DEBUG - https://huggingface.co:443 "HEAD /intfloat/e5-base-v2/resolve/main/model.safetensors HTTP/1.1" 302 0
+2023-10-03 18:15:08,111 - INFO - Preexisting df:           id  ...                  timestamp
+0     287617  ... 2023-08-24 10:00:15.619138
+1     287618  ... 2023-08-24 10:00:15.619138
+2     287619  ... 2023-08-24 10:00:15.619138
+3     287620  ... 2023-08-24 10:00:15.619138
+4     287621  ... 2023-08-24 10:00:15.619138
+...      ...  ...                        ...
+2159  312317  ... 2023-08-30 20:09:59.174096
+2160  312318  ... 2023-08-30 20:09:59.481085
+2161  312319  ... 2023-08-30 20:09:59.759084
+2162  312320  ... 2023-08-30 20:10:00.044367
+2163  312321  ... 2023-08-30 20:10:00.346891
+
+[2164 rows x 5 columns]
+2023-10-03 18:15:08,116 - INFO - df to append:           id  ...                  timestamp
+0     312841  ... 2023-08-30 22:00:23.877518
+1     312842  ... 2023-08-30 22:00:24.482100
+2     312843  ... 2023-08-30 22:00:24.754175
+3     312844  ... 2023-08-30 22:00:24.994696
+4     312845  ... 2023-08-30 22:00:25.315007
+...      ...  ...                        ...
+1577  323986  ... 2023-10-03 17:32:06.156957
+1578  323987  ... 2023-10-03 17:32:06.157210
+1579  323989  ... 2023-10-03 17:32:06.157553
+1580  323990  ... 2023-10-03 17:32:06.157757
+1581  323991  ... 2023-10-03 17:32:06.157951
+
+[1582 rows x 5 columns]
+2023-10-03 18:15:08,241 - INFO - e5_base_v2_data.parquet has been updated
+2023-10-27 15:34:12,395 - INFO - 
+
+Embedding 7182 jobs. Starting from ID number 420381
+2023-10-27 15:34:12,660 - DEBUG - Starting new HTTPS connection (1): openaipublic.blob.core.windows.net:443
+2023-10-27 15:34:12,990 - DEBUG - https://openaipublic.blob.core.windows.net:443 "GET /encodings/cl100k_base.tiktoken HTTP/1.1" 200 1681126
+2023-10-27 15:34:24,955 - INFO - 
+RAW BATCHES SPECS: -------
+TOTAL NUMBER OF BATCHES: 7182
+TOTAL NUMBER OF TOKENS: 8215766
+NUMBER OF TRUNCATIONS: 1814
+AVERAGE NUMBER OF TOKENS PER BATCH: 1143.9384572542467
+APPROXIMATE COST OF EMBEDDING: $0 USD
+
+2023-10-27 15:34:24,965 - INFO - Embedding done! Elapsed time: 0.2212635500007309 minutes.
+2023-10-27 15:34:24,965 - INFO - New max_id: 420381
+2023-10-27 15:34:25,016 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2023-10-27 15:34:25,131 - DEBUG - https://huggingface.co:443 "HEAD /intfloat/e5-base-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2023-10-27 15:34:25,232 - DEBUG - https://huggingface.co:443 "HEAD /intfloat/e5-base-v2/resolve/main/config.json HTTP/1.1" 200 0
+2023-10-27 16:11:15,926 - INFO - Preexisting df:           id  ...                  timestamp
+0     287617  ... 2023-08-24 10:00:15.619138
+1     287618  ... 2023-08-24 10:00:15.619138
+2     287619  ... 2023-08-24 10:00:15.619138
+3     287620  ... 2023-08-24 10:00:15.619138
+4     287621  ... 2023-08-24 10:00:15.619138
+...      ...  ...                        ...
+3741  323986  ... 2023-10-03 17:32:06.156957
+3742  323987  ... 2023-10-03 17:32:06.157210
+3743  323989  ... 2023-10-03 17:32:06.157553
+3744  323990  ... 2023-10-03 17:32:06.157757
+3745  323991  ... 2023-10-03 17:32:06.157951
+
+[3746 rows x 5 columns]
+2023-10-27 16:11:15,932 - INFO - df to append:           id  ...                  timestamp
+0     324031  ... 2023-10-04 02:17:59.590431
+1     324074  ... 2023-10-04 09:41:12.626398
+2     324075  ... 2023-10-04 09:41:12.649532
+3     324076  ... 2023-10-04 09:41:12.711193
+4     324077  ... 2023-10-04 09:41:12.730686
+...      ...  ...                        ...
+7177  420348  ... 2023-10-27 15:19:58.320699
+7178  420349  ... 2023-10-27 15:19:58.320820
+7179  420350  ... 2023-10-27 15:19:58.320937
+7180  420351  ... 2023-10-27 15:19:58.321053
+7181  420381  ... 2023-10-27 15:19:58.324536
+
+[7182 rows x 5 columns]
+2023-10-27 16:11:16,275 - INFO - e5_base_v2_data.parquet has been updated
