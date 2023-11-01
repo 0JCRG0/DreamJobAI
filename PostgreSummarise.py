@@ -131,8 +131,6 @@ def raw_descriptions_to_batches(max_tokens: int, embedding_model: str, print_mes
 			f"AVERAGE NUMBER OF TOKENS PER BATCH: {average_tokens_per_batch}\n" \
 			f"APPROXIMATE COST OF EMBEDDING: ${approximate_cost} USD\n"
 	
-	#TODO: This should be log not txt file
-	#original_specs_txt_file(content)
 
 	logging.info(f"\nRAW BATCHES SPECS: -------\n{content}")
 
