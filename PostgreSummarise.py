@@ -9,10 +9,10 @@ import time
 from openai.error import ServiceUnavailableError
 import pandas as pd
 from datetime import datetime, timedelta
-from utils.handy import num_tokens, count_words, LoggingMain, truncated_string, save_df_to_csv, summary_specs_txt_file, original_specs_txt_file, clean_rows, passage_e5_format
+from utils.handy import *
 from utils.AsyncSummariseJob import async_summarise_job_gpt
 from EmbeddingsOpenAI import embeddings_openai
-from EmbeddingsE5 import embedding_e5_base_v2
+from EmbeddingsE5 import embeddings_e5_base_v2_to_df
 
 """
 Env variables
@@ -75,21 +75,21 @@ def postgre_to_df(table_name:str, max_id:int = 0) -> list :
 ##Comment after first call - to restart id count
 #max_id = 0
 
-ids, titles, locations, descriptions, timestamps, max_id = postgre_to_df("main_jobs", max_id)
+IDS, titles, locations, descriptions, timestamps, max_id = postgre_to_df("main_jobs", max_id)
 
-logging.info(f"\n\nEmbedding {len(ids)} jobs. Starting from ID number {max_id}")
+logging.info(f"\n\nEmbedding {len(IDS)} jobs. Starting from ID number {max_id}")
 
 
 def rows_to_nested_list(title_list: list, location_list: list, description_list: list) -> list:
 	
 	#Titles
-	formatted_titles = ["####title: {}####".format(title) for title in title_list]
+	formatted_titles = ["#### title: {} ####".format(title) for title in title_list]
 	cleaned_titles = [clean_rows(title) for title in formatted_titles]
 	#Locations
-	formatted_locations = ["####location: {}####".format(location) for location in location_list]
+	formatted_locations = ["#### location: {} ####".format(location) for location in location_list]
 	cleaned_locations = [clean_rows(location) for location in formatted_locations]
 	#Descriptions
-	formatted_descriptions = ["####description: {}####".format(description) for description in description_list]
+	formatted_descriptions = ["#### description: {} ####".format(description) for description in description_list]
 	cleaned_descriptions = [clean_rows(description) for description in formatted_descriptions]
 
 	#NEST THE LISTS
@@ -146,16 +146,18 @@ def raw_descriptions_to_batches(max_tokens: int, embedding_model: str, print_mes
 	return batches
 
 
-raw_batches = raw_descriptions_to_batches(max_tokens=1000, embedding_model="e5", print_messages = False)
+JOBS_INFO_BATCHES = raw_descriptions_to_batches(max_tokens=1000, embedding_model="e5", print_messages = False)
 
-formatted_e5_batches = passage_e5_format(raw_batches)
+FORMATTED_E5_QUERY_BATCHES = query_e5_format(JOBS_INFO_BATCHES)
 
 def main(embedding_model:str):
 	#Embedding starts
 	if embedding_model == "openai":
-		embeddings_openai(batches_to_embed= raw_batches, batches_ids=ids, original_timestamps=timestamps, db="parquet", filename="openai_embeddings_summary")
-	elif embedding_model == "e5":
-		embedding_e5_base_v2(batches_to_embed = raw_batches, batches_ids=ids, batches_locations=locations, original_timestamps=timestamps, chunk_size=15)
+		embeddings_openai(batches_to_embed= JOBS_INFO_BATCHES, batches_ids=IDS, original_timestamps=timestamps, db="parquet", filename="openai_embeddings_summary")
+	elif embedding_model == "e5_base_v2":
+		df = embeddings_e5_base_v2_to_df(batches_to_embed=FORMATTED_E5_QUERY_BATCHES, jobs_info=JOBS_INFO_BATCHES, batches_ids=IDS)
+		#append_parquet(df, "e5_base_v2_data")
+		to_pgvector_e5_base_v2(df)
 
 #At the end of the script, save max_id to the file
 with open(SAVE_PATH + '/max_id.txt', 'w') as f:
@@ -167,4 +169,4 @@ logging.info(f"Embedding done! Elapsed time: {elapsed_time} minutes.")
 logging.info(f"New max_id: {max_id}")
 
 if __name__ == "__main__":
-	main("e5")
+	main("e5_base_v2")
