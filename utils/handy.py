@@ -1,6 +1,7 @@
 import re
 from chromadb.utils import embedding_functions
 import tiktoken
+import psycopg2
 import pandas as pd
 import logging
 import json
@@ -9,6 +10,7 @@ from torch import Tensor
 from transformers import AutoTokenizer, AutoModel
 import pyarrow.parquet as pq
 from aiohttp import ClientSession
+from pgvector.psycopg2 import register_vector
 from dotenv import load_dotenv
 import os
 
@@ -16,6 +18,11 @@ load_dotenv(".env")
 LOGGER_MAIN = os.getenv("LOGGER_MAIN")
 LOGGER_GPT4 = os.getenv("LOGGER_GPT4")
 SAVE_PATH = os.getenv("SAVE_PATH")
+user = os.getenv("user")
+password = os.getenv("password")
+host = os.getenv("host")
+port = os.getenv("port")
+database = os.getenv("database")
 
 def clean_rows(s):
 	if not isinstance(s, str):
@@ -150,8 +157,12 @@ def filter_last_two_weeks(df:pd.DataFrame) -> pd.DataFrame:
     
     return filtered_df
 
-def passage_e5_format(raw_descriptions):
+def passage_e5_format(raw_descriptions:list) -> list:
 	formatted_batches = ["passage: {}".format(raw_description) for raw_description in raw_descriptions]
+	return formatted_batches
+
+def query_e5_format(raw_descriptions:list) -> list:
+	formatted_batches = ["query: {}".format(raw_description) for raw_description in raw_descriptions]
 	return formatted_batches
 
 def set_dataframe_display_options():
@@ -201,3 +212,84 @@ def filter_df_per_country(df: pd.DataFrame, user_desired_country:str) -> pd.Data
 	filtered_df = df[mask]
 
 	return filtered_df
+
+
+def to_pgvector_e5_base_v2(df:pd.DataFrame):
+	# create a connection to the PostgreSQL database
+	cnx = psycopg2.connect(user=user, password=password, host=host, port=port, database=database)
+
+	# create a cursor object
+	cursor = cnx.cursor()
+	cursor.execute('CREATE EXTENSION IF NOT EXISTS vector')
+
+	#Register the vector type with your connection or cursor
+	register_vector(cnx)
+
+	# execute the initial count query and retrieve the result
+	initial_count_query = '''
+		SELECT COUNT(*) FROM embeddings_e5_base_v2
+	'''
+	cursor.execute(initial_count_query)
+	initial_count_result = cursor.fetchone()
+	
+	""" IF THERE IS A DUPLICATE ID IT SKIPS THAT ROW & DOES NOT INSERTS IT
+		IDs UNIQUENESS SHOULD BE ENSURED DUE TO ABOVE.
+	"""
+	jobs_added = []
+	for index, row in df.iterrows():
+		insert_query = '''
+			INSERT INTO embeddings_e5_base_v2 (id, job_info, embedding)
+			VALUES (%s, %s, %s)
+			ON CONFLICT (id) DO NOTHING
+			RETURNING *
+		'''
+		values = (row['id'], row['job_info'], row['embedding'])
+		cursor.execute(insert_query, values)
+		affected_rows = cursor.rowcount
+		if affected_rows > 0:
+			jobs_added.append(cursor.fetchone())
+
+
+	""" LOGGING/PRINTING RESULTS"""
+
+	final_count_query = '''
+		SELECT COUNT(*) FROM embeddings_e5_base_v2
+	'''
+	# execute the count query and retrieve the result
+	cursor.execute(final_count_query)
+	final_count_result = cursor.fetchone()
+
+	# calculate the number of unique jobs that were added
+	if initial_count_result is not None:
+		initial_count = initial_count_result[0]
+	else:
+		initial_count = 0
+	jobs_added_count = len(jobs_added)
+	if final_count_result is not None:
+		final_count = final_count_result[0]
+	else:
+		final_count = 0
+
+	# check if the result set is not empty
+	print("\n")
+	print("Embeddings_e5_base_v2 Table Report:", "\n")
+	print(f"Total count of jobs before crawling: {initial_count}")
+	print(f"Total number of unique jobs: {jobs_added_count}")
+	print(f"Current total count of jobs in PostgreSQL: {final_count}")
+
+	postgre_report = "Embeddings_e5_base_v2 Table Report:"\
+					"\n"\
+					f"Total count of jobs before crawling: {initial_count}" \
+					"\n"\
+					f"Total number of unique jobs: {jobs_added_count}" \
+					"\n"\
+					f"Current total count of jobs in PostgreSQL: {final_count}"
+
+	logging.info(postgre_report)
+
+	# commit the changes to the database
+	cnx.commit()
+
+	# close the cursor and connection
+	cursor.close()
+	cnx.close()
