@@ -24,7 +24,7 @@ def filter_last_two_weeks_postgre(table_name:str= "main_jobs") -> pd.DataFrame :
 	two_weeks_ago = current_date - timedelta(days=14)
 	
 	# Fetch rows from the table with the specified conditions
-	cur.execute(f"SELECT id, title, description, pubdate, location, timestamp FROM {table_name} WHERE timestamp >= %s", (two_weeks_ago,))
+	cur.execute(f"SELECT * FROM {table_name} WHERE timestamp >= %s", (two_weeks_ago,))
 
 	# Fetch all rows from the table
 	rows = cur.fetchall()
@@ -36,14 +36,16 @@ def filter_last_two_weeks_postgre(table_name:str= "main_jobs") -> pd.DataFrame :
 	# Separate the columns into individual lists
 	ids = [row[0] for row in rows]
 	titles = [row[1] for row in rows]
-	descriptions = [row[2] for row in rows]
-	pubdates = [row[3] for row in rows]
-	locations = [row[4] for row in rows]
-	timestamps = [row[5] for row in rows]
+	links = [row[2] for row in rows]
+	descriptions = [row[3] for row in rows]
+	pubdates = [row[4] for row in rows]
+	locations = [row[5] for row in rows]
+	timestamps = [row[6] for row in rows]
 
 	df = pd.DataFrame({
 		'id': ids,
 		'title': titles,
+		'link': links,
 		'description': descriptions,
 		'pubdate': pubdates,
 		'location': locations,
