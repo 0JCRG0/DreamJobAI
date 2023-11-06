@@ -8,3 +8,4 @@ __pycache__/
 utils/__pycache__
 *.json
 tools/.ipynb_checkpoints/experiment-checkpoint.ipynb
+~/.aws/
