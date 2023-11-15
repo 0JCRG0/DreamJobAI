@@ -2023,3 +2023,101 @@ APPROXIMATE COST OF EMBEDDING: $0 USD
 Total count of jobs before crawling: 0
 Total number of unique jobs: 49
 Current total count of jobs in PostgreSQL: 49
+2023-11-06 18:47:13,678 - INFO - 
+
+Embedding 37 jobs. Starting from ID number 458208
+2023-11-06 18:47:13,880 - INFO - 
+RAW BATCHES SPECS: -------
+TOTAL NUMBER OF BATCHES: 37
+TOTAL NUMBER OF TOKENS: 26881
+NUMBER OF TRUNCATIONS: 8
+AVERAGE NUMBER OF TOKENS PER BATCH: 726.5135135135135
+APPROXIMATE COST OF EMBEDDING: $0 USD
+
+2023-11-06 18:47:13,880 - INFO - Embedding done! Elapsed time: 0.004907766667505105 minutes.
+2023-11-06 18:47:13,880 - INFO - New max_id: 458208
+2023-11-06 18:47:13,944 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2023-11-06 18:47:14,092 - DEBUG - https://huggingface.co:443 "HEAD /intfloat/e5-base-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2023-11-06 18:47:14,235 - DEBUG - https://huggingface.co:443 "HEAD /intfloat/e5-base-v2/resolve/main/config.json HTTP/1.1" 200 0
+2023-11-06 18:47:26,328 - INFO - Embeddings_e5_base_v2 Table Report:
+Total count of jobs before crawling: 0
+Total number of unique jobs: 37
+Current total count of jobs in PostgreSQL: 37
+2023-11-15 15:21:33,966 - INFO - 
+
+Embedding 2258 jobs. Starting from ID number 508895
+2023-11-15 15:21:34,094 - DEBUG - Starting new HTTPS connection (1): openaipublic.blob.core.windows.net:443
+2023-11-15 15:21:34,386 - DEBUG - https://openaipublic.blob.core.windows.net:443 "GET /encodings/cl100k_base.tiktoken HTTP/1.1" 200 1681126
+2023-11-15 15:21:38,639 - INFO - 
+RAW BATCHES SPECS: -------
+TOTAL NUMBER OF BATCHES: 2258
+TOTAL NUMBER OF TOKENS: 2053125
+NUMBER OF TRUNCATIONS: 504
+AVERAGE NUMBER OF TOKENS PER BATCH: 909.2670504871568
+APPROXIMATE COST OF EMBEDDING: $0 USD
+
+2023-11-15 15:21:38,642 - INFO - Embedding done! Elapsed time: 0.08119138541666568 minutes.
+2023-11-15 15:21:38,642 - INFO - New max_id: 508895
+2023-11-15 15:21:38,694 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2023-11-15 15:21:38,890 - DEBUG - https://huggingface.co:443 "HEAD /intfloat/e5-base-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2023-11-15 15:21:38,997 - DEBUG - https://huggingface.co:443 "HEAD /intfloat/e5-base-v2/resolve/main/config.json HTTP/1.1" 200 0
+2023-11-15 15:46:14,402 - INFO - 
+\Selecting new jobs to embed. Starting from ID: 460990
+2023-11-15 15:46:14,498 - INFO - 
+Jobs selected for embedding: 1952.
+New max_id: 508895
+2023-11-15 15:46:17,304 - INFO - 
+RAW BATCHES SPECS: -------
+TOTAL NUMBER OF BATCHES: 1952
+TOTAL NUMBER OF TOKENS: 1796767
+NUMBER OF TRUNCATIONS: 426
+AVERAGE NUMBER OF TOKENS PER BATCH: 920.4748975409836
+APPROXIMATE COST OF EMBEDDING: $0 USD
+
+2023-11-15 15:46:17,396 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2023-11-15 15:46:17,622 - DEBUG - https://huggingface.co:443 "HEAD /intfloat/e5-base-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2023-11-15 15:46:17,746 - DEBUG - https://huggingface.co:443 "HEAD /intfloat/e5-base-v2/resolve/main/config.json HTTP/1.1" 200 0
+2023-11-15 15:56:36,322 - INFO - 
+embeddings_e5_base_v2_to_df() done! Elapsed time: 10.316923895133337 minutes.
+2023-11-15 15:56:37,005 - ERROR - Exception while sending embeddings to postgre: no results to fetch
+2023-11-15 16:03:04,301 - INFO - 
+
+Starting PostgreToEmbeddings.
+Selecting new jobs to embed. Starting from ID: 460990
+2023-11-15 16:03:04,415 - INFO - 
+Jobs selected for embedding: 1952.\Temporal new max_id: 508895
+2023-11-15 16:03:07,223 - INFO - 
+RAW BATCHES SPECS: -------
+TOTAL NUMBER OF BATCHES: 1952
+TOTAL NUMBER OF TOKENS: 1796767
+NUMBER OF TRUNCATIONS: 426
+AVERAGE NUMBER OF TOKENS PER BATCH: 920.4748975409836
+APPROXIMATE COST OF EMBEDDING: $0 USD
+
+2023-11-15 16:03:07,278 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2023-11-15 16:03:07,511 - DEBUG - https://huggingface.co:443 "HEAD /intfloat/e5-base-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2023-11-15 16:03:07,634 - DEBUG - https://huggingface.co:443 "HEAD /intfloat/e5-base-v2/resolve/main/config.json HTTP/1.1" 200 0
+2023-11-15 16:04:30,004 - INFO - 
+
+Starting PostgreToEmbeddings.
+Selecting new jobs to embed. Starting from ID: 460990
+2023-11-15 16:04:30,111 - INFO - 
+Jobs selected for embedding: 1952.\Temporal new max_id: 508895
+2023-11-15 16:04:32,802 - INFO - 
+RAW BATCHES SPECS: -------
+TOTAL NUMBER OF BATCHES: 1952
+TOTAL NUMBER OF TOKENS: 1796767
+NUMBER OF TRUNCATIONS: 426
+AVERAGE NUMBER OF TOKENS PER BATCH: 920.4748975409836
+APPROXIMATE COST OF EMBEDDING: $0 USD
+
+2023-11-15 16:04:32,829 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2023-11-15 16:04:33,346 - DEBUG - https://huggingface.co:443 "HEAD /intfloat/e5-base-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2023-11-15 16:04:33,465 - DEBUG - https://huggingface.co:443 "HEAD /intfloat/e5-base-v2/resolve/main/config.json HTTP/1.1" 200 0
+2023-11-15 16:14:41,739 - INFO - 
+embeddings_e5_base_v2_to_df() done! Elapsed time: 10.15 minutes.
+2023-11-15 16:14:46,559 - INFO - Embeddings_e5_base_v2 Table Report:
+Total count of jobs before crawling: 37
+Total number of unique jobs: 1952
+Current total count of jobs in PostgreSQL: 1989
+2023-11-15 16:14:46,565 - INFO - PostgreToEmbeddings has finsihed correctly! Writing the max_id: 508895
