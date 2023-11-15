@@ -4,6 +4,7 @@ import tiktoken
 import psycopg2
 import pandas as pd
 import logging
+import timeit
 import json
 from datetime import datetime, timedelta
 from torch import Tensor
@@ -129,33 +130,33 @@ def append_parquet(new_df: pd.DataFrame, filename: str):
 	logging.info(f"{filename}.parquet has been updated")
 
 def average_pool(last_hidden_states: Tensor,
-                attention_mask: Tensor) -> Tensor:
-    last_hidden = last_hidden_states.masked_fill(~attention_mask[..., None].bool(), 0.0)
-    return last_hidden.sum(dim=1) / attention_mask.sum(dim=1)[..., None]
+				attention_mask: Tensor) -> Tensor:
+	last_hidden = last_hidden_states.masked_fill(~attention_mask[..., None].bool(), 0.0)
+	return last_hidden.sum(dim=1) / attention_mask.sum(dim=1)[..., None]
 
 def e5_base_v2_query(query):
-    tokenizer = AutoTokenizer.from_pretrained('intfloat/e5-base-v2')
-    model = AutoModel.from_pretrained('intfloat/e5-base-v2')
+	tokenizer = AutoTokenizer.from_pretrained('intfloat/e5-base-v2')
+	model = AutoModel.from_pretrained('intfloat/e5-base-v2')
 
-    query_e5_format = f"query: {query}"
+	query_e5_format = f"query: {query}"
 
-    batch_dict = tokenizer(query_e5_format, max_length=512, padding=True, truncation=True, return_tensors='pt')
+	batch_dict = tokenizer(query_e5_format, max_length=512, padding=True, truncation=True, return_tensors='pt')
 
-    outputs = model(**batch_dict)
-    query_embedding = average_pool(outputs.last_hidden_state, batch_dict['attention_mask']).detach().numpy().flatten()
-    return query_embedding
+	outputs = model(**batch_dict)
+	query_embedding = average_pool(outputs.last_hidden_state, batch_dict['attention_mask']).detach().numpy().flatten()
+	return query_embedding
 
 def filter_last_two_weeks(df:pd.DataFrame) -> pd.DataFrame:
-    # Get the current date
-    current_date = datetime.now().date()
-    
-    # Calculate the date two weeks ago from the current date
-    two_weeks_ago = current_date - timedelta(days=14)
-    
-    # Filter the DataFrame to keep only rows with timestamps in the last two weeks
-    filtered_df = df[df["timestamp"].dt.date >= two_weeks_ago]
-    
-    return filtered_df
+	# Get the current date
+	current_date = datetime.now().date()
+	
+	# Calculate the date two weeks ago from the current date
+	two_weeks_ago = current_date - timedelta(days=14)
+	
+	# Filter the DataFrame to keep only rows with timestamps in the last two weeks
+	filtered_df = df[df["timestamp"].dt.date >= two_weeks_ago]
+	
+	return filtered_df
 
 def passage_e5_format(raw_descriptions:list) -> list:
 	formatted_batches = ["passage: {}".format(raw_description) for raw_description in raw_descriptions]
@@ -166,12 +167,12 @@ def query_e5_format(raw_descriptions:list) -> list:
 	return formatted_batches
 
 def set_dataframe_display_options():
-    # Call the function to set the desired display options
-    pd.set_option('display.max_columns', None)  # Show all columns
-    pd.set_option('display.max_rows', None)  # Show all rows
-    pd.set_option('display.width', None)  # Disable column width restriction
-    pd.set_option('display.expand_frame_repr', False)  # Disable wrapping to multiple lines
-    pd.set_option('display.max_colwidth', None)  # Display full contents of each column
+	# Call the function to set the desired display options
+	pd.set_option('display.max_columns', None)  # Show all columns
+	pd.set_option('display.max_rows', None)  # Show all rows
+	pd.set_option('display.width', None)  # Disable column width restriction
+	pd.set_option('display.expand_frame_repr', False)  # Disable wrapping to multiple lines
+	pd.set_option('display.max_colwidth', None)  # Display full contents of each column
 
 def filter_df_per_country(df: pd.DataFrame, user_desired_country:str) -> pd.DataFrame:
 	# Load the JSON file into a Python dictionary
@@ -238,12 +239,12 @@ def to_pgvector_e5_base_v2(df:pd.DataFrame):
 	jobs_added = []
 	for index, row in df.iterrows():
 		insert_query = '''
-			INSERT INTO embeddings_e5_base_v2 (id, job_info, embedding)
-			VALUES (%s, %s, %s)
+			INSERT INTO embeddings_e5_base_v2 (id, job_info, timestamp, embedding)
+			VALUES (%s, %s, %s, %s)
 			ON CONFLICT (id) DO NOTHING
 			RETURNING *
 		'''
-		values = (row['id'], row['job_info'], row['embedding'])
+		values = (row['id'], row['job_info'], row['timestamp'], row['embedding'])
 		cursor.execute(insert_query, values)
 		affected_rows = cursor.rowcount
 		if affected_rows > 0:
@@ -291,5 +292,77 @@ def to_pgvector_e5_base_v2(df:pd.DataFrame):
 	cnx.commit()
 
 	# close the cursor and connection
+	cursor.close()
+	cnx.close()
+
+def to_pgvector_e5_base_v2_batches(df: pd.DataFrame, batch_size: int = 1000):
+	start_time = timeit.default_timer()
+
+	# create a connection to the PostgreSQL database
+	cnx = psycopg2.connect(user=user, password=password, host=host, port=port, database=database)
+
+	# create a cursor object
+	cursor = cnx.cursor()
+	cursor.execute('CREATE EXTENSION IF NOT EXISTS vector')
+
+	# Register the vector type with your connection or cursor
+	register_vector(cnx)
+
+	# execute the initial count query and retrieve the result
+	initial_count_query = 'SELECT COUNT(*) FROM embeddings_e5_base_v2'
+	cursor.execute(initial_count_query)
+	initial_count_result = cursor.fetchone()
+
+	# IDs uniqueness should be ensured due to the ON CONFLICT (id) DO NOTHING clause.
+	jobs_added = []
+
+	# Prepare the insert query outside the loop
+	insert_query = '''
+		INSERT INTO embeddings_e5_base_v2 (id, job_info, timestamp, embedding)
+		VALUES (%s, %s, %s, %s)
+		ON CONFLICT (id) DO NOTHING
+		RETURNING *
+	'''
+
+	# Iterate over the DataFrame in batches
+	for batch_start in range(0, len(df), batch_size):
+		batch_df = df.iloc[batch_start:batch_start + batch_size]
+
+		# Create a list of tuples for executemany
+		values = [(row['id'], row['job_info'], row['timestamp'], row['embedding']) for _, row in batch_df.iterrows()]
+
+		# Execute the insert query with the batch
+		cursor.executemany(insert_query, values)
+		affected_rows = cursor.rowcount
+
+		# Fetch all rows if there are results to fetch
+		if affected_rows > 0:
+			jobs_added.extend(cursor.fetchall())
+
+	# Logging/printing results
+	final_count_query = 'SELECT COUNT(*) FROM embeddings_e5_base_v2'
+	cursor.execute(final_count_query)
+	final_count_result = cursor.fetchone()
+
+	initial_count = initial_count_result[0] if initial_count_result is not None else 0
+	jobs_added_count = len(jobs_added)
+	final_count = final_count_result[0] if final_count_result is not None else 0
+
+	elapsed_time = timeit.default_timer() - start_time
+
+	postgre_report = f"""
+		Embeddings_e5_base_v2 report:\n
+		Total count of jobs before crawling: {initial_count}
+		Total number of unique jobs: {jobs_added_count}
+		Current total count of jobs in PostgreSQL: {final_count}
+		Duration: {elapsed_time:.2f}
+		"""
+	
+	logging.info(postgre_report)
+
+	# Commit the changes to the database
+	cnx.commit()
+
+	# Close the cursor and connection
 	cursor.close()
 	cnx.close()
