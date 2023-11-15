@@ -5,6 +5,9 @@ from torch.utils.data import DataLoader, Dataset
 from tqdm import tqdm
 from transformers import AutoTokenizer, AutoModel
 import pretty_errors
+import timeit
+import logging
+from datetime import datetime
 import pandas as pd
 import numpy as np
 from utils.handy import LoggingMain, append_parquet
@@ -14,11 +17,15 @@ import pretty_errors
 LoggingMain()
 
 #@retry(wait=wait_random_exponential(min=1, max=60), stop=stop_after_attempt(6))
-def embeddings_e5_base_v2_to_df(batches_to_embed: list[str], jobs_info: list[str], batches_ids: list[str]) -> pd.DataFrame:
+def embeddings_e5_base_v2_to_df(batches_to_embed: list[str], jobs_info: list[str], batches_ids: list[str], batches_timestamps: list[datetime]) -> pd.DataFrame:
     
+    #Start the timer
+    start_time = timeit.default_timer()
+
     CHUNK_SIZE = 15
     FORMATTED_E5_QUERY_BATCHES = batches_to_embed
     JOBS_INFO_BATCHES = jobs_info
+    TIMESTAMPS = batches_timestamps
     IDS = batches_ids
     TOKENIZER = AutoTokenizer.from_pretrained("intfloat/e5-base-v2")
     MODEL = AutoModel.from_pretrained("intfloat/e5-base-v2")
@@ -66,10 +73,14 @@ def embeddings_e5_base_v2_to_df(batches_to_embed: list[str], jobs_info: list[str
     df_data = {
         'id': IDS,
         'job_info': JOBS_INFO_BATCHES,
-        'embedding': list(EMBEDDINGS),
+        'timestamp': TIMESTAMPS,
+        'embedding': list(EMBEDDINGS)
         }
 
     df = pd.DataFrame(df_data)
+
+    elapsed_time = (timeit.default_timer() - start_time) / 60
+    logging.info(f"\nembeddings_e5_base_v2_to_df() done! Elapsed time: {elapsed_time:.2f} minutes.")
 
     return df
 
