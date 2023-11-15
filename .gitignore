@@ -9,3 +9,4 @@ utils/__pycache__
 *.json
 ~/.aws
 archive
+tools
